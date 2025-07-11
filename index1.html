@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NCC Header</title>
+  <title>TCET NCC</title>
   <style>
     /* Reset top margin and padding */
     html, body {
@@ -12,16 +12,28 @@
 
     /* Header Section Styling */
     .tab-box {
-      padding: 2px;
+      padding: 2px; 
       text-align: center;
     }
 
     .header-logo {
-      width: 95%;
+      width: 100%;
       height: auto;
       display: block;
       margin: 0 auto;
     }
+
+    /* Official Profile Section */
+    .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03); /* Slight zoom */
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Elevation shadow */
+      z-index: 10;
+    }
+
   </style>
 </head>
 
@@ -264,7 +276,7 @@
   <div class="container-fluid d-flex justify-content-between align-items-center">
 
      <!-- Logo + Text aligned left -->
-    <a class="navbar-brand d-flex align-items-center me-4" href="#">
+    <a class="navbar-brand d-flex align-items-center me-4" href="index.html">
       <img src="ncclogo.png" alt="NCC Logo" style="height: 70px; width: auto;" class="me-2">
       <div class="d-flex flex-column lh-sm text-white">
         <span class="fw-bold" style="font-size: 2.0rem;">TCET</span>
@@ -273,10 +285,10 @@
     </a>
     <!-- Navigation Items Right-Aligned -->
     <ul class="navbar-nav d-flex flex-row align-items-center ms-auto gap-2">
-      <li class="nav-item"><a class="nav-link" href="tcetmumbai.in">TCET</a></li>
-      <li class="nav-item"><a class="nav-link" href="test2.html">About Us</a></li>
-      <li class="nav-item"><a class="nav-link" href="#teams">Our Teams</a></li>
-      <li class="nav-item"><a class="nav-link" href="#camps">Camps</a></li>
+      <li class="nav-item"><a class="nav-link" href="https://www.tcetmumbai.in">TCET Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html">NCC Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="tcet_nccdomains.html">Our Teams</a></li>
+      <li class="nav-item"><a class="nav-link" href="camps.html">Training & Camps</a></li>
       <li class="nav-item"><a class="nav-link" href="#achievers">Achievers</a></li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown " href="#" role="button" data-bs-toggle="dropdown">Activities</a>
@@ -284,6 +296,7 @@
           <li><a class="dropdown-item" href="#">Puneet Sagar</a></li>
           <li><a class="dropdown-item" href="#">Tree Plantation</a></li>
           <li><a class="dropdown-item" href="#">Blood Donation</a></li>
+          <li><a class="dropdown-item" href="#">Development</a></li>
         </ul>
       </li>
       <li class="nav-item"><a class="nav-link" href="#calendar">Calendar</a></li>
@@ -323,103 +336,168 @@
       <!-- Right: Content -->
       <div class="col-lg-7">
         <h1 class="display-5 fw-bold text-danger mb-4">National Cadet Corps (NCC)</h1>
-        <p class="lead text-dark mb-3">
+        <p class="lead text-dark mb-3" style="text-align: justify;">
           The National Cadet Corps (NCC) is the youth wing of the Indian Armed Forces, headquartered in New Delhi. 
           It is a voluntary organization open to school and college students across India, operating as a Tri-Services organization 
           that includes the Army, Navy, and Air Force wings. The NCC recruits cadets from educational institutions nationwide, 
           providing them with basic military training in small arms, physical fitness and parade drills.
         </p>
-        <p class="lead text-dark mb-3">
-          Beyond military training, the NCC emphasises personality development, social responsibility and community service, 
+
+       <p class="lead text-dark mb-3" style="text-align: justify;">
+          Beyond military training, the NCC emphasises personality development, social responsibility and community service,
           aiming to nurture disciplined, patriotic, responsible and united citizens.
-        </p>
-        <p class="text-dark mb-3">
-          <strong>Motto:</strong> “Unity and Discipline (एकता और अनुशासन)”, adopted on 23rd December 1957, reflects NCC’s aim 
+      </p>
+
+        <p class="text-dark mb-3" style="text-align: justify;">
+          <strong>Motto:</strong> “Unity and Discipline (एकता और अनुशासन)”, adopted on 23rd December 1957, reflects NCC’s aim
           to unite youth from across the country and instill discipline and national integration.
         </p>
-        <p class="text-dark">
-          The TCET-NCC Unit was established with a sanctioned strength of <strong>104 Army Wing Cadets</strong> & 
-          <strong>50 Naval Wing Cadets</strong> on <strong>14th October 2021</strong> and <strong>27th October 2023</strong> 
+
+        <p class="text-dark justify-content" style="text-align: justify;">
+          The TCET-NCC Unit was established with a sanctioned strength of <strong>104 Army Wing Cadets</strong> &
+          <strong>50 Naval Wing Cadets</strong> on <strong>14th October 2021</strong> and <strong>27th October 2023</strong>
           respectively. The unit conducts regular training and activities under the guidance of:
-          <br><strong>Cdr. Vijay Pratap Singh</strong> (Mentor & Officer In-charge),
-          <strong>Lt. (Dr.) Nivant Kambale</strong> (Associate NCC Officer, Army Wing),
-          <strong>Mr. Sunil Khatri</strong> (Care Taker Officer, Navy Wing).
+        </p>
+         <ul style="list-style-type: circle; padding-left: 20px;">
+          <li><strong>Cdr. Vijay Pratap Singh</strong> (Mentor & Officer In-charge)</li>
+          <li><strong>Lt. (Dr.) Nivant Kambale</strong> (Associate NCC Officer, Army Wing)</li>
+          <li><strong>Mr. Sunil Khatri</strong> (Care Taker Officer, Navy Wing)</li>
+        </ul>
+
         </p>
         <p class="text-dark">
           The TCET-NCC Unit is committed to developing disciplined, responsible and united citizens in line with the NCC motto.
         </p>
-        <a href="#about" class="btn btn-danger mt-3 px-4 py-2">Know More</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="features-objectives" class="py-5 bg-light">
-  <div class="container" data-aos="fade-up">
-
-    <div class="row">
-      <!-- Left Column - Key Features -->
-      <div class="col-lg-6 mb-4 mb-lg-0">
-        <h2 class="fw-bold mb-4 text-primary">✨ Key Features</h2>
-        <ul class="list-unstyled">
+<!-- Features and Objectives Section -->
+<section class="py-5 bg-light border-top border-bottom" id="features-objectives">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Key Features Column -->
+      <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
+        <h3 class="text-dark fw-bold mb-4">Key Features</h3>
+        <ul class="list-unstyled ps-3">
           <li class="mb-3">
-            ✅ <strong>First-of-its-kind:</strong> Pioneer among private engineering colleges in Maharashtra with official NCC sanction under the Ministry of Defence.
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            <strong>First-of-its-kind:</strong> Pioneer among private engineering colleges in Maharashtra with official NCC sanction under the Ministry of Defence.
           </li>
           <li class="mb-3">
-            ✅ <strong>'C' Certificate Advantage:</strong> Cadets earning the ‘C’ Certificate are exempted from written exams in various Armed Forces recruitment.
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            <strong>'C' Certificate Advantage:</strong> NCC cadets who successfully earn the ‘C’ Certificate are exempted from the written exam in various Indian Armed Forces recruitment processes.
           </li>
           <li class="mb-3">
-            ✅ <strong>Prestigious Parade Representation:</strong> Cadets represent TCET at Republic Day & Independence Day parades.
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            <strong>Prestigious Parade Representation:</strong> Outstanding cadets are nominated for Republic Day and Independence Day parades in Mumbai and New Delhi.
           </li>
           <li class="mb-3">
-            ✅ <strong>Global Exposure:</strong> Participation in international deployments and Youth Exchange Programme (YEP).
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            <strong>Global Exposure:</strong> Selected cadets are deputed for international deployments, training programs, and the Youth Exchange Programme (YEP).
           </li>
           <li class="mb-3">
-            ✅ <strong>Combat Readiness:</strong> Weapon handling and arms training by certified Army personnel.
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            <strong>Combat Readiness:</strong> Hands-on training in small arms and weapon handling conducted by qualified Army personnel.
           </li>
           <li class="mb-3">
-            ✅ <strong>Holistic Learning:</strong> Emphasis on civic responsibility, national integration, health & safety.
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            <strong>Holistic Learning:</strong> Sessions on national integration, safety, security, and health to instill social awareness and civic responsibility.
           </li>
           <li class="mb-3">
-            ✅ <strong>Career Mentorship:</strong> Expert talks on joining the Indian Armed Forces.
-          </li>
-        </ul>
-      </div>
-
-      <!-- Right Column - Objectives -->
-      <div class="col-lg-6">
-        <h2 class="fw-bold mb-4 text-primary">🎯 Our Objectives</h2>
-        <ul class="list-unstyled">
-          <li class="mb-3">
-            🔹 <strong>Leadership Development:</strong> Grooming youth for leadership in diverse fields, especially defense.
-          </li>
-          <li class="mb-3">
-            🔹 <strong>Character Building:</strong> Instill discipline, camaraderie, integrity, and service.
-          </li>
-          <li class="mb-3">
-            🔹 <strong>Community Engagement:</strong> Drive social impact and national unity through local initiatives.
-          </li>
-          <li class="mb-3">
-            🔹 <strong>Career Facilitation:</strong> Inspire engineering students to pursue defense careers.
-          </li>
-          <li class="mb-3">
-            🔹 <strong>Adventure & Resilience:</strong> Real-life challenges and collaborative missions build strength.
+            <i class="bi bi-check-circle-fill text-primary me-2"></i>
+            <strong>Career Mentorship:</strong> Periodic motivational lectures and expert guidance on “How to Join the Indian Armed Forces.”
           </li>
         </ul>
       </div>
-    </div>
 
-    <!-- Bottom Quote -->
-    <div class="row mt-5">
-      <div class="col text-center">
-        <blockquote class="blockquote fs-5 fw-semibold text-secondary fst-italic">
-          💬 At TCET NCC, we don’t just train cadets—we inspire a generation committed to serve the nation with honor and pride.
-        </blockquote>
+      <!-- Objectives Column -->
+      <div class="col-md-6" data-aos="fade-left">
+        <h3 class="text-dark fw-bold mb-4">Our Objectives</h3>
+        <p class="mb-4">The TCET NCC Unit aims to nurture students into responsible citizens and future leaders, equipped with strength of character and a spirit of service.</p>
+        <ul class="list-unstyled ps-3">
+          <li class="mb-3">
+            <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+            <strong>Leadership Development:</strong> Create a pool of well-trained, motivated youth who can take up leadership roles across diverse sectors, including defense services.
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+            <strong>Character Building:</strong> Foster qualities such as discipline, camaraderie, integrity, and selfless service among cadets.
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+            <strong>Community Engagement:</strong> Conduct socially impactful activities to contribute towards community development and national integration.
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+            <strong>Career Facilitation:</strong> Provide a structured environment that inspires engineering students to pursue a career in the Indian Armed Forces.
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-arrow-right-circle-fill text-success me-2"></i>
+            <strong>Adventure & Resilience:</strong> Encourage a spirit of adventure, resilience, and secularism through exposure to real-life challenges and collaborative missions.
+          </li>
+        </ul>
+
+        <div class="mt-4">
+          <blockquote class="blockquote text-muted border-start border-4 ps-3 fst-italic">
+            "At TCET NCC, we don’t just train cadets—we inspire a generation committed to serve the nation with honor and pride."
+          </blockquote>
+        </div>
       </div>
     </div>
-
   </div>
 </section>
+
+<!-- Officer Section -->
+<section id="officers" class="py-5 bg-light border-top">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-uppercase">Controlling Officers</h2>
+      <p class="text-muted">Meet the dedicated officers guiding and mentoring the TCET NCC Cadets</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+      
+      <!-- Officer 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow border-0">
+          <img src="cdr.png" class="card-img-top rounded-top" alt="Cdr. Vijay Pratap Singh">
+          <div class="card-body">
+            <h5 class="card-title mb-0 fw-semibold">Cdr. Vijay Pratap Singh</h5>
+            <p><b>Officer In-Charge</b></p>
+            <a href="ncc_cdr.html" class="btn btn-outline-primary btn-sm">View Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Officer 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow border-0">
+          <img src="ano.png" class="card-img-top rounded-top" alt="Lt. Dr. Nivant Kamabale">
+          <div class="card-body">
+            <h5 class="card-title mb-0 fw-semibold">Lt. Dr. Nivant Kamabale</h5>
+            <p ><b>Associate NCC Officer</b></p>
+            <a href="ncc_ano.html" class="btn btn-outline-primary btn-sm">View Profile</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Officer 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 text-center shadow border-0">
+          <img src="cto.png" class="card-img-top rounded-top" alt="Mr. Sunil Khatri">
+          <div class="card-body">
+            <h5 class="card-title mb-0 fw-semibold">Mr. Sunil Khatri</h5>
+            <p><b>Care Taker Officer (Navy Wing)</b></p>
+            <a href="officer-cto.html" class="btn btn-outline-primary btn-sm">View Profile</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 
 <!-- Bootstrap JS Bundle -->

@@ -2,289 +2,145 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Header Image Tab</title>
+  <title>TCET NCC – About Us</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    .tab-box {
-      border: 5px solid #000;
-      padding: 5px;
-      border-radius: 4px;
-      text-align: center;
-    }
-    .header-logo {
-      width: 95%;
-      height: auto;
+    /* About Us CSS */
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 12px;
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
     }
 
-    .navbar{
-        background-color: rgb(184, 190, 185);
-        text-decoration-color: white;
+    .about-wrapper {
+      width: 95%;
+      margin: 30px auto;
+      padding: 30px;
+      background-color: #ffffff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .about-text {
+      flex: 2;
+      text-align: justify;
+    }
+
+    .about-text h1 {
+      font-size: 45px;
+      font-weight: 700;
+      color: #b30000;
+      margin-bottom: 20px;
+    }
+
+    .about-text p,
+    .about-text li {
+      font-size: 20px;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    .about-text ul {
+      padding-left: 20px;
+    }
+
+    .image-slider {
+      flex: 1;
+      position: relative;
+      height: 650px;
+      width: 100%;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+      border: 0px solid #e0e0e0;
+      background: linear-gradient(135deg, #f8fafc 60%, #e3e6ee 100%);
+    }
+
+    .image-slider img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 0;
+      box-shadow: 0 2px 0px rgba(44, 62, 80, 0.10);
+    }
+
+    .image-slider img.active {
+      opacity: 1;
+      z-index: 1;
+      animation: fadeIn 1.2s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .about-wrapper {
+        flex-direction: column;
+      }
+
+      .image-slider {
+        height: 400px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="container mt-5">
-    <div class="tab-box">
-      <img src="Header.png" alt="NCC Header" class="header-logo">
-    </div>
+<div class="about-wrapper">
+  <!-- Left Text Section -->
+  <div class="about-text">
+    <h1>National Cadet Corps (NCC)</h1>
+    <p>
+      The National Cadet Corps (NCC) is the youth wing of the Indian Armed Forces, headquartered in New Delhi. It is a voluntary organization open to school and college students across India, operating as a Tri-Services organization that includes the Army, Navy, and Air Force wings.
+    </p>
+    <p>
+      The NCC recruits cadets from educational institutions nationwide, providing them with basic military training in small arms, physical fitness and parade drills. Beyond military training, the NCC emphasizes personality development, social responsibility, and community service.
+    </p>
+    <p><strong>Motto:</strong> “Unity and Discipline (एकता और अनुशासन)” – Adopted on 23rd December 1957, it reflects the aim to unite youth from across the country and instill a sense of discipline and national integration.</p>
+    <p>
+      The <strong>TCET-NCC Unit</strong> was established with a sanctioned strength of <strong>104 Army Wing Cadets</strong> on <strong>14th October 2021</strong> and <strong>50 Naval Wing Cadets</strong> on <strong>27th October 2023</strong>. The unit conducts regular training and activities under the able guidance of:
+    </p>
+    <ul>
+      <li><strong>Cdr. Vijay Pratap Singh</strong> – Mentor & Officer In-charge</li>
+      <li><strong>Lt. (Dr.) Nivant Kambale</strong> – Associate NCC Officer, Army Wing</li>
+      <li><strong>Mr. Sunil Khatri</strong> – Care Taker Officer, Navy Wing</li>
+    </ul>
+    <p>
+      The TCET NCC Unit is committed to shaping disciplined, service-minded and nationally integrated youth in line with the NCC's guiding principles.
+    </p>
   </div>
-  <br>
-    <nav data-bs-theme="light" class="navbar navbar-expand-lg justify-content-center nav-pills nave-fill">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">TCET NCC</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul  class="navbar-nav nav-pills nave-fill" >
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="test.html">About Us</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Team</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Achievements</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Selection & Eligibility Criteria</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Magazines</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link" href="#">Contact US</a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Activities
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-        </li>
-    </div>
-</ul>
-</ul>
+
+  <!-- Right Rotating Image Section -->
+  <div class="image-slider">
+    <img src="ncclogo.png" alt="NCC Logo" class="active">
+    <img src="priyankamiss1.png" alt="Cadets Training">
+    <img src="ncclogo.png" alt="NCC Logo" >
+    <img src="https://picsum.photos/500/650?random=102" alt="Unity March">
+  </div>
 </div>
-</nav>
-<!-- Bootstrap Icons -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 
-<!-- Animate.css for smooth image animation -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-
-<!-- AOS Animation -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init();
+  const images = document.querySelectorAll('.image-slider img');
+  let current = 0;
+
+  setInterval(() => {
+    images[current].classList.remove('active');
+    current = (current + 1) % images.length;
+    images[current].classList.add('active');
+  }, 5000);
 </script>
-<!-- TCET NCC Hero Section -->
-<section id="hero" class="py-5 bg-light">
-  <div class="container" data-aos="fade-up">
-    <div class="row align-items-center">
-      
-      <!-- Left: Larger Logo Without Border -->
-      <div class="col-lg-5 text-center mb-4 mb-lg-0" data-aos="zoom-in" data-aos-delay="100">
-        <img src="ncclogo.png" alt="NCC Logo" 
-        class="img-fluid " 
-        style="max-width: 380px;">
-      </div>
 
-      <!-- Right: Content -->
-      <div class="col-lg-7">
-        <h1 class="display-5 fw-bold text-danger mb-4">National Cadet Corps (NCC)</h1>
-        <p class="lead text-dark mb-3">
-          The National Cadet Corps (NCC) is the youth wing of the Indian Armed Forces, headquartered in New Delhi. 
-          It is a voluntary organization open to school and college students across India, operating as a Tri-Services organization 
-          that includes the Army, Navy, and Air Force wings. The NCC recruits cadets from educational institutions nationwide, 
-          providing them with basic military training in small arms, physical fitness and parade drills.
-        </p>
-        <p class="lead text-dark mb-3">
-          Beyond military training, the NCC emphasises personality development, social responsibility and community service, 
-          aiming to nurture disciplined, patriotic, responsible and united citizens.
-        </p>
-        <p class="text-dark mb-3">
-          <strong>Motto:</strong> “Unity and Discipline (एकता और अनुशासन)”, adopted on 23rd December 1957, reflects NCC’s aim 
-          to unite youth from across the country and instill discipline and national integration.
-        </p>
-        <p class="text-dark">
-          The TCET-NCC Unit was established with a sanctioned strength of <strong>104 Army Wing Cadets</strong> & 
-          <strong>50 Naval Wing Cadets</strong> on <strong>14th October 2021</strong> and <strong>27th October 2023</strong> 
-          respectively. The unit conducts regular training and activities under the guidance of:
-          <br><strong>Cdr. Vijay Pratap Singh</strong> (Mentor & Officer In-charge),
-          <strong>Lt. (Dr.) Nivant Kambale</strong> (Associate NCC Officer, Army Wing),
-          <strong>Mr. Sunil Khatri</strong> (Care Taker Officer, Navy Wing).
-        </p>
-        <p class="text-dark">
-          The TCET-NCC Unit is committed to developing disciplined, responsible and united citizens in line with the NCC motto.
-        </p>
-        <a href="#about" class="btn btn-danger mt-3 px-4 py-2">Know More</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Officer Section -->
-<section id="officers" class="py-5 bg-light border-top">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold text-uppercase">Our Officers</h2>
-      <p class="text-muted">Meet the dedicated officers guiding and mentoring the TCET NCC Cadets</p>
-    </div>
-    <div class="row g-4 justify-content-center">
-      
-      <!-- Officer 1 -->
-      <div class="col-md-4">
-        <div class="card h-100 text-center shadow border-0">
-          <img src="assets/img/officers/cdr-vijay.jpg" class="card-img-top rounded-top" alt="Cdr. Vijay Pratap Singh">
-          <div class="card-body">
-            <h5 class="card-title mb-0 fw-semibold">Cdr. Vijay Pratap Singh</h5>
-            <p class="text-muted">Officer In-Charge</p>
-            <a href="officer-cdr.html" class="btn btn-outline-primary btn-sm">View Profile</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Officer 2 -->
-      <div class="col-md-4">
-        <div class="card h-100 text-center shadow border-0">
-          <img src="assets/img/officers/lt-nivant-uniform.jpg" class="card-img-top rounded-top" alt="Lt. Dr. Nivant Kamabale">
-          <div class="card-body">
-            <h5 class="card-title mb-0 fw-semibold">Lt. Dr. Nivant Kamabale</h5>
-            <p class="text-muted">Associate NCC Officer</p>
-            <a href="officer-ano.html" class="btn btn-outline-primary btn-sm">View Profile</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Officer 3 -->
-      <div class="col-md-4">
-        <div class="card h-100 text-center shadow border-0">
-          <img src="assets/img/officers/cto-nivant.jpg" class="card-img-top rounded-top" alt="Mr. Sunil Khatri">
-          <div class="card-body">
-            <h5 class="card-title mb-0 fw-semibold">Mr. Sunil Khatri</h5>
-            <p class="text-muted">Care Taker Officer (Navy Wing)</p>
-            <a href="officer-cto.html" class="btn btn-outline-primary btn-sm">View Profile</a>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<div class="container py-5">
-  <h2 class="section-title mb-4">Design & Development Team</h2>
-
-  <div class="row align-items-center">
-    <!-- Left Image: Tank Modelling -->
-    <div class="col-lg-4 mb-4">
-      <img src="/assets/img/ncc/tank-modelling.jpg" alt="Tank Modelling" class="img-fluid rounded shadow">
-    </div>
-
-    <!-- Right Grid: Cadet Profiles -->
-    <div class="col-lg-8">
-      <div class="row g-4 row justify-content-center">
-        <div class="col-md-3 col-sm-6">
-          <div class="profile-card">
-            <img src="cadet1.png" alt="JUO Ashish Tiwari" class="profile-img">
-            <div class="cadet-name">JUO Ashish Tiwari</div>
-            <div class="cadet-role">AIML A</div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="profile-card">
-            <img src="cadet2.png" alt="JUO Prerit Kumar" class="profile-img">
-            <div class="cadet-name">JUO Prerit Kumar</div>
-            <div class="cadet-role">COMP B</div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="profile-card">
-            <img src="cadet3.png" alt="CSM Aatib Mujawar" class="profile-img">
-            <div class="cadet-name">CSM Aatib Mujawar</div>
-            <div class="cadet-role">MECH A</div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="profile-card">
-            <img src="cadet4.png" alt="CQMS Ashish Pal" class="profile-img">
-            <div class="cadet-name">CQMS Ashish Pal</div>
-            <div class="cadet-role">AIML A</div>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6">
-          <div class="profile-card">
-            <img src="cadet5.png" alt="SGT Abhijeet Shelke" class="profile-img">
-            <div class="cadet-name">SGT Abhijeet Shelke</div>
-            <div class="cadet-role">COMP C</div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="profile-card">
-            <img src="cadet6.png" alt="SGT Purva Sawant" class="profile-img">
-            <div class="cadet-name">SGT Purva Sawant</div>
-            <div class="cadet-role">AIDS B</div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="profile-card">
-            <img src="cadet7.png" alt="CDT Ashmeet Gupta" class="profile-img">
-            <div class="cadet-name">CDT Ashmeet Gupta</div>
-            <div class="cadet-role">IT A</div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="profile-card">
-            <img src="cadet8.png" alt="CDT Bhavesh Shukla" class="profile-img">
-            <div class="cadet-name">CDT Bhavesh Shukla</div>
-            <div class="cadet-role">E&TC B</div>
-          </div>
-        </div>
-
-        <div class="col-md-3 col-sm-6">
-          <div class="profile-card">
-            <img src="cadet9.png" alt="CDT Gautam Patil" class="profile-img">
-            <div class="cadet-name">CDT Gautam Patil</div>
-            <div class="cadet-role">MME A</div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="profile-card">
-            <img src="cadet10.png" alt="CDT Ankesh Yadav" class="profile-img">
-            <div class="cadet-name">CDT Ankesh Yadav</div>
-            <div class="cadet-role">AIML C</div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="profile-card">
-            <img src="cadet11.png" alt="CDT Abhishek Vishwakarma" class="profile-img">
-            <div class="cadet-name">CDT Abhishek Vishwakarma</div>
-            <div class="cadet-role">AIML C</div>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="profile-card">
-            <img src="cadet12.png" alt="CDT Harsh Rane" class="profile-img">
-            <div class="cadet-name">CDT Harsh Rane</div>
-            <div class="cadet-role">AIDS B</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
