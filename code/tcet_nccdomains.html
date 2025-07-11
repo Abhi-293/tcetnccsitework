@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NCC Header</title>
+  <style>
+    /* Reset top margin and padding */
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Header Section Styling */
+    .tab-box {
+      padding: 2px;
+      text-align: center;
+    }
+
+    .header-logo {
+      width: 95%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+
+    /* Official Profile Section */
+    .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.03); /* Slight zoom */
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Elevation shadow */
+      z-index: 10;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Header Section -->
+  <div class="container mt-5">
+    <div class="tab-box">
+      <img src="Header.png" alt="NCC Header" class="header-logo">
+    </div>
+  </div>
+
+  <!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+<!-- Custom Navbar Style -->
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .navbar-custom {
+    background: linear-gradient(90deg, #800000, #1a1a2e); /* Maroon to Navy */
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-brand img {
+    height: 50px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .navbar-brand:hover img {
+    transform: scale(1.1);
+  }
+
+  .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #f5b041;
+    transition: 0.3s;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    background-color: #1a1a2e;
+    border: none;
+  }
+
+  .dropdown-item {
+    color: white;
+    transition: background 0.3s ease;
+  }
+
+  .dropdown-item:hover {
+    background-color: #800000;
+    color: #fff;
+  }
+</style>
+
+<!-- Add in <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .navbar-custom {
+    background: linear-gradient(90deg, #800000, #1a1a2e);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+
+  .navbar-brand img {
+    height: 45px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-link {
+    color: #fff !important;
+    font-weight: 500;
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: #f5b041;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    background-color: #1a1a2e;
+  }
+
+  .dropdown-item {
+    color: #fff;
+  }
+
+  .dropdown-item:hover {
+    background-color: #800000;
+  }
+</style>
+
+<!-- Navbar -->
+<!-- Fonts & Styling -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .navbar-custom {
+    background: linear-gradient(90deg, #8b0000, #1a1a2e);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    padding: 0.4rem 1.2rem;
+  }
+
+  .navbar-brand img {
+    height: 45px;
+    margin-right: 8px;
+  }
+
+  .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #ffd700 !important;
+  }
+
+  .nav-link::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: #9b9679;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    transition: width 0.4s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+    display: none !important;
+
+  }
+
+/* Position the dropdown to float */
+.nav-item.dropdown {
+  position: relative; /* Anchor for absolute dropdown */
+}
+
+.dropdown-menu {
+  position: relative;
+  top: 100%; /* Places it just below the trigger */
+  left: 0;
+  z-index: 1050;
+  margin-top: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  min-width
+
+  .dropdown-item {
+    color: #fff;
+    transition: background 0.3s ease;
+  }
+
+  .dropdown-item:hover {
+    background-color: #800000;
+  }
+
+  @media (max-width: 992px) {
+    .navbar-nav {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      max-width: 100%;
+    }
+  }
+
+/* CSS Styles  */
+  .ncc-hero-section {
+    background: #f8f9fa;
+  }
+
+  .ncc-logo {
+    max-width: 250px;
+    animation: floatLogo 3s ease-in-out infinite;
+    transition: transform 0.3s ease;
+  }
+
+  .ncc-logo:hover {
+    transform: scale(1.05) rotate(-1deg);
+  }
+
+  ul {
+    list-style: disc inside;
+    padding-left: 0;
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .ncc-logo {
+      max-width: 200px;
+    }
+  }
+</style>
+
+<!-- Navbar -->
+<nav class="navbar navbar-dark navbar-custom sticky-top">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+
+     <!-- Logo + Text aligned left -->
+    <a class="navbar-brand d-flex align-items-center me-4" href="index.html">
+      <img src="ncclogo.png" alt="NCC Logo" style="height: 70px; width: auto;" class="me-2">
+      <div class="d-flex flex-column lh-sm text-white">
+        <span class="fw-bold" style="font-size: 2.0rem;">TCET</span>
+        <span style="font-size: 1.2rem;">NCC UNIT</span>
+      </div>
+    </a>
+    <!-- Navigation Items Right-Aligned -->
+    <ul class="navbar-nav d-flex flex-row align-items-center ms-auto gap-2">
+      <li class="nav-item"><a class="nav-link" href="https://www.tcetmumbai.in">TCET</a></li>
+      <li class="nav-item"><a class="nav-link" href="test2.html">About Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="tcet_nccdomains.html">Our Teams</a></li>
+      <li class="nav-item"><a class="nav-link" href="#camps">Camps</a></li>
+      <li class="nav-item"><a class="nav-link" href="#achievers">Achievers</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown " href="#" role="button" data-bs-toggle="dropdown">Activities</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Puneet Sagar</a></li>
+          <li><a class="dropdown-item" href="#">Tree Plantation</a></li>
+          <li><a class="dropdown-item" href="#">Blood Donation</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="#calendar">Calendar</a></li>
+      <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="#magazine">Magazine</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+ <style>
+    
+    .team-section {
+      padding: 60px 0;
+    }
+    .team-heading {
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    .profile-card {
+      border: 1px solid #e0e0e0;
+      border-radius: 12px;
+      text-align: center;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background-color: #f8f9fa;
+      transition: transform 0.3s ease;
+    }
+    .profile-card:hover {
+      transform: translateY(-5px);
+    }
+    .profile-img {
+      border-radius: 10px;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .cadet-name {
+      font-weight: 1000;
+      font-size: 2.0 px;
+      margin-top: 10px;
+    }
+    .cadet-role {
+      font-size: 1.0rem;
+      color: #555;
+    }
+    .wing-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .bg-heading-domain{
+    background-color: #003366; /* Navy Blue or your brand color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 100%;
+    }
+
+.wing-heading-army {
+  display: inline-block;
+  padding: 6px 20px;
+  margin: 20px 0 10px;
+  font-size: 1.25rem;
+  text-decoration-color: #ff0000;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-left: 5px solid;
+  background-color: #e9e9e9;
+  color: #ff0000;
+  border-color: #ff0000;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+}
+.wing-heading-navy {
+  display: inline-block;
+  padding: 6px 20px;
+  margin: 20px 0 10px;
+  font-size: 1.25rem;
+  text-decoration-color: #0024f0;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border-left: 5px solid;
+  background-color: #e9e9e9;
+  color: #0024f0;
+  border-color: #0024f0;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+  </style>
+</head>
+<body>
+
+  <section class="team-section container">
+    <h2 class="team-heading text-center bg-heading-domain">Training Control and Administrative Team</h2>
+
+    <h4 class="mb-4 wing-heading-army  ">Army Wing</h4>
+    <div class="row g-4 justify-content-center">
+      <!-- Army Wing Profiles -->
+      <!-- Profile Cards Here (No change needed) -->
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="SUO Snehal Vishwakarma" class="profile-img">
+          <div class="cadet-name">SUO Sneehal Vishwakarma</div>
+          <div class="cadet-role">Comps</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="JUO Prerit Kumar" class="profile-img">
+          <div class="cadet-name">JUO Prerit Kumar</div>
+          <div class="cadet-role">Comps</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="JUO Saanika Rajan" class="profile-img">
+          <div class="cadet-name">JUO Saanika Rajan</div>
+          <div class="cadet-role">AIDS</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="CDT Abhishek Vishwakarma" class="profile-img">
+          <div class="cadet-name">CDT Abhishek Vishwakarma</div>
+          <div class="cadet-role">AIML</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="CDT Manasvi Sawant" class="profile-img">
+          <div class="cadet-name">CDT Manasvi Sawant</div>
+          <div class="cadet-role">B.Voc</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="CDT Tanuja Vishe" class="profile-img">
+          <div class="cadet-name">CDT Tanuja Vishe</div>
+          <div class="cadet-role">AIML C</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="CDT Disha Mate" class="profile-img">
+          <div class="cadet-name">CDT Disha Mate</div>
+          <div class="cadet-role">B.Voc</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="CDT Kirlish Mahto" class="profile-img">
+          <div class="cadet-name">CDT Kirish Mahto</div>
+          <div class="cadet-role">AIDS</div>
+        </div>
+      </div>
+    </div>
+
+    <h4 class="mt-5 mb-4 wing-heading-navy bg">Navy Wing</h4>
+    <div class="row g-4 justify-content-center">
+      <!-- Navy Wing Profiles -->
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="PO Cdt Aarna Singh" class="profile-img">
+          <div class="cadet-name">PO Cdt Aarna Singh</div>
+          <div class="cadet-role">Branch</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="PO Cdt Premraj Dhondphde" class="profile-img">
+          <div class="cadet-name">PO Cdt Premraj Dhondphde</div>
+          <div class="cadet-role">Comps</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="Cdt Shruti Prajapati" class="profile-img">
+          <div class="cadet-name">Cdt Shruti Prajapati</div>
+          <div class="cadet-role">AIDS</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="CDT Janhavi Patil" class="profile-img">
+          <div class="cadet-name">CDT Janhavi Patil</div>
+          <div class="cadet-role">MECH</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="CDT Shruti Singh" class="profile-img">
+          <div class="cadet-name">CDT Shruti Singh</div>
+          <div class="cadet-role">AIML</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="CDT Astha Shetty" class="profile-img">
+          <div class="cadet-name">CDT Astha Shetty</div>
+          <div class="cadet-role">COMP C</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-6">
+        <div class="profile-card">
+          <img src="cadet.png" alt="CDT Ravishankar Kananki" class="profile-img">
+          <div class="cadet-name">CDT Ravishankar Kananki</div>
+          <div class="cadet-role">IT</div>
+        </div>
+      </div>
+    </div>
+
+      <h2 class="team-heading text-center mt-5 bg-heading-domain text-white text-center py-2 px-4 rounded">KOTE, Logistics, Resource Management and PR</h2>
+
+    <h4 class="mb-4 wing-heading-army">Army Wing</h4>
+    <div class="row g-4 row justify-content-center">
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="JUO Prerit Kumar" class="profile-img"><div class="cadet-name">JUO Prerit Kumar</div><div class="cadet-role">COMP B</div></div></div>
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="JUO Sanika Rajan" class="profile-img"><div class="cadet-name">JUO Sanika Rajan</div><div class="cadet-role">AIDS B</div></div></div>
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CSM Aatib Mujwar" class="profile-img"><div class="cadet-name">CSM Aatib Mujwar</div><div class="cadet-role">AIML A</div></div></div>
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Gautam Patil" class="profile-img"><div class="cadet-name">CDT Gautam Patil</div><div class="cadet-role">MME</div></div></div>
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Manasvi Sawant" class="profile-img"><div class="cadet-name">CDT Manasvi Sawant</div><div class="cadet-role">B.Voc</div></div></div>
+    </div>
+
+    <h4 class="mt-5 mb-4 wing-heading-navy">Navy Wing</h4>
+    <div class="row g-4 row justify-content-center">
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="PO Cdt Premraj Dhondphode" class="profile-img"><div class="cadet-name">PO Cdt Premraj Dhondphode</div><div class="cadet-role">COMP A</div></div></div>
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="Ldg Cdt Priti Yadav" class="profile-img"><div class="cadet-name">Ldg Cdt Priti Yadav</div><div class="cadet-role">E&TC B</div></div></div>
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Jaya Shukla" class="profile-img"><div class="cadet-name">CDT Jaya Shukla</div><div class="cadet-role">MME</div></div></div>
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Ritu Dubey" class="profile-img"><div class="cadet-name">CDT Ritu Dubey</div><div class="cadet-role">Mech</div></div></div>
+    </div>
+
+    <h2 class="team-heading text-center mt-5 bg-heading-domain">Domain: Ground - PT, Drill, Training, Outdoor Activities</h2>
+
+    <h4 class="mb-4 wing-heading-army">Army Wing</h4>
+    <div class="row g-4 row justify-content-center">
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="SUO Trisha Yadav" class="profile-img"><div class="cadet-name">SUO Trisha Yadav</div><div class="cadet-role">Comp C</div></div></div>
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="SGT Abhijeet Shelke" class="profile-img"><div class="cadet-name">SGT Abhijeet Shelke</div><div class="cadet-role">COMP C</div></div></div>
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="SGT Ayush Jaiswal" class="profile-img"><div class="cadet-name">SGT Ayush Jaiswal</div><div class="cadet-role">AIDS A</div></div></div>
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Falakkhatoon Shaikh" class="profile-img"><div class="cadet-name">CDT Falakkhatoon Shaikh</div><div class="cadet-role">E&CS A</div></div></div>
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Raunak Prajapati" class="profile-img"><div class="cadet-name">CDT Raunak Prajapati</div><div class="cadet-role">AIML A</div></div></div>
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Omkar Joshi" class="profile-img"><div class="cadet-name">CDT Omkar Joshi</div><div class="cadet-role">AIDS A</div></div></div>
+      <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Rahul Kumawat" class="profile-img"><div class="cadet-name">CDT Rahul Kumawat</div><div class="cadet-role">AIML C</div></div></div>
+    </div>
+
+    <h4 class="mt-5 mb-4 wing-heading-navy">Navy Wing</h4>
+        <div class="row g-4 row justify-content-center">
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="PO Cdt Abhishek Vishwakarma" class="profile-img"><div class="cadet-name">PO Cdt Abhishek Vishwakarma</div><div class="cadet-role">MME</div></div></div>
+        </div>
+
+        <div class="container my-5">
+    <h3 class="section-tab-heading bg-heading-domain">Creatives, Media, Publications, Marketing Team</h3>
+
+    <h5 class="wing-heading-army">Army Wing</h5>
+    <div class="row g-4 row justify-content-center">
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="SGT Purva Sawant" class="profile-img"><div class="cadet-name">SGT Purva Sawant</div><div class="cadet-role">AIDS B</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Abhishek Vishwakarma" class="profile-img"><div class="cadet-name">CDT Abhishek Vishwakarma</div><div class="cadet-role">AIML C</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Tanuja Vishe" class="profile-img"><div class="cadet-name">CDT Tanuja Vishe</div><div class="cadet-role">AIML C</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Kirish Mahto" class="profile-img"><div class="cadet-name">CDT Kirish Mahto</div><div class="cadet-role">AIDS B</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Ritu Dubey" class="profile-img"><div class="cadet-name">CDT Ritu Dubey</div><div class="cadet-role">Mech</div></div></div>
+    </div>
+
+    <h5 class="wing-heading-navy">Navy Wing</h5>
+    <div class="row g-4 row justify-content-center">
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="Ldg Cdt Ujjesha Tiwari" class="profile-img"><div class="cadet-name">Ldg Cdt Ujjesha Tiwari</div><div class="cadet-role">COMP C</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="PO Cdt Premraj Dhondphode" class="profile-img"><div class="cadet-name">PO Cdt Premraj Dhondphode</div><div class="cadet-role">COMP A</div></div></div>
+    </div>
+    </div>
+
+<div class="container py-5">
+  <h2 class="section-title mb-4 bg-heading-domain">Design & Development Team</h2>
+
+  <div class="row align-items-center">
+    <!-- Left Images: Tank Modelling -->
+    <div class="col-lg-4 mb-4 d-flex flex-column justify-content-center align-items-center gap-25">
+      <img src="tank.png" alt="Tank Modelling" class="img-fluid rounded shadow-lg object-fit-cover" style="height: 48%;">
+      <img src="tankteam.png" alt="Tank Modelling 2" class="img-fluid rounded shadow-lg object-fit-cover" style="height: 48%;">
+      <img src="tankteam.png" alt="Tank Modelling 2" class="img-fluid rounded shadow-lg object-fit-cover" style="height: 48%;">
+    </div>
+
+    <!-- Right Grid: Cadet Profiles -->
+    <div class="col-lg-8">
+      <h5 class="wing-heading-army mb-3"> Army Wing : Tank Modelling Arjun Mark II</h5>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="JUO Ashish Tiwari" class="profile-img"><div class="cadet-name">JUO Ashish Tiwari</div><div class="cadet-role">AIML A</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="JUO Prerit Kumar" class="profile-img"><div class="cadet-name">JUO Prerit Kumar</div><div class="cadet-role">COMP B</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CSM Aatib Mujawar" class="profile-img"><div class="cadet-name">CSM Aatib Mujawar</div><div class="cadet-role">MECH A</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CQMS Ashish Pal" class="profile-img"><div class="cadet-name">CQMS Ashish Pal</div><div class="cadet-role">AIML A</div></div></div>
+
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="SGT Abhijeet Shelke" class="profile-img"><div class="cadet-name">SGT Abhijeet Shelke</div><div class="cadet-role">COMP C</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="SGT Purva Sawant" class="profile-img"><div class="cadet-name">SGT Purva Sawant</div><div class="cadet-role">AIDS B</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Ashmeet Gupta" class="profile-img"><div class="cadet-name">CDT Ashmeet Gupta</div><div class="cadet-role">IT A</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Bhavesh Shukla" class="profile-img"><div class="cadet-name">CDT Bhavesh Shukla</div><div class="cadet-role">E&TC B</div></div></div>
+
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Gautam Patil" class="profile-img"><div class="cadet-name">CDT Gautam Patil</div><div class="cadet-role">MME A</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Ankesh Yadav" class="profile-img"><div class="cadet-name">CDT Ankesh Yadav</div><div class="cadet-role">AIML C</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Abhishek Vishwakarma" class="profile-img"><div class="cadet-name">CDT Abhishek Vishwakarma</div><div class="cadet-role">AIML C</div></div></div>
+        <div class="col-md-3 col-sm-6"><div class="profile-card"><img src="cadet.png" alt="CDT Harsh Rane" class="profile-img"><div class="cadet-name">CDT Harsh Rane</div><div class="cadet-role">AIDS B</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container py-5">
+  <h2 class="section-title mb-4">Naval Ship Modelling Team</h2>
+
+  <div class="row align-items-center">
+    <!-- Left Images -->
+    <div class="col-lg-4 mb-4 d-flex flex-column justify-content-center align-items-center gap-3">
+      <img src="ship.png" alt="Ship Modelling" class="img-fluid rounded shadow-lg object-fit-cover" style="height: 40%;">
+      <img src="shipteam.png" alt="Ship Modelling 2" class="img-fluid rounded shadow-lg object-fit-cover" style="height: 40%;">
+      <img src="ship.png" alt="Ship Modelling 2" class="img-fluid rounded shadow-lg object-fit-cover" style="height: 40%;">
+    </div>
+
+    <!-- Right Grid: Cadet Profiles -->
+    <div class="col-lg-8">
+      <h5 class="wing-heading-navy mb-3">Navy Wing</h5>
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-4 justify-content-center">
+          <div class="col"><div class="profile-card"><img src="cadet.png" alt="PO Cdt Abhishek Vishwakarma" class="profile-img"><div class="cadet-name">PO Cdt Abhishek Vishwakarma</div><div class="cadet-role">MME A</div></div></div>
+          <div class="col"><div class="profile-card"><img src="cadet.png" alt="PO Cdt Premraj Dhondphode" class="profile-img"><div class="cadet-name">PO Cdt Premraj Dhondphode</div><div class="cadet-role">COMP A</div></div></div>
+          <div class="col"><div class="profile-card"><img src="cadet.png" alt="Ldg CDT Ujjesha Tiwari" class="profile-img"><div class="cadet-name">Ldg CDT Ujjesha Tiwari</div><div class="cadet-role">COMP C</div></div></div>
+          <div class="col"><div class="profile-card"><img src="cadet.png" alt="Ldg Cdt Shruti Prajapati" class="profile-img"><div class="cadet-name">Ldg Cdt Shruti Prajapati</div><div class="cadet-role">CSE A</div></div></div>
+          
+          <div class="col"><div class="profile-card"><img src="cadet.png" alt="Ldg Cdt Priti Yadav" class="profile-img"><div class="cadet-name">Ldg Cdt Priti Yadav</div><div class="cadet-role">E&TC B</div></div></div>
+          <div class="col"><div class="profile-card"><img src="cadet.png" alt="CDT Rahul Patel" class="profile-img"><div class="cadet-name">CDT Rahul Patel</div><div class="cadet-role">CIVIL A</div></div></div>
+          <div class="col"><div class="profile-card"><img src="cadet.png" alt="CDT Prayag Patani" class="profile-img"><div class="cadet-name">CDT Prayag Patani</div><div class="cadet-role">E&TC</div></div></div>
+          <div class="col"><div class="profile-card"><img src="cadet.png" alt="CDT Viraj Jadhav" class="profile-img" ><div class="cadet-name">CDT Viraj Jadhav</div><div class="cadet-role">IT A</div></div></div>
+          
+          <div class="col"><div class="profile-card"><img src="cadet.png" alt="CDT Ritu Dubey" class="profile-img"><div class="cadet-name">CDT Ritu Dubey</div><div class="cadet-role">Mech</div></div></div>
+          <div class="col"><div class="profile-card"><img src="cadet.png" alt="CDT Janhvi Patil" class="profile-img"><div class="cadet-name">CDT Janhvi Patil</div><div class="cadet-role">Mech</div></div></div>
+          <div class="col"><div class="profile-card"><img src="cadet.png" alt="CDT Jaya Shukla" class="profile-img"><div class="cadet-name">CDT Jaya Shukla</div><div class="cadet-role">MME</div></div></div>
+          <div class="col"><div class="profile-card"><img src="cadet.png" alt="CDT Nimesh Kanojiya" class="profile-img"><div class="cadet-name">CDT Nimesh Kanojiya</div><div class="cadet-role">MME</div></div></div>
+
+        <div class="col"><div class="profile-card"><img src="cadet.png" alt="CDT Prakash Shukla" class="profile-img"><div class="cadet-name">CDT Prakash Shukla</div><div class="cadet-role">MME</div></div></div>
+        <div class="col"><div class="profile-card"><img src="cadet.png" alt="Cdt Kushal Mishra" class="profile-img"><div class="cadet-name">Cdt Kushal Mishra</div><div class="cadet-role">IT B</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  </section>
+
+
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
