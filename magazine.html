@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Warrior Magazine – TCET NCC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/magazine.css">
+</head>
+<body>
+  <!-- Header Section (from index.html) -->
+  <div class="container mt-5">
+    <div class="tab-box">
+      <img src="assets/img/Header.png" alt="NCC Header" class="header-logo">
+    </div>
+  </div>
+
+  <!-- Navbar (from index.html) -->
+  <nav class="navbar navbar-dark navbar-custom sticky-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <a class="navbar-brand d-flex align-items-center me-4" href="index.html">
+        <img src="assets/img/ncclogo.png" alt="NCC Logo" style="height: 60px; width: auto;" class="me-2">
+        <div class="d-flex flex-column lh-sm text-white">
+          <span class="fw-bold" style="font-size: 2.0rem;">TCET</span>
+          <span style="font-size: 1.2rem;">NCC UNIT</span>
+        </div>
+      </a>
+      <ul class="navbar-nav d-flex flex-row align-items-center ms-auto gap-2">
+        <li class="nav-item"><a class="nav-link" href="https://www.tcetmumbai.in">TCET Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">NCC Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="tcet_nccdomains.html">Our Teams</a></li>
+        <li class="nav-item"><a class="nav-link" href="camps.html">Training & Camps</a></li>
+        <li class="nav-item"><a class="nav-link" href="#achievers">Achievers</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown " href="#" role="button" data-bs-toggle="dropdown">Activities</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Puneet Sagar</a></li>
+            <li><a class="dropdown-item" href="#">Tree Plantation</a></li>
+            <li><a class="dropdown-item" href="#">Blood Donation</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#calendar">Calendar</a></li>
+        <li class="nav-item"><a class="nav-link" href="test2.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="magazine.html">Magazine</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="magazine-section">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h4>Our Edition Out</h4>
+      <div class="nav flex-column magazine-links" id="magazineTabs" role="tablist">
+        <a class="nav-link-sidebar" id="link1-tab" data-bs-toggle="tab" data-bs-target="#link1" href="#link1" role="tab" aria-controls="link1" aria-selected="false">Warrior – April 2025</a>
+        <a class="nav-link-sidebar" id="link2-tab" data-bs-toggle="tab" data-bs-target="#link2" href="#link2" role="tab" aria-controls="link2" aria-selected="false">Warrior – Oct 2024</a>
+        <a class="nav-link-sidebar active" id="link3-tab" data-bs-toggle="tab" data-bs-target="#link3" href="#link3" role="tab" aria-controls="link3" aria-selected="true">Warrior – April 2023</a>
+        <a class="nav-link-sidebar" id="link4-tab" data-bs-toggle="tab" data-bs-target="#link4" href="#link4" role="tab" aria-controls="link4" aria-selected="false">Warrior – Oct 2023</a>
+        <a class="nav-link-sidebar" id="link5-tab" data-bs-toggle="tab" data-bs-target="#link5" href="#link5" role="tab" aria-controls="link5" aria-selected="false">Warrior – April 2022</a>
+        <a class="nav-link-sidebar" id="link6-tab" data-bs-toggle="tab" data-bs-target="#link6" href="#link6" role="tab" aria-controls="link6" aria-selected="false">Coffee Table Book</a>
+      </div>
+    </div>
+    <!-- Magazine Content -->
+    <div class="magazine-content">
+      <h2 class="magazine-title">Warrior – TCET NCC Magazine</h2>
+      <!-- Only one embed container per tab, visually appealing -->
+      <div class="tab-content" id="magazineTabsContent">
+        <div class="tab-pane fade magazine-embed" id="link1" role="tabpanel" aria-labelledby="link1-tab">
+          <div class="magazine-desc">Coming soon: April 2025 edition will be available here.</div>
+          <iframe src="" title="Warrior – April 2025 Coming Soon"></iframe>
+        </div>
+        <div class="tab-pane fade magazine-embed" id="link2" role="tabpanel" aria-labelledby="link2-tab">
+          <div class="magazine-desc">Coming soon: October 2024 edition will be available here.</div>
+          <iframe src="" title="Warrior – Oct 2024 Coming Soon"></iframe>
+        </div>
+        <div class="tab-pane fade show active magazine-embed" id="link3" role="tabpanel" aria-labelledby="link3-tab">
+          <div class="magazine-desc">Warrior – April 2023: Flip through the magazine below.</div>
+          <iframe src="https://online.fliphtml5.com/dvkne/dhaj/#p=1" allowfullscreen></iframe>
+        </div>
+        <div class="tab-pane fade magazine-embed" id="link4" role="tabpanel" aria-labelledby="link4-tab">
+          <div class="magazine-desc">Warrior – Oct 2023: Flip through the magazine below.</div>
+          <iframe src="https://online.fliphtml5.com/dvkne/juri/" allowfullscreen></iframe>
+        </div>
+        <div class="tab-pane fade magazine-embed" id="link5" role="tabpanel" aria-labelledby="link5-tab">
+          <div class="magazine-desc">Warrior – April 2022: Flip through the magazine below.</div>
+          <iframe src="https://heyzine.com/flip-book/1e2383f07b.html" allowfullscreen></iframe>
+        </div>
+        <div class="tab-pane fade magazine-embed" id="link6" role="tabpanel" aria-labelledby="link6-tab">
+          <div class="magazine-desc">Coffee Table Book: Coming soon.</div>
+          <iframe src="" title="Coffee Table Book Coming Soon"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

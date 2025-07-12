@@ -16,289 +16,7 @@
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
   <!-- ===================== Custom Styles ===================== -->
-  <style>
-    /* Header Section Styling */
-    .tab-box {
-      padding: 2px;
-      text-align: center;
-    }
-    .header-logo {
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* Official Profile Section */
-    .card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: scale(1.03); /* Slight zoom */
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Elevation shadow */
-      z-index: 10;
-    }
-
-    /* Navbar Styles */
-    .navbar-custom {
-      background: linear-gradient(90deg, #8b0000, #1a1a2e);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-      padding: 10px 10px;
-      transition: all 0.3s ease-in-out;
-    }
-    .navbar-brand img {
-      height: 45px;
-      margin-right: 8px;
-      transition: transform 0.3s ease;
-    }
-    .navbar-brand:hover img {
-      transform: scale(1.1);
-    }
-    .nav-link {
-      color: #ffffff !important;
-      font-weight: 500;
-      position: relative;
-      padding: 0.5rem 1rem;
-      transition: all 0.3s ease;
-    }
-    .nav-link:hover {
-      color: #ffd700 !important;
-    }
-    .nav-link::after {
-      content: "";
-      width: 0;
-      height: 2px;
-      background: #9b9679;
-      position: relative;
-      bottom: 0;
-      left: 0;
-      transition: width 0.4s ease;
-    }
-    .nav-link:hover::after {
-      width: 100%;
-      display: none !important;
-    }
-    .nav-item.dropdown {
-      position: relative; /* Anchor for absolute dropdown */
-    }
-    .dropdown-menu {
-      position: relative;
-      top: 100%; /* Places it just below the trigger */
-      left: 0;
-      z-index: 1050;
-      margin-top: 10px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      border-radius: 8px;
-      min-width: 180px;
-      background-color: #1a1a2e;
-      border: none;
-    }
-    .dropdown-item {
-      color: #fff;
-      transition: background 0.3s ease;
-    }
-    .dropdown-item:hover {
-      background-color: #800000;
-      color: #fff;
-    }
-    @media (max-width: 992px) {
-      .navbar-nav {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        max-width: 100%;
-      }
-    }
-
-    /* Section image slideshow */
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      font-size: 18px;
-      text-align: justify;
-    }
-    .outer-wrapper {
-      width: 100%;
-      padding: 0 20px;
-    }
-    .gallery-section {
-      background-color: #f8f9fa;
-      padding: 20px 0;
-    }
-    .gallery-section h2 {
-      text-align: center;
-      font-weight: 700;
-      font-size: 2rem;
-      margin-bottom: 10px;
-      color: #800000;
-      text-transform: uppercase;
-    }
-    .gallery-section .intro-text {
-      text-align: center;
-      color: #333;
-      font-weight: 500;
-      font-size: 15px;
-      max-width: 900px;
-      margin: 0 auto 20px auto;
-    }
-    .carousel-item img {
-      width: 100%;
-      height: 600px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    .carousel-column {
-      margin-bottom: 20px;
-    }
-    .carousel-column h5 {
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: #004080;
-    }
-    @media (max-width: 768px) {
-      .carousel-item img {
-        height: 200px;
-      }
-    }
-
-    /* Modern Card Design for Features & Objectives */
-    .features-objectives-card {
-      background: linear-gradient(135deg, #f8fafc 60%, #e3e6ee 100%);
-      border-radius: 16px;
-      box-shadow: 0 4px 24px rgba(44,62,80,0.10);
-      padding: 2rem 1.5rem 1.5rem 1.5rem;
-      margin-bottom: 2rem;
-      transition: box-shadow 0.3s, transform 0.3s;
-      border: 1px solid #e0e0e0;
-    }
-    .features-objectives-card:hover {
-      box-shadow: 0 8px 32px rgba(44,62,80,0.18);
-      transform: translateY(-4px) scale(1.02);
-    }
-    .features-objectives-card h3 {
-      font-size: 1.7rem;
-      font-weight: 700;
-      color: #b30000;
-      margin-bottom: 1.2rem;
-      border-bottom: 2px solid #b30000;
-      display: inline-block;
-      padding-bottom: 0.3rem;
-    }
-    .features-list, .objectives-list {
-      list-style: none;
-      padding-left: 0;
-      margin-bottom: 0;
-    }
-    .features-list li, .objectives-list li {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(44,62,80,0.07);
-      margin-bottom: 1rem;
-      padding: 1rem 1.2rem;
-      display: flex;
-      align-items: center;
-      transition: box-shadow 0.2s, background 0.2s;
-    }
-    .features-list li:hover, .objectives-list li:hover {
-      background: #f8e6e6;
-      box-shadow: 0 4px 16px rgba(44,62,80,0.13);
-    }
-    .features-list i, .objectives-list i {
-      font-size: 1.7rem;
-      margin-right: 1rem;
-      flex-shrink: 0;
-    }
-    .features-list strong, .objectives-list strong {
-      color: #800000;
-      font-weight: 600;
-    }
-    .features-objectives-card p {
-      font-size: 1.1rem;
-      color: #333;
-      margin-bottom: 1.2rem;
-    }
-    .features-objectives-quote {
-      background: #f8fafc;
-      border-left: 4px solid #b30000;
-      padding: 1rem 1.5rem;
-      font-style: italic;
-      color: #555;
-      border-radius: 8px;
-      margin-top: 2rem;
-    }
-
-    /* About Us CSS */
-    .about-wrapper {
-      width: 95%;
-      margin: 30px auto;
-      padding: 30px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-      display: flex;
-      gap: 30px;
-      align-items: flex-start;
-    }
-    .about-text {
-      flex: 2;
-      text-align: justify;
-    }
-    .about-text h1 {
-      font-size: 45px;
-      font-weight: 700;
-      color: #b30000;
-      margin-bottom: 20px;
-    }
-    .about-text p,
-    .about-text li {
-      font-size: 20px;
-      color: #333;
-      line-height: 1.7;
-    }
-    .about-text ul {
-      padding-left: 20px;
-    }
-    .image-slider {
-      flex: 1;
-      position: relative;
-      height: 650px;
-      width: 100%;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
-      border: 0px solid #e0e0e0;
-      background: linear-gradient(135deg, #f8fafc 60%, #e3e6ee 100%);
-    }
-    .image-slider img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 0;
-      box-shadow: 0 2px 0px rgba(44, 62, 80, 0.10);
-    }
-    .image-slider img.active {
-      opacity: 1;
-      z-index: 1;
-      animation: fadeIn 1.2s;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @media (max-width: 768px) {
-      .about-wrapper {
-        flex-direction: column;
-      }
-      .image-slider {
-        height: 400px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="src/index.css">
 </head>
 
 <body>
@@ -306,7 +24,7 @@
   <!-- Header Section -->
   <div class="container mt-5">
     <div class="tab-box">
-      <img src="Header.png" alt="NCC Header" class="header-logo">
+      <img src="assets/img/Header.png" alt="NCC Header" class="header-logo">
     </div>
   </div>
 
@@ -321,7 +39,7 @@
 
      <!-- Logo + Text aligned left -->
     <a class="navbar-brand d-flex align-items-center me-4" href="index.html">
-      <img src="ncclogo.png" alt="NCC Logo" style="height: 60px; width: auto;" class="me-2">
+      <img src="assets/img/ncclogo.png" alt="NCC Logo" style="height: 60px; width: auto;" class="me-2">
       <div class="d-flex flex-column lh-sm text-white">
         <span class="fw-bold" style="font-size: 2.0rem;">TCET</span>
         <span style="font-size: 1.2rem;">NCC UNIT</span>
@@ -342,9 +60,9 @@
           <li><a class="dropdown-item" href="#">Blood Donation</a></li>
         </ul>
       </li>
-      <li class="nav-item"><a class="nav-link" href="#calendar">Calendar</a></li>
+      <li class="nav-item"><a class="nav-link" href="activities.html">Calendar</a></li>
       <li class="nav-item"><a class="nav-link" href="test2.html">Gallery</a></li>
-      <li class="nav-item"><a class="nav-link" href="#magazine">Magazine</a></li>
+      <li class="nav-item"><a class="nav-link" href="magazine.html">Magazine</a></li>
       <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
     </ul>
   </div>
@@ -378,22 +96,22 @@
           <div id="carouselOne" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="heroevent1.jpg" class="d-block w-100" alt="Defence 1">
+                <img src="assets/img/heroevent1.jpg" class="d-block w-100" alt="Defence 1">
               </div>
               <div class="carousel-item">
-                <img src="heroevent2.jpg" class="d-block w-100" alt="Defence 2">
+                <img src="assets/img/heroevent2.jpg" class="d-block w-100" alt="Defence 2">
               </div>
               <div class="carousel-item">
-                <img src="heroevent3.jpg" class="d-block w-100" alt="Defence 3">
+                <img src="assets/img/heroevent3.jpg" class="d-block w-100" alt="Defence 3">
               </div>
               <div class="carousel-item active">
-                <img src="heroevent4.jpg" class="d-block w-100" alt="Defence 1">
+                <img src="assets/img/heroevent4.jpg" class="d-block w-100" alt="Defence 1">
               </div>
               <div class="carousel-item">
                 <img src="heroeven3.jpg" class="d-block w-100" alt="Defence 2">
               </div>
               <div class="carousel-item">
-                <img src="heroevent5.jpg" class="d-block w-100" alt="Defence 3">
+                <img src="assets/img/heroevent5.jpg" class="d-block w-100" alt="Defence 3">
               </div>
             </div>
           </div>
@@ -458,9 +176,9 @@
 
   <!-- Right Rotating Image Section -->
   <div class="image-slider">
-    <img src="ncclogo.png" alt="NCC Logo" class="active">
-    <img src="priyankamiss1.png" alt="Cadets Training">
-    <img src="ncclogo.png" alt="NCC Logo" >
+    <img src="assets/img/ncclogo.png" alt="NCC Logo" class="active">
+    <img src="assets/img/priyankamiss1.png" alt="Cadets Training">
+    <img src="assets/img/ncclogo.png" alt="NCC Logo" >
     <img src="https://picsum.photos/500/650?random=102" alt="Unity March">
   </div>
 </div>
@@ -565,7 +283,7 @@
       <!-- Officer 1 -->
       <div class="col-md-4">
         <div class="card h-100 text-center shadow border-0">
-          <img src="cdr.png" class="card-img-top rounded-top" alt="Cdr. Vijay Pratap Singh">
+          <img src="assets/img/cdr.png" class="card-img-top rounded-top" alt="Cdr. Vijay Pratap Singh">
           <div class="card-body">
             <h5 class="card-title mb-0 fw-semibold">Cdr. Vijay Pratap Singh</h5>
             <p><b>Officer In-Charge</b></p>
@@ -577,7 +295,7 @@
       <!-- Officer 2 -->
       <div class="col-md-4">
         <div class="card h-100 text-center shadow border-0">
-          <img src="ano.png" class="card-img-top rounded-top" alt="Lt. Dr. Nivant Kamabale">
+          <img src="assets/img/ano.png" class="card-img-top rounded-top" alt="Lt. Dr. Nivant Kamabale">
           <div class="card-body">
             <h5 class="card-title mb-0 fw-semibold">Lt. Dr. Nivant Kamabale</h5>
             <p ><b>Associate NCC Officer</b></p>
@@ -589,7 +307,7 @@
       <!-- Officer 3 -->
       <div class="col-md-4">
         <div class="card h-100 text-center shadow border-0">
-          <img src="cto.png" class="card-img-top rounded-top" alt="Mr. Sunil Khatri">
+          <img src="assets/img/cto.png" class="card-img-top rounded-top" alt="Mr. Sunil Khatri">
           <div class="card-body">
             <h5 class="card-title mb-0 fw-semibold">Mr. Sunil Khatri</h5>
             <p><b>Care Taker Officer (Navy Wing)</b></p>
