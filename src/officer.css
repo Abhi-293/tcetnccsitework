@@ -1,0 +1,146 @@
+/* ===================== TCET NCC - officer.css ===================== */
+/* Navbar Styles for Officer Profile Pages */
+.navbar-custom {
+  background: linear-gradient(90deg, #8b0000, #1a1a2e);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  padding: 10px 10px;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-brand img {
+  height: 60px;
+  width: auto;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+.navbar-brand:hover img {
+  transform: scale(1.1);
+}
+.navbar-brand .fw-bold {
+  font-size: 2.0rem;
+}
+.navbar-brand .lh-sm {
+  line-height: 1.1;
+}
+.nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  color: #ffd700 !important;
+}
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #9b9679;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  transition: width 0.4s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+  display: none !important;
+}
+.nav-item.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: relative;
+  top: 100%;
+  left: 0;
+  z-index: 1050;
+  margin-top: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  min-width: 180px;
+  background-color: #1a1a2e;
+  border: none;
+}
+.dropdown-item {
+  color: #fff;
+  transition: background 0.3s ease;
+}
+.dropdown-item:hover {
+  background-color: #800000;
+  color: #fff;
+}
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+}
+/* Officer Profile Page General Styles */
+body {
+  font-family: 'Segoe UI', 'Poppins', sans-serif;
+  background-color: #f4f4f4;
+  color: #2d2d2d;
+}
+.profile-header {
+  background-color: #6c757d;
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+.profile-photo {
+  max-width: 420px;
+  width: 100%;
+  min-height: 340px;
+  border-radius: 18px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.18);
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Vertically center the image in the left column */
+@media (min-width: 992px) {
+  .officer-main-container .row.align-items-center {
+    align-items: center !important;
+    min-height: 600px;
+  }
+}
+
+/* Wider main content for officer profile pages */
+.officer-main-container {
+  max-width: 80vw;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #060f18;
+  border-bottom: 3px solid #6c757d;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+.highlight {
+  color: #6c757d;
+  font-weight: 700;
+}
+.badge-rank {
+  background-color: white;
+  color: #01080e;
+  padding: 0.4rem 0.9rem;
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+.info-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
