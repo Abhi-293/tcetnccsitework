@@ -2,145 +2,125 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>TCET NCC – About Us</title>
+  <title>TCET NCC – Activities Overview</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    /* About Us CSS */
     body {
       font-family: 'Poppins', sans-serif;
-      font-size: 12px;
-      margin: 0;
-      padding: 0;
-      background-color: #fdfdfd;
+      background-color: #f9f9f9;
+      padding: 30px 0;
     }
 
-    .about-wrapper {
+    .activities-section {
       width: 95%;
-      margin: 30px auto;
-      padding: 30px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-      border-radius: 12px;
-      display: flex;
-      gap: 30px;
-      align-items: flex-start;
+      margin: auto;
     }
 
-    .about-text {
-      flex: 2;
-      text-align: justify;
-    }
-
-    .about-text h1 {
-      font-size: 45px;
+    .activities-section h2 {
+      text-align: center;
       font-weight: 700;
+      color: #800000;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    .activity-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .activity-card {
+      background-color: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+    }
+
+    .activity-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    .activity-icon {
+      font-size: 40px;
       color: #b30000;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
 
-    .about-text p,
-    .about-text li {
-      font-size: 20px;
-      color: #333;
-      line-height: 1.7;
+    .activity-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #003366;
     }
 
-    .about-text ul {
-      padding-left: 20px;
-    }
-
-    .image-slider {
-      flex: 1;
-      position: relative;
-      height: 650px;
-      width: 100%;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
-      border: 0px solid #e0e0e0;
-      background: linear-gradient(135deg, #f8fafc 60%, #e3e6ee 100%);
-    }
-
-    .image-slider img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-      z-index: 0;
-      box-shadow: 0 2px 0px rgba(44, 62, 80, 0.10);
-    }
-
-    .image-slider img.active {
-      opacity: 1;
-      z-index: 1;
-      animation: fadeIn 1.2s;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @media (max-width: 768px) {
-      .about-wrapper {
-        flex-direction: column;
-      }
-
-      .image-slider {
-        height: 400px;
-      }
+    .activity-description {
+      font-size: 0.95rem;
+      color: #555;
     }
   </style>
 </head>
 <body>
 
-<div class="about-wrapper">
-  <!-- Left Text Section -->
-  <div class="about-text">
-    <h1>National Cadet Corps (NCC)</h1>
-    <p>
-      The National Cadet Corps (NCC) is the youth wing of the Indian Armed Forces, headquartered in New Delhi. It is a voluntary organization open to school and college students across India, operating as a Tri-Services organization that includes the Army, Navy, and Air Force wings.
-    </p>
-    <p>
-      The NCC recruits cadets from educational institutions nationwide, providing them with basic military training in small arms, physical fitness and parade drills. Beyond military training, the NCC emphasizes personality development, social responsibility, and community service.
-    </p>
-    <p><strong>Motto:</strong> “Unity and Discipline (एकता और अनुशासन)” – Adopted on 23rd December 1957, it reflects the aim to unite youth from across the country and instill a sense of discipline and national integration.</p>
-    <p>
-      The <strong>TCET-NCC Unit</strong> was established with a sanctioned strength of <strong>104 Army Wing Cadets</strong> on <strong>14th October 2021</strong> and <strong>50 Naval Wing Cadets</strong> on <strong>27th October 2023</strong>. The unit conducts regular training and activities under the able guidance of:
-    </p>
-    <ul>
-      <li><strong>Cdr. Vijay Pratap Singh</strong> – Mentor & Officer In-charge</li>
-      <li><strong>Lt. (Dr.) Nivant Kambale</strong> – Associate NCC Officer, Army Wing</li>
-      <li><strong>Mr. Sunil Khatri</strong> – Care Taker Officer, Navy Wing</li>
-    </ul>
-    <p>
-      The TCET NCC Unit is committed to shaping disciplined, service-minded and nationally integrated youth in line with the NCC's guiding principles.
-    </p>
-  </div>
+<div class="activities-section">
+  <h2>Activities Overview</h2>
+  <div class="activity-grid">
+    <a href="activities.html#defence" class="text-decoration-none">
+      <div class="activity-card">
+        <div class="activity-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="activity-title">Defence & Armed Forces Exposure</div>
+        <div class="activity-description">
+          Army Day, Navy Day Celebration, Shastra Pooja, CATC Camps
+        </div>
+      </div>
+    </a>
 
-  <!-- Right Rotating Image Section -->
-  <div class="image-slider">
-    <img src="ncclogo.png" alt="NCC Logo" class="active">
-    <img src="priyankamiss1.png" alt="Cadets Training">
-    <img src="ncclogo.png" alt="NCC Logo" >
-    <img src="https://picsum.photos/500/650?random=102" alt="Unity March">
+    <a href="activities.html#training" class="text-decoration-none">
+      <div class="activity-card">
+        <div class="activity-icon"><i class="fas fa-dumbbell"></i></div>
+        <div class="activity-title">Training & Sports Activities</div>
+        <div class="activity-description">
+          Physical Training, Patriotic Run, Soujourn 2025
+        </div>
+      </div>
+    </a>
+
+    <a href="activities.html#lectures" class="text-decoration-none">
+      <div class="activity-card">
+        <div class="activity-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+        <div class="activity-title">Lectures & Career Development</div>
+        <div class="activity-description">
+          SSB Training, NCC Lectures, Eligibility Talks
+        </div>
+      </div>
+    </a>
+
+    <a href="activities.html#initiatives" class="text-decoration-none">
+      <div class="activity-card">
+        <div class="activity-icon"><i class="fas fa-hand-holding-heart"></i></div>
+        <div class="activity-title">Social Initiatives</div>
+        <div class="activity-description">
+          Tree Plantation, Swachhta Abhiyan, Eco Cyclothon
+        </div>
+      </div>
+    </a>
+
+    <a href="activities.html#achievements" class="text-decoration-none">
+      <div class="activity-card">
+        <div class="activity-icon"><i class="fas fa-medal"></i></div>
+        <div class="activity-title">Achievements</div>
+        <div class="activity-description">
+          Cadet selections, Certificates of Excellence, 2024–25
+        </div>
+      </div>
+    </a>
   </div>
 </div>
-
-<script>
-  const images = document.querySelectorAll('.image-slider img');
-  let current = 0;
-
-  setInterval(() => {
-    images[current].classList.remove('active');
-    current = (current + 1) % images.length;
-    images[current].classList.add('active');
-  }, 5000);
-</script>
 
 </body>
 </html>
