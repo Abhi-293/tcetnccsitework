@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - TCET NCC</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/index.css">
+  <link rel="stylesheet" href="src/tcet_nccdomains.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .contact-section {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .officer-img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+    .officer-img-square {
+      border-radius: 18px;
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      background: #e9e9e9;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    }
+    .officer-box {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .contact-icon {
+      font-size: 1.5rem;
+      margin-right: 8px;
+      color: #003366;
+    }
+    .contact-info-title {
+      font-weight: 600;
+      color: #003366;
+      font-size: 1.2rem;
+    }
+    .contact-info-link {
+      color: #003366;
+      text-decoration: underline;
+    }
+    iframe {
+      border-radius: 10px;
+      border: 0;
+    }
+    /* Contact grid pop-up effect and light color background */
+    .contact-card {
+      background: #f6f8fc;
+      transition: box-shadow 0.3s, transform 0.3s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border-radius: 16px;
+    }
+    .contact-card:hover {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.13);
+      transform: translateY(-6px) scale(1.03);
+      z-index: 2;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Header Section (full-width, matches index.html) -->
+<div class="container-fluid p-0">
+  <div class="tab-box">
+    <img src="assets/img/Header.png" alt="NCC Header" class="header-logo">
+  </div>
+</div>
+
+<!-- Navbar (copied from index.html) -->
+<nav class="navbar navbar-dark navbar-custom sticky-top">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    <!-- Logo + Text aligned left -->
+    <a class="navbar-brand d-flex align-items-center me-4" href="index.html">
+      <img src="assets/img/ncclogo.png" alt="NCC Logo" style="height: 60px; width: auto;" class="me-2">
+      <div class="d-flex flex-column lh-sm text-white">
+        <span class="fw-bold" style="font-size: 2.0rem;">TCET</span>
+        <span style="font-size: 1.2rem;">NCC UNIT</span>
+      </div>
+    </a>
+    <!-- Navigation Items Right-Aligned -->
+    <ul class="navbar-nav d-flex flex-row align-items-center ms-auto gap-2">
+      <li class="nav-item"><a class="nav-link" href="https://www.tcetmumbai.in">TCET Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html">NCC Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="tcet_nccdomains.html">Our Teams</a></li>
+      <li class="nav-item"><a class="nav-link" href="camps.html">Training & Camps</a></li>
+      <li class="nav-item"><a class="nav-link" href="#achievers">Achievers</a></li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown " href="#" role="button" data-bs-toggle="dropdown">Activities</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Puneet Sagar</a></li>
+          <li><a class="dropdown-item" href="#">Tree Plantation</a></li>
+          <li><a class="dropdown-item" href="#">Blood Donation</a></li>
+        </ul>
+      </li>
+      <li class="nav-item"><a class="nav-link" href="activities.html">Calendar</a></li>
+      <li class="nav-item"><a class="nav-link" href="test2.html">Gallery</a></li>
+      <li class="nav-item"><a class="nav-link" href="magazine.html">Magazine</a></li>
+      <li class="nav-item"><a class="nav-link" href="#contact">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Contact & Query Section - Full Width Modern Design -->
+<!--
+  Main Contact Section Layout:
+  - Uses Bootstrap grid for three columns:
+    1. Query Form (left)
+    2. Official Contact (center)
+    3. Address & Map (right)
+  - Each grid has a card with shadow, light background, and pop-up effect on hover.
+  - Ready for reuse on home page before footer.
+-->
+<div class="container-fluid bg-white py-5" style="box-shadow: 0 4px 24px rgba(0,0,0,0.07);">
+  <div class="row justify-content-center align-items-stretch g-0">
+    <!-- Query Form Grid -->
+    <div class="col-lg-4 col-md-6 d-flex flex-column justify-content-center align-items-center px-4 border-end">
+      <div class="contact-card w-100" style="max-width: 400px;">
+        <h4 class="mb-4 text-center contact-info-title">Send Us a Query</h4>
+        <form id="queryForm" autocomplete="off" class="mb-4">
+          <div class="row mb-3">
+            <div class="col-6 mb-3 mb-md-0">
+              <input type="text" class="form-control rounded-3" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-6">
+              <input type="email" class="form-control rounded-3" name="email" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <input type="text" class="form-control rounded-3" name="subject" placeholder="Subject" required>
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control rounded-3" name="message" rows="4" placeholder="Message" required></textarea>
+          </div>
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary rounded-3">Send Message</button>
+          </div>
+        </form>
+        <div class="mb-3">
+          <span class="contact-info-title">Office Telephone:</span> <span class="contact-info-link">+91 22 2846 5000</span>
+        </div>
+        <div class="mb-3">
+          <span class="contact-info-title">Email:</span> <a href="mailto:tcetncc@gmail.com" class="contact-info-link">tcetncc@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <!-- Official Contact Grid -->
+    <div class="col-lg-4 col-md-6 px-4 d-flex flex-column justify-content-center">
+      <div class="contact-card card shadow-sm border-0 mb-4">
+        <div class="card-body">
+          <h4 class="mb-4 text-danger fw-bold text-center">Contact Our Official</h4>
+          <div class="officer-box mb-3">
+            <img src="assets/img/cdr.png" alt="Cdr. Vijay Pratap Singh" class="officer-img officer-img-square">
+            <div>
+              <span class="fw-bold text-primary">Cdr. Vijay Pratap Singh</span><br>
+              <span class="small">Officer-in-Charge, NCC TCET</span><br>
+              <span class="text-danger"><i class="bi bi-telephone-fill"></i> +91 98765 43210</span>
+            </div>
+          </div>
+          <div class="officer-box mb-3">
+            <img src="assets/img/ano.png" alt="Lt. Dr. Nivant Kambale" class="officer-img officer-img-square">
+            <div>
+              <span class="fw-bold text-primary">Lt. Dr. Nivant Kambale</span><br>
+              <span class="small">Associate NCC Officer, Army Wing</span><br>
+              <span class="text-danger"><i class="bi bi-telephone-fill"></i> +91 91234 56789</span>
+            </div>
+          </div>
+          <div class="officer-box mb-3">
+            <img src="assets/img/cto.png" alt="CTO Priyanka Singh" class="officer-img officer-img-square">
+            <div>
+              <span class="fw-bold text-primary">CTO Priyanka Singh</span><br>
+              <span class="small">CTO, Navy Wing</span><br>
+              <span class="text-danger"><i class="bi bi-telephone-fill"></i> +91 99876 54321</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Address & Map Grid -->
+    <div class="col-lg-4 col-md-12 px-4 d-flex flex-column justify-content-center">
+      <div class="contact-card card shadow-sm border-0 mb-4">
+        <div class="card-body">
+          <h4 class="mb-3 contact-info-title">Address</h4>
+          <div class="mb-3">
+            611, NCC Office, TCET,<br>
+            A-Block, Thakur Educational Campus, Shyamnarayan Thakur Marg,<br>
+            Kandivali East, Mumbai, Maharashtra 400101
+          </div>
+          <div class="rounded shadow-sm overflow-hidden" style="min-height:180px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.3959563279826!2d72.85902457470191!3d19.134607650449612!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b62b6a4e58ff%3A0x15dbcbff6b9932c!2sThakur%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1720853236462!5m2!1sen!2sin" width="100%" height="180" allowfullscreen="" loading="lazy" style="border:0;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// Query form handler (ready for future DB connection)
+document.getElementById('queryForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  // Collect form data
+  const formData = {
+    name: this.name.value,
+    email: this.email.value,
+    subject: this.subject.value,
+    message: this.message.value
+  };
+  // Placeholder: Show success message
+  alert('Thank you for your query, ' + formData.name + '! We will connect soon.');
+  this.reset();
+  // Future: Send formData to backend/database
+});
+</script>
+</body>
+</html>
