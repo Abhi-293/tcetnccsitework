@@ -1,373 +1,369 @@
-body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background-color: #f7f9fc;
-      color: #1c1c1c;
-    }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TCET NCC | Past Camps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.camp-header {
-  background: linear-gradient(to right, #012a4a, #468faf);
-  padding: 10px 20px;
-  margin-left: 10px 0;
-  margin-right: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-  border-left: 8px solid  #468faf;
-   margin-top: 50px;
-  margin-bottom: 30px;
-}
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-.camp-titl {
-  font-size: 2.5rem;
-  color: #ffffff;
-  font-weight: bold;
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  letter-spacing: 1px;
-}
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="camps.css">
+</head>
+<body>
+
+  <aside class="camp-sidebar">
+  <div class="sidebar-header">
+
+  <ul class="sidebar-menu">
+    <li><span> Training</span><br>
+      <ul class="submenu">
+        <li><a href="#physical"><i class="fas fa-dumbbell"></i> Physical Training</a></li><br>
+        <li><a href="#lecture"><i class="fas fa-chalkboard-teacher"></i> Lecture Training</a></li><br>
+        <li><a href="#ssb"><i class="fas fa-user-tie"></i> SSB Lectures</a></li><br>
+        <li><a href="#officer"><i class="fas fa-user-shield"></i> Officers Lectures</a></li><br>
+      </ul>
+    </li>
+
+    <li><span> Camps</span><br>
+      <ul class="submenu">
+        <li><a href="#yep"><i class="fas fa-globe-asia"></i> Youth Exchange Program</a></li><br>
+         <li><a href="#rdc"><i class="fas fa-flag"></i> Republic Day Camp</a></li><br>
+          <li><a href="#adc"><i class="fas fa-shield-alt"></i> Army Day Camp</a></li><br>
+          <li><a href="#nsc"><i class="fas fa-trophy"></i> Nau Sainik Camp</a></li><br>
+          <li><a href="#catcA"><i class="fas fa-campground"></i> CATC-Army</a></li><br>       
+        <li><a href="#catcN"><i class="fas fa-user-friends"></i> CATC-Navy</a></li><br>       
+      </ul>
+    </li>
+  </ul>
+</aside>
+
+<div class = "main-content">
+  <div class="topbar">
+    <h1><i class="fas fa-campground"></i> TRAINING AND CAMPS</h1>
+  </div>
+  <div class="hero-banner">
+    <h2>Explore the Legacy of Our Camps</h2>
+    <p>Moments of discipline, valor & camaraderie – captured through time.</p>
+  </div>
+
+   <div class="row">
+      <div class="camp-header">
+  <h2 class="camp-titl">TRAINING</h2>
+</div>
+
+<div class="training-wrapper">
+  <!-- Vertical Line -->
+  <div class="vertical-line"></div>
+  <!-- Horizontal Line -->
+  <div class="horizontal-line"></div>
+
+<div class="training-grid">
+  <!-- Card 1 -->
+  <div id="physical" class="training-card">
+    <h3>Physical Training</h3>
+    <p>Drill practice, parade techniques, obstacle training, and physical fitness development sessions.</p>
+    <div class="slideshow-container">
+      <img src="images/pt1.jpg" class="slide active">
+      <img src="images/pt2.jpg" class="slide">
+      <img src="images/pt3.jpg" class="slide">
+    </div>
+  </div>
+
+  <!-- Card 2 -->
+  <div id="Lecture" class="training-card">
+    <h3>Lecture Training</h3>
+    <p>Focused sessions on discipline, national values, and current affairs by senior cadets and officers.</p>
+    <div class="slideshow-container">
+      <img src="images/lecture1.jpg" class="slide active">
+      <img src="images/lecture2.jpg" class="slide">
+    </div>
+  </div>
+
+  <!-- Card 3 -->
+  <div id="ssb" class="training-card">
+    <h3>SSB Lectures</h3>
+    <p>Preparation for Services Selection Board with mock interviews, psychological tests, and GTO tasks.</p>
+    <div class="slideshow-container">
+      <img src="images/ssb1.jpg" class="slide active">
+      <img src="images/ssb2.jpg" class="slide">
+    </div>
+  </div>
+
+  <!-- Card 4 -->
+  <div id="officer" class="training-card">
+    <h3>Officers Lectures</h3>
+    <p>Insightful lectures by Army/Navy Officers on career, discipline, leadership and real-life experiences.</p>
+    <div class="slideshow-container">
+      <img src="images/officer1.jpg" class="slide active">
+      <img src="images/officer2.jpg" class="slide">
+    </div>
+  </div>
+</div>
+</div>
 
 
-      /* Navbar/Header */
-    .topbar {
-      background: linear-gradient(to right, #781c1c, #000000);
-      color: white;
-      padding: 15px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    }
+    <div class="row">
+      <div class="camp-header">
+  <h2 class="camp-titl">CAMP</h2>
+</div>
 
-    .topbar h1 {
-      font-size: 24px;
-      margin: 0;
-      font-weight: 700;
-      letter-spacing: 1px;
-    }
-
-    /* Hero Banner */
-    .hero-banner {
-      background-image: url('your-camp-image.jpg'); /* Replace with actual */
-      background-size: cover;
-      background-position: center;
-      color: white;
-      text-align: center;
-      padding: 80px 20px;
-      position: relative;
+  <section class="training-camp-headings">
+  <section class="camp-section">
     
-    }
+  <div class="container-fluid"></div>
 
-    .hero-banner::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
-      z-index: 1;
-    }
+  <div  id="yep" class="catc-army-header">Youth Exchange Program</div>
+        <div class="catc-slider-section">
+  <div class="catc-arrow left" onclick="slideCATC(-1)">&#10094;</div>
+  <div class="catc-arrow right" onclick="slideCATC(1)">&#10095;</div>
 
-    .hero-banner h2 {
-      font-size: 48px;
-      font-weight: 700;
-      z-index: 2;
-      position: relative;
-    }
+  <div class="catc-slider-container" id="catcSlider">
+    <!-- Card 1 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc1.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 1</h4>
+        <p>Description text for CATC 1. Highlights of training activities, discipline, and cadet experiences.</p>
+      </div>
+    </div>
 
-    .hero-banner p {
-      font-size: 18px;
-      margin-top: 10px;
-      z-index: 2;
-      position: relative;
-    }
+    <!-- Card 2 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc2.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 2</h4>
+        <p>Description for CATC 2. Include drills, sessions, and cadet involvement.</p>
+      </div>
+    </div>
 
-    /* Section */
+    <!-- Card 3 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc3.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 3</h4>
+        <p>Include cadet reflections, photos, and cultural programs at CATC 3.</p>
+      </div>
+    </div> 
+    </div> 
+    </div>
 
-    .catc-slider-section {
-  position: relative;
-  margin: 1px;
-  overflow: hidden;
-  background: #f9f9f9;
-}
+       <div  id="rdc" class="catc-army-header">Republic Day Camp</div>
+        <div class="catc-slider-section">
+  <div class="catc-arrow left" onclick="slideCATC(-1)">&#10094;</div>
+  <div class="catc-arrow right" onclick="slideCATC(1)">&#10095;</div>
 
-.catc-slider-container {
-  display: flex;
-  gap: 30px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 50ppx;
-  scroll-snap-type: x mandatory;
-}
+  <div class="catc-slider-container" id="catcSlider">
+    <!-- Card 1 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc1.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 1</h4>
+        <p>Description text for CATC 1. Highlights of training activities, discipline, and cadet experiences.</p>
+      </div>
+    </div>
 
-.catc-slider-container::-webkit-scrollbar {
-  display: none; /* Hide scrollbar */
-}
+    <!-- Card 2 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc2.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 2</h4>
+        <p>Description for CATC 2. Include drills, sessions, and cadet involvement.</p>
+      </div>
+    </div>
 
-.catc-slider-card {
-  flex: 0 0 auto;
-  width: 710px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  scroll-snap-align: start;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
+    <!-- Card 3 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc3.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 3</h4>
+        <p>Include cadet reflections, photos, and cultural programs at CATC 3.</p>
+      </div>
+    </div> 
+    </div> 
+    </div> 
+        <div id="adc" class="catc-army-header">Army Day Camp</div>
+        <div class="catc-slider-section">
+  <div class="catc-arrow left" onclick="slideCATC(-1)">&#10094;</div>
+  <div class="catc-arrow right" onclick="slideCATC(1)">&#10095;</div>
 
-.catc-slider-card:hover {
-  transform: scale(1.02);
-}
+  <div class="catc-slider-container" id="catcSlider">
+    <!-- Card 1 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc1.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 1</h4>
+        <p>Description text for CATC 1. Highlights of training activities, discipline, and cadet experiences.</p>
+      </div>
+    </div>
 
-.catc-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 2.2rem;
-  color: #012a4a;
-  background-color: white;
-  border-radius: 50%;
-  padding: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  cursor: pointer;
-  z-index: 1;
-  user-select: none;
-}
+    <!-- Card 2 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc2.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 2</h4>
+        <p>Description for CATC 2. Include drills, sessions, and cadet involvement.</p>
+      </div>
+    </div>
 
-.catc-arrow.left {
-  left: 10px;
-}
+    <!-- Card 3 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc3.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 3</h4>
+        <p>Include cadet reflections, photos, and cultural programs at CATC 3.</p>
+      </div>
+    </div> 
+    </div> 
+    </div> 
+        <div id="nsc" class="catc-army-header">Nau Sainik Camp</div>
+        <div class="catc-slider-section">
+  <div class="catc-arrow left" onclick="slideCATC(-1)">&#10094;</div>
+  <div class="catc-arrow right" onclick="slideCATC(1)">&#10095;</div>
 
-.catc-arrow.right {
-  right: 10px;
-}
-    .camp-section {
-      max-width: 100%;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
+  <div class="catc-slider-container" id="catcSlider">
+    <!-- Card 1 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc1.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 1</h4>
+        <p>Description text for CATC 1. Highlights of training activities, discipline, and cadet experiences.</p>
+      </div>
+    </div>
 
-    .catc-army-header {
-  background-color: #012a4a; /* Dark Blue */
-  color: white;
-  text-align: center;
-  padding: 1px 2px;
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+    <!-- Card 2 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc2.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 2</h4>
+        <p>Description for CATC 2. Include drills, sessions, and cadet involvement.</p>
+      </div>
+    </div>
 
-.catc-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
-}
+    <!-- Card 3 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc3.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 3</h4>
+        <p>Include cadet reflections, photos, and cultural programs at CATC 3.</p>
+      </div>
+    </div> 
+    </div> 
+    </div> 
 
-.catc-card-img {
-  height: 230px;
-  background-color: #dfe7f2;
-  background-size: cover;
-  background-position: center;
-}
+        <div id="catcN" class="catc-army-header">CATC – NAVY</div>
+     <div class="catc-slider-section">
+  <div class="catc-arrow left" onclick="slideCATC(-1)">&#10094;</div>
+  <div class="catc-arrow right" onclick="slideCATC(1)">&#10095;</div>
 
-.catc-card-content {
-  padding: 20px;
-}
+  <div class="catc-slider-container" id="catcSlider">
+    <!-- Card 1 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc1.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 1</h4>
+        <p>Description text for CATC 1. Highlights of training activities, discipline, and cadet experiences.</p>
+      </div>
+    </div>
 
-.catc-card h4 {
-  font-size: 1.3rem;
-  color: #002147;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
+    <!-- Card 2 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc2.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 2</h4>
+        <p>Description for CATC 2. Include drills, sessions, and cadet involvement.</p>
+      </div>
+    </div>
 
-.catc-card p {
-  font-size: 0.95rem;
-  color: #444;
-  line-height: 1.5;
-}
-    /* Footer */
-    .footer {
-      text-align: center;
-      background: #111;
-      color: #aaa;
-      padding: 20px;
-      font-size: 14px;
-    }
+    <!-- Card 3 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc3.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 3</h4>
+        <p>Include cadet reflections, photos, and cultural programs at CATC 3.</p>
+      </div>
+    </div> 
+    </div> 
+    </div> 
+    
+    
+    <div id="catcA" class="catc-army-header">CATC – ARMY</div>
 
-    @media (max-width: 768px) {
-      .hero-banner h2 {
-        font-size: 32px;
-      }
-      .camp-card {
-        flex-direction: column;
-      }
-    }
+<div class="catc-slider-section">
+  <div class="catc-arrow left" onclick="slideCATC(-1)">&#10094;</div>
+  <div class="catc-arrow right" onclick="slideCATC(1)">&#10095;</div>
 
-    .camp-sidebar {
-  width: 260px;
-  position: fixed;
-  top: 0px; /* adjust to sit below the header */
-  left: 0;
-  bottom: 0;
-  background: linear-gradient(180deg, #002147, #003566);
-  padding: 25px 20px;
-  color: #fff;
-  z-index: 100;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
-  overflow-y: auto;
-  border-right: 4px solid #8b0000;
-}
+  <div class="catc-slider-container" id="catcSlider">
+    <!-- Card 1 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc1.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 1</h4>
+        <p>Description text for CATC 1. Highlights of training activities, discipline, and cadet experiences.</p>
+      </div>
+    </div>
 
-.sidebar-menu {
-  list-style: none;
-  padding: 0;
-}
+    <!-- Card 2 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc2.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 2</h4>
+        <p>Description for CATC 2. Include drills, sessions, and cadet involvement.</p>
+      </div>
+    </div>
 
-.sidebar-menu > li {
-  margin-bottom: 20px;
-}
+    <!-- Card 3 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc3.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 3</h4>
+        <p>Include cadet reflections, photos, and cultural programs at CATC 3.</p>
+      </div>
+    </div>
 
-.sidebar-menu span {
-  font-weight: 600;
-  color: #f0f8ff;
-  display: block;
-  margin-bottom: 8px;
-  font-size: 2.1rem;
-  border-left: 4px solid #ffb703;
-  padding-left: 10px;
-}
+    <!-- Card 4 -->
+    <div class="catc-slider-card">
+      <div class="catc-card-img" style="background-image: url('catc4.jpg');"></div>
+      <div class="catc-card-content">
+        <h4>CATC 4</h4>
+        <p>Special lectures, weapon handling, obstacle courses and leadership development at CATC 4.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-.submenu {
-  list-style: none;
-  padding-left: 10px;
-}
+  </section>
+</section>
 
-.submenu li {
-  margin-bottom: 10px;
-}
+     </div>
+  
+     <script>
+  function slideCATC(direction) {
+    const slider = document.getElementById('catcSlider');
+    const cardWidth = 680; // width + gap
+    slider.scrollBy({
+      left: direction * cardWidth,
+      behavior: 'smooth'
+    });
 
-.submenu a {
-  text-decoration: none;
-  color: #e0f7fa;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  transition: all 0.3s ease;
-}
+    document.querySelectorAll('.slideshow-container').forEach(container => {
+    const slides = container.querySelectorAll('.slide');
+    let index = 0;
 
-.submenu a i {
-  margin-right: 10px;
-  color: #00b4d8;
-}
+    setInterval(() => {
+      slides[index].classList.remove('active');
+      index = (index + 1) % slides.length;
+      slides[index].classList.add('active');
+    }, 2500);
+  });
+  }
+</script>
 
-.training-camp-headings {
-  padding: 60px 20px 40px;
-  background: linear-gradient(to right, #f9fafb, #eef1f5);
-  margin-top: 0;
-}
+</body>
+</html>
 
-.headline {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 700;
-  padding: 15px 30px;
-  display: inline-block;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.training-title {
-  color: #ffffff;
-  background: linear-gradient(135deg, #0077b6, #00b4d8);
-}
-
-.camp-title {
-  color: #ffffff;
-  background: linear-gradient(135deg, #8b0000, #c0392b);
-}
-
-.headline:hover {
-  transform: scale(1.05);
-}
-
-    .main-content {
-  margin-left: 310px; /* to avoid overlap with sidebar */
-  padding: 10px;
-    }
-
-    .training-wrapper {
-  position: relative;
-  padding: 50px 20px;
-}
-  .training-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap: 30px;
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;}
-
-.training-card {
-  background: #fff;
-  padding: 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  border-radius: 12px;
-  position: relative;
-  z-index: 2;
-}
-
-.training-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-  color: #012a4a;
-}
-
-.training-card p {
-  font-size: 1rem;
-  margin-bottom: 15px;
-  color: #444;
-}
-
-/* Slideshow styles */
-.slideshow-container {
-  position: relative;
-  width: 100%;
-  height: 180px;
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-.slideshow-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: none;
-}
-
-.slideshow-container img.active {
-  display: block;
-}
-
-/* Cross lines */
-.vertical-line {
-  position: absolute;
-  top: 30px;
-  bottom: 30px;
-  left: 50%;
-  width: 2px;
-  background: #ccc;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.horizontal-line {
-  position: absolute;
-  left: 30px;
-  right: 30px;
-  top: 50%;
-  height: 2px;
-  background: #ccc;
-  transform: translateY(-50%);
-  z-index: 1;
-}
+   
