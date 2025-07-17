@@ -12,11 +12,11 @@ body {
   margin-right: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
   border-left: 8px solid  #468faf;
-   margin-top: 50px;
-  margin-bottom: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.camp-titl {
+.camp-title {
   font-size: 2.5rem;
   color: #ffffff;
   font-weight: bold;
@@ -30,7 +30,7 @@ body {
     .topbar {
       background: linear-gradient(to right, #781c1c, #000000);
       color: white;
-      padding: 15px 30px;
+      padding: 7.5px 15px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -51,7 +51,7 @@ body {
       background-position: center;
       color: white;
       text-align: center;
-      padding: 80px 20px;
+      padding: 15px 15px;
       position: relative;
     
     }
@@ -102,7 +102,7 @@ body {
 
 .catc-slider-card {
   flex: 0 0 auto;
-  width: 710px;
+  width: 650px;
   background: white;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.1);
@@ -139,11 +139,11 @@ body {
 }
     .camp-section {
       max-width: 100%;
-      margin: 60px auto;
+      margin: 50px auto;
       padding: 0 20px;
     }
 
-    .catc-army-header {
+  .catc-army-header {
   background-color: #012a4a; /* Dark Blue */
   color: white;
   text-align: center;
@@ -151,8 +151,8 @@ body {
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: 1px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -208,13 +208,13 @@ body {
   top: 0px; /* adjust to sit below the header */
   left: 0;
   bottom: 0;
-  background: linear-gradient(180deg, #002147, #003566);
+  background: linear-gradient(180deg, #2a5688, #003566);
   padding: 25px 20px;
   color: #fff;
   z-index: 100;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
   overflow-y: auto;
-  border-right: 4px solid #8b0000;
+  border-right: 8px solid #8b0000;
 }
 
 .sidebar-menu {
@@ -232,7 +232,7 @@ body {
   display: block;
   margin-bottom: 8px;
   font-size: 2.1rem;
-  border-left: 4px solid #ffb703;
+  border-left: 8px solid #ffb703;
   padding-left: 10px;
 }
 
@@ -260,7 +260,7 @@ body {
 }
 
 .training-camp-headings {
-  padding: 60px 20px 40px;
+  padding: 2px;
   background: linear-gradient(to right, #f9fafb, #eef1f5);
   margin-top: 0;
 }
@@ -297,20 +297,21 @@ body {
 
     .training-wrapper {
   position: relative;
-  padding: 50px 20px;
+  padding: 30px 10px;
 }
   .training-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  gap: 30px;
-  max-width: 1400px;
+  gap: 10px;
+  max-width: 1600px;
+  max-height: 1000px;
   margin: 0 auto;
-  position: relative;}
+  position:relative;}
 
 .training-card {
   background: #fff;
-  padding: 20px;
+  padding: 10px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   border-radius: 12px;
   position: relative;
@@ -319,13 +320,13 @@ body {
 
 .training-card h3 {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #012a4a;
 }
 
 .training-card p {
   font-size: 1rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: #444;
 }
 
@@ -371,3 +372,32 @@ body {
   transform: translateY(-50%);
   z-index: 1;
 }
+
+.training-card,
+.catc-slider-card {
+  margin: 0.5rem 0.5rem;
+  padding: 0.7rem 0.7rem;
+}
+
+.slideshow-container img.slide,
+.catc-card-img {
+  height: 550px !important;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.catc-card-img {
+  min-height: 550px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+/* Optional: Reduce section paddings for a more compact look */
+.training-wrapper,
+.catc-slider-section {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+`
