@@ -8,6 +8,7 @@
 /* General page styles */
 html {
   scroll-behavior: smooth;
+  margin: 0px;
 }
 body {
   font-family: 'Poppins', sans-serif;
@@ -18,14 +19,14 @@ body {
 /* Header styles */
 .page-header {
   background: linear-gradient(to right, #781c1c, #000000);
-  color: white;
-  padding: 40px 20px;
-  text-align-last: center;
-  width: 100%;
-  margin: 0;
-  position: relative;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  z-index: 10;
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+    margin-top: 10px;
+    margin-left: 390px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(22, 59, 91, 0.07);     
+    z-index: 10;
 }
 .page-header h1 {
   font-size: 2.0rem;
@@ -175,9 +176,10 @@ body {
   padding: 20px;
 }
 
-/* --- Sidebar --- */
+/* ================= Sidebar Styles ================= */
+/* Styles for the fixed sidebar navigation */
 .camp-sidebar {
-  width: 260px;
+  width: 380px;
   background: #163b5b;
   min-height: 100vh;
   position: fixed;
@@ -192,12 +194,13 @@ body {
   flex-direction: column;
   overflow: hidden;
 }
-.camp-sidebar .sidebar-header {
+.sidebar-header {
   text-align: center;
   margin-bottom: 1.5rem;
 }
-.sidebar-header span {
-  color: #fff !important;
+.sidebar-title {
+  color: #fd0909;
+  font-size: 1.5rem;
   letter-spacing: 0.04em;
 }
 .sidebar-menu {
@@ -248,34 +251,43 @@ body {
   color: #fff;
 }
 
-/* --- Main Content --- */
+/* ================= Main Content Styles ================= */
 .main-content {
-  margin-left: 260px;
+  margin-left: 380px;
   padding: 2rem 2.5vw 2rem 2.5vw;
   min-height: 100vh;
   background: #f3f6fb;
   transition: margin-left 0.3s;
 }
-.topbar {
-  background: #d63911;
-  color: #fff;
-  padding: 0.7rem 1.2rem;
-  border-radius: 0 0 8px 8px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  font-size: 1.5rem;
-  margin-bottom: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  justify-content: center;
-  text-align: center;
+div.main-content {
+  padding: 10px;
 }
+
+/* ================= Header and Navbar ================= */
+/* ===================== 3. Header Section ===================== */
+/* Styles for the logo and tab box in the header. */
+.headcontainer {
+  width: 100%;
+  padding: 20px;
+}
+.tab-box {
+  text-align: center;
+  margin-left: 380px;
+}
+.header-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ================= Hero Banner ================= */
 .hero-banner {
   background: linear-gradient(90deg, #236090 60%, #163b5b 100%);
   color: #fff;
   border-radius: 0.5rem;
   padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+  margin-top: 10px;
   margin-bottom: 1.5rem;
   text-align: center;
   box-shadow: 0 2px 8px rgba(22,59,91,0.07);
@@ -294,11 +306,11 @@ body {
   text-align: center;
 }
 
-/* --- Slider Section --- */
+/* ================= Activities Slider Styles ================= */
 .activities-slider-section {
   margin: 2rem 0 2.5rem 0;
   position: relative;
-  background: #fff;
+  background: #d1c36a;
   border-radius: 12px;
   padding: 1.5rem 0.5rem 2.5rem 0.5rem;
   box-shadow: 0 2px 16px rgba(22,59,91,0.07);
@@ -318,24 +330,18 @@ body {
 }
 .activities-slider-container {
   display: flex;
-  gap: 1.5rem;
+  gap: 0.8rem;
   transition: transform 0.7s cubic-bezier(.4,2,.6,1);
   will-change: transform;
   padding: 0 1.5rem;
 }
 .activities-slider-card {
-  min-width: 23%;
-  max-width: 25%;
-  background: #f7fafd;
-  border-radius: 16px;
-  box-shadow: 0 2px 12px rgba(22,59,91,0.07);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  margin: 0.5rem 0;
-  flex-shrink: 0;
-  border: 1.5px solid #e0e0e0;
-  transition: box-shadow 0.2s, border 0.2s;
+  min-width: 32%;
+  max-width: 33%;
+  margin-right: 1.5%; /* Add margin between cards */
+}
+.activities-slider-card:nth-child(3n) {
+  margin-right: 0; /* Remove margin on every 3rd card for perfect alignment */
 }
 .activities-slider-card:hover {
   box-shadow: 0 4px 18px rgba(214,57,17,0.13);
@@ -343,7 +349,7 @@ body {
 }
 .activities-card-img {
   width: 100%;
-  height: 170px;
+  height: 210px; /* Previously 170px, now +40px */
   background-size: cover;
   background-position: center;
   border-radius: 12px 12px 0 0;
@@ -400,71 +406,13 @@ body {
 .activities-arrow.right { right: 10px; }
 .activities-arrow:hover { background: #d63911; }
 
-/* --- Local Header & Navbar (inside main-content) --- */
-.local-header-container {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
-.header-logo {
-  width: 100%;
-  max-width: 100vw;
-  height: 48px;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto;
-  padding: 0.1rem 0 0.1rem 0;
-}
-.local-navbar {
-  background: linear-gradient(90deg, #7b1414 0%, #232335 100%);
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  margin-bottom: 1.5rem;
-}
-.local-navbar .navbar-brand {
-  display: flex;
-  align-items: center;
-}
-.local-navbar .navbar-brand img {
-  height: 48px;
-  width: auto;
-  margin-right: 0.5rem;
-}
-.local-navbar .navbar-nav {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center;
-  gap: 0.7rem;
-  margin-left: auto;
-  margin-bottom: 0;
-  padding-left: 0;
-  justify-content: unset !important;
-}
-.local-navbar .nav-item {
-  display: flex !important;
-  align-items: center;
-  margin-left: 0.2rem;
-}
-.local-navbar .nav-link {
-  color: #fff !important;
-  font-size: 1.08rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  padding: 0.22rem 1.05rem;
-  border-radius: 4px;
-  transition: background 0.18s, color 0.18s;
-  text-align: left;
-  text-decoration: none !important;
-  line-height: 1.6;
-}
-.local-navbar .nav-link:hover,
-.local-navbar .nav-link.active {
-  background: #d63911 !important;
-  color: #fff !important;
-  text-decoration: none !important;
+/* ================= Footer Note ================= */
+.activities-footer-note {
+  padding: 1.5rem;
+  text-align: center;
 }
 
-/* --- Responsive --- */
+/* ================= Responsive Styles ================= */
 @media (max-width: 1200px) {
   .activities-slider-card { min-width: 32%; max-width: 33%; }
 }
@@ -484,18 +432,26 @@ body {
     margin-top: 0;
     padding: 1rem 1vw 1rem 1vw;
   }
-  .activities-slider-card { min-width: 48%; max-width: 49%; }
+  .activities-slider-card {
+    min-width: 48%;
+    max-width: 49%;
+    margin-right: 2%;
+  }
+  .activities-slider-card:nth-child(2n) {
+    margin-right: 0;
+  }
   .activities-slider-container { padding: 0 0.5rem; }
   .activities-slider-title { padding-left: 0; }
   .sidebar-menu {
     max-height: 220px;
   }
-  .header-logo { height: 36px; }
-  .local-navbar { min-height: 36px; }
-  .local-navbar .nav-link { font-size: 0.97rem; padding: 0.15rem 0.5rem; }
 }
 @media (max-width: 600px) {
-  .activities-slider-card { min-width: 95vw; max-width: 98vw; }
+  .activities-slider-card {
+    min-width: 95vw;
+    max-width: 98vw;
+    margin-right: 0;
+  }
   .activities-slider-container { gap: 0.7rem; }
   .activities-slider-title { font-size: 1.1rem; }
   .main-content,
@@ -503,7 +459,323 @@ body {
     margin-top: 0;
   }
   .header-logo { height: 28px; }
-  .local-navbar { min-height: 28px; }
-  .local-navbar .navbar-nav { gap: 0.2rem; flex-wrap: wrap; }
-  .local-navbar .nav-link { font-size: 0.93rem; padding: 0.1rem 0.2rem; }
 }
+
+
+/* ===================== 2. Navbar Styles ===================== */
+/* Custom gradient navbar with hover effects and dropdown styling. */
+.navbar-custom {
+  background: linear-gradient(90deg, #8b0000, #1a1a2e);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  padding: 10px 10px;
+  transition: all 0.3s ease-in-out;
+  margin-left: 390px;   
+  margin-top:10px;
+  display: flex; 
+  justify-content: space-around; /* centers horizontally */
+  align-items: center;     /*centers vertically if needed */
+}
+.navbar-nav{
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically if needed */
+}
+.navlogo {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.withlogo {
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin-right: 100px;
+}
+nav div ul {
+  align-items: center;
+}
+.navbar-brand img {
+  height: 45px;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+.navbar-brand:hover img {
+  transform: scale(1.1);
+}
+
+.nav-link {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  display: flex;
+}
+.nav-link:hover {
+  color: #ffd700 !important;
+  letter-spacing: 1px;
+  font-weight: bold;
+  text-decoration: underline;
+
+}
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #9b9679;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  transition: width 0.4s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+  display: none !important;
+}
+
+/* Force navbar links to be horizontal and flexed */
+.navbar-nav {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0rem;
+  width: auto;
+  margin-left: auto;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.navbar-nav .nav-item {
+  display: flex !important;
+  align-items: center;
+}
+
+/* Ensure logo stays left and nav links are in a single row after it */
+.navbar-custom .container-fluid {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-brand {
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  justify-content: flex-start;
+}
+
+.navbar-nav .nav-item {
+  white-space: nowrap;
+}
+
+/* Sidebar toggle button styles */
+.sidebar-toggle {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 2001;
+  background: #163b5b;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(22,59,91,0.12);
+  display: none;
+}
+
+/* Show toggle button on screens < 992px */
+@media (max-width: 991.98px) {
+  .sidebar-toggle {
+    display: block;
+  }
+  .camp-sidebar {
+    position: fixed;
+    left: -100vw;
+    top: 0;
+    width: 80vw;
+    max-width: 340px;
+    height: 100vh;
+    z-index: 2000;
+    transition: left 0.3s cubic-bezier(.4,2,.6,1);
+    box-shadow: 2px 0 16px rgba(22,59,91,0.18);
+    overflow-y: auto;
+    background: #163b5b;
+    padding-bottom: 2rem;
+  }
+  .camp-sidebar.open {
+    left: 0 !important;
+  }
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(22,59,91,0.35);
+    z-index: 1999;
+    opacity: 1;
+    transition: opacity 0.3s;
+  }
+  .sidebar-overlay.hide {
+    display: none;
+    opacity: 0;
+  }
+  .main-content {
+    margin-left: 0 !important;
+    padding: 1rem 1vw 1rem 1vw;
+  }
+}
+
+/* Sidebar menu uses full height */
+.camp-sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.sidebar-header {
+  flex-shrink: 0;
+}
+.sidebar-menu {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  margin-bottom: 0;
+  padding-bottom: 2rem;
+}
+
+/* Desktop: sidebar fixed left, content right */
+@media (min-width: 992px) {
+  .sidebar-toggle, .sidebar-overlay {
+    display: none !important;
+  }
+  .camp-sidebar {
+    left: 0 !important;
+    position: fixed;
+    width: 380px;
+    height: 100vh;
+    z-index: 100;
+    box-shadow: none;
+  }
+  .main-content {
+    margin-left: 380px;
+    padding: 2rem 2.5vw 2rem 2.5vw;
+  }
+}
+
+/* --- Adjust grid: Show 3 cards per row on desktop, 2 on tablet, 1 on mobile, with margin on 3rd card --- */
+.activities-slider-card {
+  min-width: 32%;
+  max-width: 33%;
+  margin-right: 1.5%; /* Add margin between cards */
+}
+.activities-slider-card:nth-child(3n) {
+  margin-right: 0; /* Remove margin on every 3rd card for perfect alignment */
+}
+
+/* Increase image height by 40px */
+.activities-card-img {
+  width: 100%;
+  height: 480px; 
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px 12px 0 0;
+}
+
+/* Tablet and mobile adjustments remain the same */
+@media (max-width: 900px) {
+  .camp-sidebar {
+    position: static;
+    width: 100%;
+    min-height: unset;
+    border-right: none;
+    border-bottom: 3px solid #d63911;
+    padding-top: 0.5rem;
+    background: #163b5b;
+    max-height: none;
+  }
+  .main-content {
+    margin-left: 0 !important;
+    margin-top: 0;
+    padding: 1rem 1vw 1rem 1vw;
+  }
+  .activities-slider-card {
+    min-width: 48%;
+    max-width: 49%;
+    margin-right: 2%;
+  }
+  .activities-slider-card:nth-child(2n) {
+    margin-right: 0;
+  }
+  .activities-slider-container { padding: 0 0.5rem; }
+  .activities-slider-title { padding-left: 0; }
+  .sidebar-menu {
+    max-height: 220px;
+  }
+}
+@media (max-width: 600px) {
+  .activities-slider-card {
+    min-width: 95vw;
+    max-width: 98vw;
+    margin-right: 0;
+  }
+  .activities-slider-container { gap: 0.7rem; }
+  .activities-slider-title { font-size: 1.1rem; }
+  .main-content,
+  .camp-sidebar {
+    margin-top: 0;
+  }
+  .header-logo { height: 28px; }
+}
+
+/* Add this at the end of your activities.css */
+
+/* Ensure logo stays left and nav links are in a single row after it */
+.navbar-custom .container-fluid {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.navbar-brand {
+  margin-right: 2rem;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  gap: 0.7rem;
+  width: 100%;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  justify-content: flex-start;
+}
+
+.navbar-nav .nav-item {
+  white-space: nowrap;
+}
+

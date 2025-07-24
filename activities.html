@@ -1,528 +1,257 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>TCET NCC | Activities</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-  <link href="src/index.css" rel="stylesheet">  
-  <style>
-    /* --- Sidebar --- */
-    .camp-sidebar {
-      width: 380px; /* Increased from 260px */
-      background: #163b5b;
-      min-height: 100vh;
-      position: fixed;
-      left: 0;
-      top: 0;
-      z-index: 100;
-      border-right: 3px solid #d63911;
-      padding-top: 1.5rem;
-      font-family: 'Poppins', sans-serif;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-    }
-    .camp-sidebar .sidebar-header {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-    .sidebar-header span {
-      color: #fff !important;
-      letter-spacing: 0.04em;
-    }
-    .sidebar-menu {
-      list-style: none;
-      padding: 0 0.5rem;
-      margin: 0;
-      overflow-y: auto;
-      flex: 1 1 auto;
-      max-height: calc(100vh - 80px);
-      scrollbar-width: thin;
-      scrollbar-color: #d63911 #163b5b;
-    }
-    .sidebar-menu::-webkit-scrollbar {
-      width: 8px;
-    }
-    .sidebar-menu::-webkit-scrollbar-thumb {
-      background: #d63911;
-      border-radius: 4px;
-    }
-    .sidebar-menu::-webkit-scrollbar-track {
-      background: #163b5b;
-    }
-    .sidebar-menu > li {
-      margin-bottom: 1.6rem;
-    }
-    .sidebar-menu span {
-      font-weight: 700;
-      color: #ffc107;
-      font-size: 1.08rem;
-      letter-spacing: 0.02em;
-      margin-bottom: 0.2rem;
-      display: inline-block;
-    }
-    .submenu a {
-      color: #fff;
-      text-decoration: none;
-      font-size: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      padding: 0.18rem 0.5rem;
-      border-radius: 4px;
-      transition: background 0.18s, color 0.18s;
-    }
-    .submenu a:hover,
-    .submenu a:focus {
-      background: #d63911;
-      color: #fff;
-    }
-
-    /* --- Main Content --- */
-    .main-content {
-      margin-left: 380px;
-      padding: 2rem 2.5vw 2rem 2.5vw;
-      min-height: 100vh;
-      background: #f3f6fb;
-      transition: margin-left 0.3s;
-    }
-    .topbar {
-      background: #d63911;
-      color: #fff;
-      padding: 0.7rem 1.2rem;
-      border-radius: 0 0 8px 8px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      font-size: 1.5rem;
-      margin-bottom: 1.2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.7rem;
-      justify-content: center;
-      text-align: center;
-    }
-    .hero-banner {
-      background: linear-gradient(90deg, #236090 60%, #163b5b 100%);
-      color: #fff;
-      border-radius: 0.5rem;
-      padding: 1.2rem 1.5rem 1.2rem 1.5rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(22,59,91,0.07);
-    }
-    .hero-banner h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 0.3rem;
-      letter-spacing: 0.01em;
-      text-align: center;
-    }
-    .hero-banner p {
-      font-size: 1.08rem;
-      margin-bottom: 0;
-      opacity: 0.95;
-      text-align: center;
-    }
-
-    /* --- Slider Section --- */
-    .activities-slider-section {
-      margin: 2rem 0 2.5rem 0;
-      position: relative;
-      background: #fff;
-      border-radius: 12px;
-      padding: 1.5rem 0.5rem 2.5rem 0.5rem;
-      box-shadow: 0 2px 16px rgba(22,59,91,0.07);
-    }
-    .activities-slider-title {
-      text-align: center !important;
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 1.2rem;
-      color: #d63911;
-      letter-spacing: 0.03em;
-      padding-left: 0;
-    }
-    .activities-slider-viewport {
-      overflow: hidden;
-      width: 100%;
-    }
-    .activities-slider-container {
-      display: flex;
-      gap: 1.5rem;
-      transition: transform 0.7s cubic-bezier(.4,2,.6,1);
-      will-change: transform;
-      padding: 0 1.5rem;
-    }
-    .activities-slider-card {
-      min-width: 23%;
-      max-width: 25%;
-      background: #f7fafd;
-      border-radius: 16px;
-      box-shadow: 0 2px 12px rgba(22,59,91,0.07);
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      margin: 0.5rem 0;
-      flex-shrink: 0;
-      border: 1.5px solid #e0e0e0;
-      transition: box-shadow 0.2s, border 0.2s;
-    }
-    .activities-slider-card:hover {
-      box-shadow: 0 4px 18px rgba(214,57,17,0.13);
-      border: 1.5px solid #d63911;
-    }
-    .activities-card-img {
-      width: 100%;
-      height: 170px;
-      background-size: cover;
-      background-position: center;
-      border-radius: 12px 12px 0 0;
-    }
-    .activities-card-content {
-      padding: 1rem 1.2rem 1.2rem 1.2rem;
-      background: #fff;
-      border-radius: 0 0 12px 12px;
-      flex: 1 1 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-    .activities-card-content h4 {
-      margin: 0 0 0.5rem 0;
-      color: #163b5b;
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-      text-align: center;
-    }
-    .activities-card-content h4 a {
-      color: #d63911;
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .activities-card-content h4 a:hover {
-      color: #163b5b;
-      text-decoration: underline;
-    }
-    .activities-card-content p {
-      font-size: 0.98rem;
-      color: #333;
-      margin-bottom: 0;
-      opacity: 0.97;
-      text-align: justify !important;
-    }
-    .activities-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #163b5b;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 38px;
-      height: 38px;
-      font-size: 1.5rem;
-      cursor: pointer;
-      z-index: 2;
-      transition: background 0.2s;
-    }
-    .activities-arrow.left { left: 10px; }
-    .activities-arrow.right { right: 10px; }
-    .activities-arrow:hover { background: #d63911; }
-
-    @media (max-width: 1200px) {
-      .activities-slider-card { min-width: 32%; max-width: 33%; }
-    }
-    @media (max-width: 900px) {
-      .camp-sidebar {
-        position: static;
-        width: 100%;
-        min-height: unset;
-        border-right: none;
-        border-bottom: 3px solid #d63911;
-        padding-top: 0.5rem;
-        background: #163b5b;
-        max-height: none;
-      }
-      .main-content {
-        margin-left: 0 !important;
-        margin-top: 0;
-        padding: 1rem 1vw 1rem 1vw;
-      }
-      .activities-slider-card { min-width: 48%; max-width: 49%; }
-      .activities-slider-container { padding: 0 0.5rem; }
-      .activities-slider-title { padding-left: 0; }
-      .sidebar-menu {
-        max-height: 220px;
-      }
-    }
-    @media (max-width: 600px) {
-      .activities-slider-card { min-width: 95vw; max-width: 98vw; }
-      .activities-slider-container { gap: 0.7rem; }
-      .activities-slider-title { font-size: 1.1rem; }
-      .main-content,
-      .camp-sidebar {
-        margin-top: 0;
-      }
-    }
-
-    /* Force navbar links to be horizontal */
-    .navbar-nav {
-      display: relative !important;
-      flex-direction: row !important;
-      align-items: center;
-      gap: 0.7rem;
-      width: auto;
-      margin-left: auto;
-      margin-bottom: 0;
-      padding-left: 0;
-    }
-    .navbar-nav .nav-item {
-      display: flex !important;
-      align-items: center;
-    }
-
-    /* --- Local Header & Navbar (inside main-content) --- */
-    .local-header-container {
-      padding: 0;
-      margin: 0;
-      width: 100%;
-    }
-    .header-logo {
-      width: 100%;
-      max-width: 100vw;
-      height: 48px;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto;
-      padding: 0.1rem 0 0.1rem 0;
-    }
-    .local-navbar {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: linear-gradient(90deg, #7b1414 0%, #232335 100%);
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-    }
-    .local-navbar .navbar-brand {
-      display: flex;
-      align-items: center;
-    }
-    .local-navbar .navbar-brand img {
-      height: 48px;
-      width: auto;
-      margin-right: 0.5rem;
-    }
-    .local-navbar .navbar-nav {
-      display: flex !important;
-      flex-direction: row !important;
-      align-items: center;
-      gap: 0.7rem;
-      margin-left: auto;
-      margin-bottom: 0;
-      padding-left: 0;
-      justify-content: unset !important;
-    }
-    .local-navbar .nav-item {
-      display: flex !important;
-      align-items: center;
-      margin-left: 0.2rem;
-    }
-    .local-navbar .nav-link {
-      color: #fff !important;
-      font-size: 0.85rem;           /* Match index.html nav font size */
-      font-weight: 600;             /* Match index.html nav font weight */
-      letter-spacing: 0.01em;       /* Match index.html nav letter spacing */
-      padding: 0.22rem 1.05rem;     /* Match index.html nav padding */
-      border-radius: 4px;
-      transition: background 0.18s, color 0.18s;
-      text-align: left;
-      text-decoration: none !important;
-      line-height: 1.6;
-    }
-    .local-navbar .nav-link:hover,
-    .local-navbar .nav-link.active {
-      background: #d63911 !important;
-      color: #fff !important;
-      text-decoration: none !important;
-    }
-    @media (max-width: 900px) {
-      .header-logo { height: 36px; }
-      .local-navbar { min-height: 36px; }
-      .local-navbar .nav-link { font-size: 0.97rem; padding: 0.15rem 0.5rem; }
-    }
-    @media (max-width: 600px) {
-      .header-logo { height: 28px; }
-      .local-navbar { min-height: 28px; }
-      .local-navbar .navbar-nav { gap: 0.2rem; flex-wrap: wrap; }
-      .local-navbar .nav-link { font-size: 0.93rem; padding: 0.1rem 0.2rem; }
-    }
-  </style>
+  <title>TCET NCC Activities</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS (if used) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- FontAwesome (if used) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="src/activities.css">
 </head>
+
 <body>
-  <!-- Sidebar and main-content only, no header or navbar -->
-  <aside class="camp-sidebar">
+
+  <!-- Header Section -->
+  <div class="container-fluid p-0">
+    <div class="tab-box">
+      <img src="assets/img/Header.png" alt="NCC Header" class="header-logo">
+    </div>
+  </div>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-dark navbar-custom sticky-top navbar-expand-lg">
+    <div class="navlogo container-fluid d-flex justify-content-between align-items-center">
+      <a class="navbar-brand d-flex align-items-center me-4" href="index.html">
+        <img src="assets/img/logo/ncclogo.png" alt="NCC Logo" style="height: 60px; width: auto;" class="me-2">
+        <div class="withlogo d-flex flex-column lh-sm text-white">
+          <span class="fw-bold" style="font-size: 2.0rem;">TCET</span>
+          <span style="font-size: 1.2rem;">NCC UNIT</span>
+        </div>
+      </a>
+      <ul class="navbar-nav d-flex flex-row align-items-center ms-auto gap-2 flex-nowrap">
+        <li class="nav-item"><a class="nav-link" href="index.html">NCC Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="tcet_nccdomains.html">Our Teams</a></li>
+        <li class="nav-item"><a class="nav-link" href="camp.html">Training & Camps</a></li>
+        <li class="nav-item"><a class="nav-link" href="achievers.html">Achievers</a></li>
+        <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+        <li class="nav-item"><a class="nav-link" href="activities.html">Calendar</a></li>
+        <li class="nav-item"><a class="nav-link" href="test2.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="magazine.html">Magazine</a></li>
+        <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Sidebar Toggle Button (visible on mobile/tablet) -->
+  <button class="sidebar-toggle d-lg-none" aria-label="Open sidebar" aria-controls="sidebarNav" aria-expanded="false">
+    <i class="fas fa-bars"></i>
+  </button>
+
+  <!-- Sidebar -->
+  <aside class="camp-sidebar" id="sidebarNav">
     <div class="sidebar-header">
-      <span style="font-size: 1.5rem; color: #fd0909;"><b>Actvities</b></span>
+      <span class="sidebar-title"><b>Activities</b></span>
     </div>
     <ul class="sidebar-menu">
+      <!-- Sidebar navigation grouped by category -->
       <li>
-        <span>Defence & Armed Forces</span><br>
+        <span>Defence & Armed Forces</span>
         <ul class="submenu">
-          <li><a href="#defence"><i class="fas fa-shield-alt"></i> Defence Exposure</a></li><br>
-          <li><a href="#armyday"><i class="fas fa-flag"></i> Army Day</a></li><br>
-          <li><a href="#navyday"><i class="fas fa-anchor"></i> Navy Day Celebration</a></li><br>
-          <li><a href="#shastrapooja"><i class="fas fa-gavel"></i> Shastra Pooja</a></li><br>
-          <li><a href="#catc"><i class="fas fa-campground"></i> CATC 512 & 405</a></li><br>
+          <li>
+            <a href="#defence"><i class="fas fa-shield-alt"></i> Defence Exposure</a>
+          </li>
+          <li>
+            <a href="#armyday"><i class="fas fa-flag"></i> Army Day</a>
+          </li>
+          <li>
+            <a href="#navyday"><i class="fas fa-anchor"></i> Navy Day Celebration</a>
+          </li>
+          <li>
+            <a href="#shastrapooja"><i class="fas fa-gavel"></i> Shastra Pooja</a>
+          </li>
+          <li>
+            <a href="#catc"><i class="fas fa-campground"></i> CATC 512 & 405</a>
+          </li>
         </ul>
       </li>
       <li>
-        <span>Training & Sports</span><br>
+        <span>Training & Sports</span>
         <ul class="submenu">
-          <li><a href="#training"><i class="fas fa-running"></i> Physical Training</a></li><br>
-          <li><a href="#patrioticrun"><i class="fas fa-shoe-prints"></i> Patriotic Run</a></li><br>
-          <li><a href="#sojourn"><i class="fas fa-music"></i> Sojourn 2025</a></li><br>
-          <li><a href="#ecocyclothon"><i class="fas fa-bicycle"></i> Eco Cylothon</a></li><br>
+          <li>
+            <a href="#training"><i class="fas fa-running"></i> Physical Training</a>
+          </li>
+          <li>
+            <a href="#patrioticrun"><i class="fas fa-shoe-prints"></i> Patriotic Run</a>
+          </li>
+          <li>
+            <a href="#sojourn"><i class="fas fa-music"></i> Sojourn 2025</a>
+          </li>
+          <li>
+            <a href="#ecocyclothon"><i class="fas fa-bicycle"></i> Eco Cylothon</a>
+          </li>
         </ul>
       </li>
       <li>
-        <span>Lectures & Career</span><br>
+        <span>Lectures & Career</span>
         <ul class="submenu">
-          <li><a href="#lectures"><i class="fas fa-chalkboard-teacher"></i> Defence Training & Lectures</a></li><br>
-          <li><a href="#ncctraining"><i class="fas fa-book"></i> NCC Training & Lectures</a></li><br>
-          <li><a href="#selection"><i class="fas fa-user-check"></i> Selection & Eligibility</a></li><br>
-          <li><a href="#motivation"><i class="fas fa-bullhorn"></i> Motivational Lectures</a></li><br>
-          <li><a href="#farewell"><i class="fas fa-award"></i> Felicitation & Farewell</a></li><br>
+          <li>
+            <a href="#lectures"><i class="fas fa-chalkboard-teacher"></i> Defence Training &
+              Lectures</a>
+          </li>
+          <li>
+            <a href="#ncctraining"><i class="fas fa-book"></i> NCC Training & Lectures</a>
+          </li>
+          <li>
+            <a href="#selection"><i class="fas fa-user-check"></i> Selection & Eligibility</a>
+          </li>
+          <li>
+            <a href="#motivation"><i class="fas fa-bullhorn"></i> Motivational Lectures</a>
+          </li>
+          <li>
+            <a href="#farewell"><i class="fas fa-award"></i> Felicitation & Farewell</a>
+          </li>
         </ul>
       </li>
       <li>
-        <span>Social Initiatives</span><br>
+        <span>Social Initiatives</span>
         <ul class="submenu">
-          <li><a href="#treeplantation"><i class="fas fa-tree"></i> Tree Plantation Drive</a></li><br>
-          <li><a href="#swachhbharat"><i class="fas fa-recycle"></i> Swachh Bharat Abhiyan</a></li><br>
-          <li><a href="#achievers"><i class="fas fa-trophy"></i> Achievers 2024–2025</a></li><br>
-          <li><a href="#republicday"><i class="fas fa-flag-usa"></i> 76th Republic Day</a></li><br>
-          <li><a href="#independenceday"><i class="fas fa-flag"></i> 78th Independence Day</a></li><br>
-          <li><a href="#heritage"><i class="fas fa-landmark"></i> Heritage Awareness Program</a></li><br>
+          <li>
+            <a href="#treeplantation"><i class="fas fa-tree"></i> Tree Plantation Drive</a>
+          </li>
+          <li>
+            <a href="#swachhbharat"><i class="fas fa-recycle"></i> Swachh Bharat Abhiyan</a>
+          </li>
+          <li>
+            <a href="#achievers"><i class="fas fa-trophy"></i> Achievers 2024–2025</a>
+          </li>
+          <li>
+            <a href="#republicday"><i class="fas fa-flag-usa"></i> 76th Republic Day</a>
+          </li>
+          <li>
+            <a href="#independenceday"><i class="fas fa-flag"></i> 78th Independence Day</a>
+          </li>
+          <li>
+            <a href="#heritage"><i class="fas fa-landmark"></i> Heritage Awareness Program</a>
+          </li>
         </ul>
       </li>
     </ul>
   </aside>
 
-  <div class="main-content">
-    <!-- Header Section (now inside main-content) -->
-    <div class="container-fluid p-0 local-header-container">
-      <div class="tab-box">
-        <img src="assets/img/logo/Header.png" alt="NCC Header" class="header-logo">
-      </div>
-    </div>
-    <!-- Navigation Bar (now inside main-content) -->
-    <nav class="navbar navbar-dark navbar-custom local-navbar">
-      <div class="container-fluid d-flex justify-content-between align-items-center">
-        <!-- <a class="navbar-brand d-flex align-items-center me-4" href="index.html"> -->
-          <!-- <img src="assets/img/logo/ncclogo.png" alt="NCC Logo" style="height: 48px; width: auto;" class="me-2"> -->
-          <!-- <div class="d-flex flex-column lh-sm text-white"> -->
-            <!-- <span class="fw-bold" style="font-size: 1.0rem;">TCET</span>
-            <span style="font-size: 1rem;">NCC UNIT</span> -->
-          <!-- </div> -->
-        </a>
-        <ul class="navbar-nav flex-row align-items-center ms-auto gap-2" style="flex-direction: row !important;">
-          <li class="nav-item"><a class="nav-link" href="index.html">NCC Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="tcet_nccdomains.html">Our Teams</a></li>
-          <li class="nav-item"><a class="nav-link" href="camp.html">Training & Camps</a></li>
-          <li class="nav-item"><a class="nav-link" href="achievers.html">Achievers</a></li>
-          <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
-          <li class="nav-item"><a class="nav-link" href="activities.html">Calendar</a></li>
-          <li class="nav-item"><a class="nav-link" href="test2.html">Gallery</a></li>
-          <li class="nav-item"><a class="nav-link" href="magazine.html">Magazine</a></li>
-          <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
-        </ul>
-      </div>
-    </nav>
+  <header class="page-header">
+    <h1>Our Achievers</h1>
+  </header>
 
-    <!-- <div class="topbar">
-      <h1><i class="fas fa-star"></i> TCET NCC ACTIVITIES</h1>
-    </div> -->
+  <!-- ================= Main Content Section ================= -->
+  <div class="main-content">
+    <!-- Hero Banner -->
     <div class="hero-banner">
-      <h2>Shaping Cadets Through Service & Discipline</h2>
+      <h2>Shaping Cadets Through Service &amp; Discipline</h2>
       <p>Explore our journey through impactful events and dedicated service.</p>
     </div>
 
-    <!-- Activities Auto-Rotating Grid Slider -->
-    <!-- Major Events & Activities -->
+    <!-- ================= Activities Sliders ================= -->
+    <!-- Each slider section is for a category of activities -->
+    <!-- ... (your slider HTML remains unchanged) ... -->
+
+    <!-- Example: Major Events & Activities Slider -->
     <div class="activities-slider-section">
       <h2 class="activities-slider-title">Major Events & Activities</h2>
       <div class="activities-slider-viewport">
         <div class="activities-slider-container" id="activitiesSlider">
           <!-- Card 1 -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (2).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (2).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-republic-day.html" style="color:inherit;text-decoration:none;">Republic Day Parade</a>
+                <a href="event-republic-day.html" style="color: inherit; text-decoration: none">Republic Day Parade</a>
               </h4>
               <p>
-                Cadets participated in the grand Republic Day Parade, showcasing discipline, unity, and patriotism. The event included synchronized march-past, cultural performances, and a Guard of Honour for dignitaries.
+                Cadets participated in the grand Republic Day Parade,
+                showcasing discipline, unity, and patriotism. The event
+                included synchronized march-past, cultural performances, and a
+                Guard of Honour for dignitaries.
               </p>
             </div>
           </div>
           <!-- Card 2 -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/yep2025/yep2025 (3).jpg');"></div>
+            <div class="activities-card-img" ></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-youth-exchange.html" style="color:inherit;text-decoration:none;">Youth Exchange Program</a>
+                <a href="event-youth-exchange.html" style="color: inherit; text-decoration: none">Youth Exchange
+                  Program</a>
               </h4>
               <p>
-                Selected cadets represented the unit in the Youth Exchange Program, interacting with peers from across the country, sharing experiences, and participating in leadership and cultural workshops.
+                Selected cadets represented the unit in the Youth Exchange
+                Program, interacting with peers from across the country,
+                sharing experiences, and participating in leadership and
+                cultural workshops.
               </p>
             </div>
           </div>
           <!-- Card 3 -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (5).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (5).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-tree-plantation.html" style="color:inherit;text-decoration:none;">Tree Plantation Drive</a>
+                <a href="event-tree-plantation.html" style="color: inherit; text-decoration: none">Tree Plantation
+                  Drive</a>
               </h4>
               <p>
-                A green initiative where cadets planted saplings in the campus and nearby areas, promoting environmental awareness and responsibility as part of the Swachh Bharat Abhiyan.
+                A green initiative where cadets planted saplings in the campus
+                and nearby areas, promoting environmental awareness and
+                responsibility as part of the Swachh Bharat Abhiyan.
               </p>
             </div>
           </div>
           <!-- Card 4 -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (7).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (7).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-patriotic-run.html" style="color:inherit;text-decoration:none;">Patriotic Run</a>
+                <a href="event-patriotic-run.html" style="color: inherit; text-decoration: none">Patriotic Run</a>
               </h4>
               <p>
-                The Patriotic Run saw enthusiastic participation from cadets and staff, fostering fitness and national pride. The event concluded with motivational speeches and prize distribution.
+                The Patriotic Run saw enthusiastic participation from cadets
+                and staff, fostering fitness and national pride. The event
+                concluded with motivational speeches and prize distribution.
               </p>
             </div>
           </div>
           <!-- Card 5 -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/yep2025/yep2025 (6).jpg');"></div>
+            <div class="activities-card-img">
+                        background-image: url('assets/img/yep2025/yep2025 (6).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-heritage-awareness.html" style="color:inherit;text-decoration:none;">Heritage Awareness Program</a>
+                <a href="event-heritage-awareness.html" style="color: inherit; text-decoration: none">Heritage Awareness
+                  Program</a>
               </h4>
               <p>
-                Cadets took part in a heritage walk and street play, learning about India’s rich culture and history. The program encouraged pride in national heritage and teamwork among participants.
+                Cadets took part in a heritage walk and street play, learning
+                about India’s rich culture and history. The program encouraged
+                pride in national heritage and teamwork among participants.
               </p>
             </div>
           </div>
         </div>
       </div>
-      <button class="activities-arrow left" onclick="manualSlide('activitiesSlider', -1)">&#10094;</button>
-      <button class="activities-arrow right" onclick="manualSlide('activitiesSlider', 1)">&#10095;</button>
+      <button class="activities-arrow left" onclick="manualSlide('activitiesSlider', -1)">
+        &#10094;
+      </button>
+      <button class="activities-arrow right" onclick="manualSlide('activitiesSlider', 1)">
+        &#10095;
+      </button>
     </div>
 
     <!-- Defence & Armed Forces Exposure Slider -->
@@ -532,56 +261,80 @@
         <div class="activities-slider-container" id="defenceSlider">
           <!-- Army Day -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (1).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (1).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-army-day.html" style="color:inherit;text-decoration:none;">Army Day</a>
+                <a href="event-army-day.html" style="color: inherit; text-decoration: none">Army Day</a>
               </h4>
               <p>
-                Cadets celebrated Army Day with parades and drills, honoring the Indian Army's valor and discipline. The event included motivational talks by officers and showcased the spirit of service and unity.
+                Cadets celebrated Army Day with parades and drills, honoring
+                the Indian Army's valor and discipline. The event included
+                motivational talks by officers and showcased the spirit of
+                service and unity.
               </p>
             </div>
           </div>
           <!-- Navy Day Celebration -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (2).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (2).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-navy-day.html" style="color:inherit;text-decoration:none;">Navy Day Celebration</a>
+                <a href="event-navy-day.html" style="color: inherit; text-decoration: none">Navy Day Celebration</a>
               </h4>
               <p>
-                Cadets visited INS Shikra, Mumbai, witnessing naval aviation and rescue demos. Officers explained naval operations, inspiring cadets with real-world defence insights and maritime pride.
+                Cadets visited INS Shikra, Mumbai, witnessing naval aviation
+                and rescue demos. Officers explained naval operations,
+                inspiring cadets with real-world defence insights and maritime
+                pride.
               </p>
             </div>
           </div>
           <!-- Shastra Pooja -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (3).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (3).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-shastra-pooja.html" style="color:inherit;text-decoration:none;">Shastra Pooja</a>
+                <a href="event-shastra-pooja.html" style="color: inherit; text-decoration: none">Shastra Pooja</a>
               </h4>
               <p>
-                On Dussehra, cadets performed Shastra Pooja, cleaning and honoring training weapons. The ritual fostered respect, unity, and discipline, reinforcing the cultural value of arms as protectors of peace.
+                On Dussehra, cadets performed Shastra Pooja, cleaning and
+                honoring training weapons. The ritual fostered respect, unity,
+                and discipline, reinforcing the cultural value of arms as
+                protectors of peace.
               </p>
             </div>
           </div>
           <!-- CATC 512 -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (4).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (4).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-catc-512.html" style="color:inherit;text-decoration:none;">CATC 512</a>
+                <a href="event-catc-512.html" style="color: inherit; text-decoration: none">CATC 512</a>
               </h4>
               <p>
-                Cadets attended Combined Annual Training Camps, engaging in drills, obstacle courses, and leadership activities. The camps built camaraderie, resilience, and a deeper understanding of military life.
+                Cadets attended Combined Annual Training Camps, engaging in
+                drills, obstacle courses, and leadership activities. The camps
+                built camaraderie, resilience, and a deeper understanding of
+                military life.
               </p>
             </div>
           </div>
         </div>
       </div>
-      <button class="activities-arrow left" onclick="manualSlide('defenceSlider', -1)">&#10094;</button>
-      <button class="activities-arrow right" onclick="manualSlide('defenceSlider', 1)">&#10095;</button>
+      <button class="activities-arrow left" onclick="manualSlide('defenceSlider', -1)">
+        &#10094;
+      </button>
+      <button class="activities-arrow right" onclick="manualSlide('defenceSlider', 1)">
+        &#10095;
+      </button>
     </div>
 
     <!-- Training & Sports Activities Slider -->
@@ -591,56 +344,81 @@
         <div class="activities-slider-container" id="trainingSlider">
           <!-- Physical Training -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/yep2025/yep2025 (1).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/yep2025/yep2025 (1).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-physical-training.html" style="color:inherit;text-decoration:none;">Physical Training</a>
+                <a href="event-physical-training.html" style="color: inherit; text-decoration: none">Physical
+                  Training</a>
               </h4>
               <p>
-                Rigorous physical training sessions included parade drills, obstacle courses, and endurance runs. Cadets developed fitness, discipline, and teamwork essential for NCC and defence careers.
+                Rigorous physical training sessions included parade drills,
+                obstacle courses, and endurance runs. Cadets developed
+                fitness, discipline, and teamwork essential for NCC and
+                defence careers.
               </p>
             </div>
           </div>
           <!-- Patriotic Run -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (5).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (5).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-patriotic-run.html" style="color:inherit;text-decoration:none;">Patriotic Run 2025</a>
+                <a href="event-patriotic-run.html" style="color: inherit; text-decoration: none">Patriotic Run 2025</a>
               </h4>
               <p>
-                Held on 15th Feb 2025, the 5km Patriotic Run united cadets and staff in a celebration of fitness and national pride. The event concluded with prizes and inspiring speeches by dignitaries.
+                Held on 15th Feb 2025, the 5km Patriotic Run united cadets and
+                staff in a celebration of fitness and national pride. The
+                event concluded with prizes and inspiring speeches by
+                dignitaries.
               </p>
             </div>
           </div>
           <!-- Sojourn 2025 -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/yep2025/yep2025 (2).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/yep2025/yep2025 (2).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-sojourn.html" style="color:inherit;text-decoration:none;">Sojourn 2025</a>
+                <a href="event-sojourn.html" style="color: inherit; text-decoration: none">Sojourn 2025</a>
               </h4>
               <p>
-                NCC cadets performed a vibrant group dance at the college festival, blending patriotism with cultural pride. Their unity and energy earned applause and highlighted NCC’s campus spirit.
+                NCC cadets performed a vibrant group dance at the college
+                festival, blending patriotism with cultural pride. Their unity
+                and energy earned applause and highlighted NCC’s campus
+                spirit.
               </p>
             </div>
           </div>
           <!-- Eco Cylothon -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (6).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (6).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-eco-cyclothon.html" style="color:inherit;text-decoration:none;">Eco-Cyclothon 2025</a>
+                <a href="event-eco-cyclothon.html" style="color: inherit; text-decoration: none">Eco-Cyclothon 2025</a>
               </h4>
               <p>
-                On 23rd March 2025, cadets and volunteers cycled through Sanjay Gandhi National Park, promoting fitness and environmental awareness in tribute to national heroes and sustainable living.
+                On 23rd March 2025, cadets and volunteers cycled through
+                Sanjay Gandhi National Park, promoting fitness and
+                environmental awareness in tribute to national heroes and
+                sustainable living.
               </p>
             </div>
           </div>
         </div>
       </div>
-      <button class="activities-arrow left" onclick="manualSlide('trainingSlider', -1)">&#10094;</button>
-      <button class="activities-arrow right" onclick="manualSlide('trainingSlider', 1)">&#10095;</button>
+      <button class="activities-arrow left" onclick="manualSlide('trainingSlider', -1)">
+        &#10094;
+      </button>
+      <button class="activities-arrow right" onclick="manualSlide('trainingSlider', 1)">
+        &#10095;
+      </button>
     </div>
 
     <!-- Lectures & Career Development Slider -->
@@ -650,232 +428,338 @@
         <div class="activities-slider-container" id="lecturesSlider">
           <!-- Defence Training & Lectures -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/yep2025/yep2025 (3).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/yep2025/yep2025 (3).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-defence-lectures.html" style="color:inherit;text-decoration:none;">Defence Training & Lectures</a>
+                <a href="event-defence-lectures.html" style="color: inherit; text-decoration: none">Defence Training &
+                  Lectures</a>
               </h4>
               <p>
-                Officers and alumni delivered sessions on defence careers, SSB prep, and leadership. Cadets gained insights into selection processes and the values needed for a successful defence journey.
+                Officers and alumni delivered sessions on defence careers, SSB
+                prep, and leadership. Cadets gained insights into selection
+                processes and the values needed for a successful defence
+                journey.
               </p>
             </div>
           </div>
           <!-- NCC Training & Lectures -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (7).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (7).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-ncc-lectures.html" style="color:inherit;text-decoration:none;">NCC Training & Lectures</a>
+                <a href="event-ncc-lectures.html" style="color: inherit; text-decoration: none">NCC Training &
+                  Lectures</a>
               </h4>
               <p>
-                Regular lectures covered NCC history, drill, and national integration. Interactive sessions encouraged cadets to ask questions and develop a deeper understanding of NCC’s mission.
+                Regular lectures covered NCC history, drill, and national
+                integration. Interactive sessions encouraged cadets to ask
+                questions and develop a deeper understanding of NCC’s mission.
               </p>
             </div>
           </div>
           <!-- Selection & Eligibility -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/yep2025/yep2025 (4).jpg');"></div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/yep2025/yep2025 (4).jpg');
+                      "></div>
             <div class="activities-card-content">
               <h4>
-                <a href="event-selection-eligibility.html" style="color:inherit;text-decoration:none;">Selection & Eligibility</a>
+                <a href="event-selection-eligibility.html" style="color: inherit; text-decoration: none">Selection &
+                  Eligibility</a>
               </h4>
               <p>
-                Workshops guided cadets through eligibility criteria and selection for national camps and defence services, helping them plan their NCC and career progression effectively.
+                Workshops guided cadets through eligibility criteria and
+                selection for national camps and defence services, helping
+                them plan their NCC and career progression effectively.
               </p>
             </div>
           </div>
           <!-- Motivational Lectures -->
           <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (8).jpg');"></div>
-            <div class="activities-card-content">
-              <h4>
-                <a href="event-motivational-lectures.html" style="color:inherit;text-decoration:none;">Motivational Lectures</a>
-              </h4>
-              <p>
-                Inspirational talks by veterans and achievers motivated cadets to pursue excellence, develop leadership, and serve the nation with pride and integrity.
-              </p>
-            </div>
+            <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (8).jpg');
+                      "></div>
+            Inspirational talks by veterans and achievers motivated cadets
+            to pursue excellence, develop leadership, and serve the nation
+            with pride and integrity.
+            </p>
           </div>
-          <!-- Felicitation & Farewell -->
-          <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/yep2025/yep2025 (5).jpg');"></div>
-            <div class="activities-card-content">
-              <h4>
-                <a href="event-felicitation-farewell.html" style="color:inherit;text-decoration:none;">Felicitation & Farewell</a>
-              </h4>
-              <p>
-                Outgoing cadets were honored for their dedication and achievements. The ceremony included mementos, certificates, and heartfelt tributes, inspiring juniors to carry forward the legacy.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <button class="activities-arrow left" onclick="manualSlide('lecturesSlider', -1)">&#10094;</button>
-      <button class="activities-arrow right" onclick="manualSlide('lecturesSlider', 1)">&#10095;</button>
-    </div>
-
-    <!-- Social Initiatives Slider -->
-    <div class="activities-slider-section">
-      <h2 class="activities-slider-title">Social Initiatives</h2>
-      <div class="activities-slider-viewport">
-        <div class="activities-slider-container" id="socialSlider">
-          <!-- Tree Plantation Drive -->
-          <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (9).jpg');"></div>
-            <div class="activities-card-content">
-              <h4>
-                <a href="event-tree-plantation.html" style="color:inherit;text-decoration:none;">Tree Plantation Drive</a>
-              </h4>
-              <p>
-                NCC and Rotary Club joined hands to plant saplings, raising awareness about climate change and green responsibility. The event ended with a pledge to protect and nurture the environment.
-              </p>
-            </div>
-          </div>
-          <!-- Swachh Bharat Abhiyan -->
-          <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (10).jpg');"></div>
-            <div class="activities-card-content">
-              <h4>
-                <a href="event-swachh-bharat.html" style="color:inherit;text-decoration:none;">Swachh Bharat Abhiyan</a>
-              </h4>
-              <p>
-                Cadets led a spirited cleanliness drive at parks and beaches, collecting waste and inspiring civic responsibility. Street plays and campaigns promoted environmental awareness and teamwork.
-              </p>
-            </div>
-          </div>
-          <!-- Achievers 2024–2025 -->
-          <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/yep2025/yep2025 (6).jpg');"></div>
-            <div class="activities-card-content">
-              <h4>
-                <a href="event-achievers.html" style="color:inherit;text-decoration:none;">Achievers 2024–2025</a>
-              </h4>
-              <p>
-                Cadets who excelled in national camps and defence selections were recognized for their achievements, inspiring peers to strive for excellence and serve the nation with distinction.
-              </p>
-            </div>
-          </div>
-          <!-- Republic Day -->
-          <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (11).jpg');"></div>
-            <div class="activities-card-content">
-              <h4>
-                <a href="event-republic-day.html" style="color:inherit;text-decoration:none;">76th Republic Day</a>
-              </h4>
-              <p>
-                The 76th Republic Day was celebrated with flag hoisting, synchronized drills, cultural performances, and model exhibitions, reflecting unity, discipline, and patriotism among cadets.
-              </p>
-            </div>
-          </div>
-          <!-- Independence Day -->
-          <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/rdc2024/rdc2024 (12).jpg');"></div>
-            <div class="activities-card-content">
-              <h4>
-                <a href="event-independence-day.html" style="color:inherit;text-decoration:none;">78th Independence Day</a>
-              </h4>
-              <p>
-                Under the theme ‘Viksit Bharat’, cadets delivered a powerful Guard of Honour and parade. The event featured inspiring performances and celebrated India’s vision for 2047.
-              </p>
-            </div>
-          </div>
-          <!-- Heritage Awareness Program -->
-          <div class="activities-slider-card">
-            <div class="activities-card-img" style="background-image: url('assets/img/yep2025/yep2025 (7).jpg');"></div>
-            <div class="activities-card-content">
-              <h4>
-                <a href="event-heritage-awareness.html" style="color:inherit;text-decoration:none;">Heritage Awareness Program</a>
-              </h4>
-              <p>
-                Cadets participated in a heritage walk and street play, promoting India’s rich culture and history. The event blended patriotism with creative expression and teamwork.
-              </p>
-            </div>
+        <!-- Felicitation & Farewell -->
+        <div class="activities-slider-card">
+          <div class="activities-card-img" style="
+                        background-image: url('assets/img/yep2025/yep2025 (5).jpg');
+                      "></div>
+          <div class="activities-card-content">
+            <h4>
+              <a href="event-felicitation-farewell.html" style="color: inherit; text-decoration: none">Felicitation &
+                Farewell</a>
+            </h4>
+            <p>
+              Outgoing cadets were honored for their dedication and
+              achievements. The ceremony included mementos, certificates,
+              and heartfelt tributes, inspiring juniors to carry forward the
+              legacy.
+            </p>
           </div>
         </div>
       </div>
-      <button class="activities-arrow left" onclick="manualSlide('socialSlider', -1)">&#10094;</button>
-      <button class="activities-arrow right" onclick="manualSlide('socialSlider', 1)">&#10095;</button>
     </div>
-
-    <div style="padding:1.5rem; text-align: center;" >
-      <p><strong>TCET NCC – Fostering Patriotism, Awareness, and Leadership</strong></p>
-      <p>From defence inspiration to social impact, each event reinforces discipline, unity, and national pride among cadets.</p>
-    </div>
+    <button class="activities-arrow left" onclick="manualSlide('lecturesSlider', -1)">
+      &#10094;
+    </button>
+    <button class="activities-arrow right" onclick="manualSlide('lecturesSlider', 1)">
+      &#10095;
+    </button>
   </div>
 
+  <!-- Social Initiatives Slider -->
+  <div class="activities-slider-section">
+    <h2 class="activities-slider-title">Social Initiatives</h2>
+    <div class="activities-slider-viewport">
+      <div class="activities-slider-container" id="socialSlider">
+        <!-- Tree Plantation Drive -->
+        <div class="activities-slider-card">
+          <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (9).jpg');
+                      "></div>
+          <div class="activities-card-content">
+            <h4>
+              <a href="event-tree-plantation.html" style="color: inherit; text-decoration: none">Tree Plantation
+                Drive</a>
+            </h4>
+            <p>
+              NCC and Rotary Club joined hands to plant saplings, raising
+              awareness about climate change and green responsibility. The
+              event ended with a pledge to protect and nurture the
+              environment.
+            </p>
+          </div>
+        </div>
+        <!-- Swachh Bharat Abhiyan -->
+        <div class="activities-slider-card">
+          <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (10).jpg');
+                      "></div>
+          <div class="activities-card-content">
+            <h4>
+              <a href="event-swachh-bharat.html" style="color: inherit; text-decoration: none">Swachh Bharat Abhiyan</a>
+            </h4>
+            <p>
+              Cadets led a spirited cleanliness drive at parks and beaches,
+              collecting waste and inspiring civic responsibility. Street
+              plays and campaigns promoted environmental awareness and
+              teamwork.
+            </p>
+          </div>
+        </div>
+        <!-- Achievers 2024–2025 -->
+        <div class="activities-slider-card">
+          <div class="activities-card-img" style="
+                        background-image: url('assets/img/yep2025/yep2025 (6).jpg');
+                      "></div>
+          <div class="activities-card-content">
+            <h4>
+              <a href="event-achievers.html" style="color: inherit; text-decoration: none">Achievers 2024–2025</a>
+            </h4>
+            <p>
+              Cadets who excelled in national camps and defence selections
+              were recognized for their achievements, inspiring peers to
+              strive for excellence and serve the nation with distinction.
+            </p>
+          </div>
+        </div>
+        <!-- Republic Day -->
+        <div class="activities-slider-card">
+          <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (11).jpg');
+                      "></div>
+          <div class="activities-card-content">
+            <h4>
+              <a href="event-republic-day.html" style="color: inherit; text-decoration: none">76th Republic Day</a>
+            </h4>
+            <p>
+              The 76th Republic Day was celebrated with flag hoisting,
+              synchronized drills, cultural performances, and model
+              exhibitions, reflecting unity, discipline, and patriotism
+              among cadets.
+            </p>
+          </div>
+        </div>
+        <!-- Independence Day -->
+        <div class="activities-slider-card">
+          <div class="activities-card-img" style="
+                        background-image: url('assets/img/rdc2024/rdc2024 (12).jpg');
+                      "></div>
+          <div class="activities-card-content">
+            <h4>
+              <a href="event-independence-day.html" style="color: inherit; text-decoration: none">78th Independence
+                Day</a>
+            </h4>
+            <p>
+              Under the theme ‘Viksit Bharat’, cadets delivered a powerful
+              Guard of Honour and parade. The event featured inspiring
+              performances and celebrated India’s vision for 2047.
+            </p>
+          </div>
+        </div>
+        <!-- Heritage Awareness Program -->
+        <div class="activities-slider-card">
+          <div class="activities-card-img" style="
+                        background-image: url('assets/img/yep2025/yep2025 (7).jpg');
+                      "></div>
+          <div class="activities-card-content">
+            <h4>
+              <a href="event-heritage-awareness.html" style="color: inherit; text-decoration: none">Heritage Awareness
+                Program</a>
+            </h4>
+            <p>
+              Cadets participated in a heritage walk and street play,
+              promoting India’s rich culture and history. The event blended
+              patriotism with creative expression and teamwork.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="activities-arrow left" onclick="manualSlide('socialSlider', -1)">
+      &#10094;
+    </button>
+    <button class="activities-arrow right" onclick="manualSlide('socialSlider', 1)">
+      &#10095;
+    </button>
+  </div>
+</div>
+
+  <!-- Page Footer/Note -->
+  <div class="activities-footer-note">
+    <p><strong>TCET NCC – Fostering Patriotism, Awareness, and Leadership</strong></p>
+    <p>From defence inspiration to social impact, each event reinforces discipline, unity, and national pride among cadets.</p>
+  </div>
+  </div>
+
+  <!-- ================= Slider Script ================= -->
   <script>
-  function getVisibleCards() {
-    if(window.innerWidth <= 600) return 1;
-    if(window.innerWidth <= 900) return 2;
-    if(window.innerWidth <= 1200) return 3;
-    return 4;
-  }
-
-  function setupSlider(sliderId, intervalMs = 5000) {
-    const slider = document.getElementById(sliderId);
-    if (!slider) return;
-    const cards = slider.children;
-    let current = 0;
-    let visible = getVisibleCards();
-
-    function update() {
-      visible = getVisibleCards();
-      const cardWidth = cards[0].offsetWidth + parseFloat(getComputedStyle(slider).gap || 24);
-      slider.style.transform = `translateX(-${current * cardWidth}px)`;
+    // ... (your slider JS remains unchanged) ...
+    function getVisibleCards() {
+      if (window.innerWidth <= 600) return 1;
+      if (window.innerWidth <= 900) return 2;
+      if (window.innerWidth <= 1200) return 3;
+      return 4;
     }
-
-    function next() {
-      visible = getVisibleCards();
-      if (current + visible >= cards.length) {
-        current = 0;
-      } else {
-        current++;
+    function setupSlider(sliderId, intervalMs = 5000) {
+      const slider = document.getElementById(sliderId);
+      if (!slider) return;
+      const cards = slider.children;
+      let current = 0;
+      let visible = getVisibleCards();
+      function update() {
+        visible = getVisibleCards();
+        const cardWidth =
+          cards[0].offsetWidth +
+          parseFloat(getComputedStyle(slider).gap || 24);
+        slider.style.transform = `translateX(-${current * cardWidth}px)`;
       }
+      function next() {
+        visible = getVisibleCards();
+        if (current + visible >= cards.length) {
+          current = 0;
+        } else {
+          current++;
+        }
+        update();
+      }
+      function prev() {
+        visible = getVisibleCards();
+        if (current === 0) {
+          current = Math.max(0, cards.length - visible);
+        } else {
+          current--;
+        }
+        update();
+      }
+      let auto = setInterval(next, intervalMs);
+      slider.parentElement.addEventListener("mouseenter", () =>
+        clearInterval(auto)
+      );
+      slider.parentElement.addEventListener(
+        "mouseleave",
+        () => (auto = setInterval(next, intervalMs))
+      );
+      window.addEventListener("resize", update);
+      slider.dataset.current = current;
+      slider.dataset.visible = visible;
+      slider.next = next;
+      slider.prev = prev;
+      slider.update = update;
       update();
     }
-
-    function prev() {
-      visible = getVisibleCards();
-      if (current === 0) {
-        current = Math.max(0, cards.length - visible);
-      } else {
-        current--;
-      }
-      update();
+    function manualSlide(sliderId, dir) {
+      const slider = document.getElementById(sliderId);
+      if (!slider) return;
+      if (dir > 0) slider.next();
+      else slider.prev();
     }
+    document.addEventListener("DOMContentLoaded", function () {
+      setupSlider("activitiesSlider", 5000);
+      setupSlider("defenceSlider", 5000);
+      setupSlider("trainingSlider", 5000);
+      setupSlider("lecturesSlider", 5000);
+      setupSlider("socialSlider", 5000);
+    });
+  </script>
+  <!-- Bootstrap JS for navbar toggler -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sidebar = document.getElementById('sidebarNav');
+      const toggleBtn = document.querySelector('.sidebar-toggle');
+      let overlay = null;
 
-    let auto = setInterval(next, intervalMs);
-
-    slider.parentElement.addEventListener('mouseenter', () => clearInterval(auto));
-    slider.parentElement.addEventListener('mouseleave', () => auto = setInterval(next, intervalMs));
-
-    window.addEventListener('resize', update);
-
-    slider.dataset.current = current;
-    slider.dataset.visible = visible;
-
-    slider.next = next;
-    slider.prev = prev;
-    slider.update = update;
-
-    update();
-  }
-
-  function manualSlide(sliderId, dir) {
-    const slider = document.getElementById(sliderId);
-    if (!slider) return;
-    if (dir > 0) slider.next();
-    else slider.prev();
-  }
-
-  // Initialize all sliders after DOM is ready
-  document.addEventListener('DOMContentLoaded', function() {
-    setupSlider('activitiesSlider', 5000);
-    setupSlider('defenceSlider', 5000);
-    setupSlider('trainingSlider', 5000);
-    setupSlider('lecturesSlider', 5000);
-    setupSlider('socialSlider', 5000);
-  });
+      function openSidebar() {
+        sidebar.classList.add('open');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        overlay = document.createElement('div');
+        overlay.className = 'sidebar-overlay';
+        overlay.onclick = closeSidebar;
+        document.body.appendChild(overlay);
+        // Trap focus inside sidebar for accessibility
+        sidebar.setAttribute('tabindex', '-1');
+        sidebar.focus();
+      }
+      function closeSidebar() {
+        sidebar.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        if (overlay) {
+          overlay.classList.add('hide');
+          setTimeout(() => overlay && overlay.remove(), 300);
+        }
+        sidebar.removeAttribute('tabindex');
+      }
+      // Toggle sidebar on hamburger click
+      toggleBtn && toggleBtn.addEventListener('click', function () {
+        if (sidebar.classList.contains('open')) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
+      });
+      // Close sidebar on resize to desktop
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 992) closeSidebar();
+      });
+      // Close sidebar on ESC key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === "Escape" && sidebar.classList.contains('open')) {
+          closeSidebar();
+          toggleBtn.focus();
+        }
+      });
+    });
   </script>
 </body>
+
 </html>

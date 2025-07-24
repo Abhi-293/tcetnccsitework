@@ -1,4 +1,119 @@
-/* ===================== Redesigned Social Handles Section ===================== */
+/* ===================== TCET NCC - index.css =====================
+   This stylesheet contains all custom CSS for index.html.
+   Each section is clearly commented for easy navigation and maintenance.
+================================================================= */
+
+/* ===================== 1. General Styles ===================== */
+/* Sets base font, removes default margin/padding, and applies global font. */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  text-align: justify;
+}
+.outer-wrapper {
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* ===================== 2. Navbar Styles ===================== */
+/* Custom gradient navbar with hover effects and dropdown styling. */
+.navbar-custom {
+  background: linear-gradient(90deg, #8b0000, #1a1a2e);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  padding: 10px 10px;
+  transition: all 0.3s ease-in-out;
+}
+.navbar-brand img {
+  height: 45px;
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+.navbar-brand:hover img {
+  transform: scale(1.1);
+}
+.nav-link {
+  color: #ffffff !important;
+  font-size: 20px;
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease;
+}
+.nav-link:hover {
+  color: #ffd700 !important;
+}
+.nav-link::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #9b9679;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  transition: width 0.4s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+  display: none !important;
+}
+.nav-item.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: relative;
+  top: 100%;
+  left: 0;
+  z-index: 1050;
+  margin-top: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  min-width: 180px;
+  background-color: #1a1a2e;
+  border: none;
+}
+.dropdown-item {
+  color: #fff;
+  transition: background 0.3s ease;
+}
+.dropdown-item:hover {
+  background-color: #800000;
+  color: #fff;
+}
+
+
+/* ===================== 3. Header Section ===================== */
+/* Styles for the logo and tab box in the header. */
+.headcontainer {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.tab-box {
+  padding: 2px;
+  text-align: center;
+}
+.header-logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ===================== 4. Official Profile Section ===================== */
+/* Card hover effect for profile cards. */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+}
+
+/* ===================== 5. Redesigned Social Handles Section ===================== */
+/* Modern floating cards and glowing animated icons for social links. */
 .social-card.attract-effect {
   position: relative;
   overflow: visible;
@@ -14,7 +129,6 @@
   border-color: #ffd600;
   z-index: 2;
 }
-
 @keyframes floatCard {
   0% { transform: translateY(0) rotate(-1deg); }
   50% { transform: translateY(-8px) rotate(1.5deg); }
@@ -41,7 +155,6 @@
 .social-card.attract-effect:hover .attract-icon i {
   transform: scale(1.18) rotate(-8deg);
 }
-
 @keyframes glowPulse {
   0% { box-shadow: 0 0 0 0 #ffd600, 0 0 24px 0 #ffd60055; }
   50% { box-shadow: 0 0 0 8px #ffd60044, 0 0 32px 8px #ffd60099; }
@@ -53,7 +166,6 @@
 .insta-glow { box-shadow: 0 0 0 0 #e1306c, 0 0 24px 0 #e1306c55; animation: instaGlow 2.2s infinite alternate; }
 .twitter-glow { box-shadow: 0 0 0 0 #111, 0 0 24px 0 #11133355; animation: twitterGlow 2.2s infinite alternate; }
 .linkedin-glow { box-shadow: 0 0 0 0 #0077B5, 0 0 24px 0 #0077B555; animation: linkedinGlow 2.2s infinite alternate; }
-
 @keyframes youtubeGlow {
   0% { box-shadow: 0 0 0 0 #ff0000, 0 0 24px 0 #ff000055; }
   50% { box-shadow: 0 0 0 8px #ff000044, 0 0 32px 8px #ff000099; }
@@ -75,7 +187,7 @@
   100% { box-shadow: 0 0 0 0 #0077B5, 0 0 24px 0 #0077B555; }
 }
 
-/* Button hover and gradient effects */
+/* Button hover and gradient effects for social section */
 .attract-btn {
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -122,10 +234,9 @@
   .attract-icon { width: 56px; height: 56px; }
   .attract-icon i { font-size: 1.5rem !important; }
 }
-/* ===================== End Redesigned Social Handles Section ===================== */
-/* ===================== Carousel Fade Animation Enhancement ===================== */
 
-/* ===================== Carousel Slide-in Animation Enhancement ===================== */
+/* ===================== 6. Carousel & Testimonials Section ===================== */
+/* Carousel fade/slide-in animation and testimonial card styling. */
 .carousel .carousel-item {
   opacity: 0;
   transform: translateX(80px) scale(0.98);
@@ -137,39 +248,10 @@
   transform: translateX(0) scale(1);
   z-index: 2;
 }
-
-/* Card fade-in effect for testimonials */
-/* Card slide-in effect for testimonials */
 .carousel .card {
   opacity: 0;
   transform: translateX(60px) scale(0.97);
   transition: opacity 0.7s, transform 0.7s;
-}
-.carousel-item.active .card {
-  opacity: 1;
-  transform: translateX(0) scale(1);
-}
-/* Even larger testimonial images for carousel */
-.testimonial-img-lg {
-  width: 180px !important;
-  height: 180px !important;
-}
-/* ===================== Testimonials Section ===================== */
-.testimonial-img {
-  width: 180px !important;
-  height: 200px !important;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 8px solid #ff0000;    
-  box-shadow: 0 4px 16px rgba(29, 78, 137, 0.15);
-  transition: transform 0.3s;
-}
-.testimonial-img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 32px rgba(29, 78, 137, 0.25);
-}
-
-.carousel .card {
   min-height: 370px;
   max-width: 100%;
   width: 100%;
@@ -183,11 +265,31 @@
   flex-direction: column;
   justify-content: flex-start;
 }
+.carousel-item.active .card {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+}
 .carousel .card:hover {
   box-shadow: 0 12px 48px rgba(29, 78, 137, 0.18), 0 2px 8px rgba(0,0,0,0.06);
   transform: translateY(6px) scale(1.03);
 }
-
+.testimonial-img-lg {
+  width: 180px !important;
+  height: 180px !important;
+}
+.testimonial-img {
+  width: 180px !important;
+  height: 200px !important;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid #ff0000;    
+  box-shadow: 0 4px 16px rgba(29, 78, 137, 0.15);
+  transition: transform 0.3s;
+}
+.testimonial-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 32px rgba(29, 78, 137, 0.25);
+}
 .testimonial-text {
   color: #1d4e89;
   font-size: 1.08rem;
@@ -198,129 +300,19 @@
   font-family: 'Poppins', Arial, sans-serif;
   letter-spacing: 0.01em;
 }
-
 #testimonials .carousel-inner {
   padding-bottom: 2rem;
 }
-
 #testimonials .carousel-control-prev,
 #testimonials .carousel-control-next {
   filter: drop-shadow(0 2px 8px #1d4e89cc);
 }
-
 #testimonials .fw-bold {
   color: #1d4e89;
 }
-/* ===================== TCET NCC - index.css ===================== */
-/*
-  This stylesheet contains all custom CSS for index.html.
-  Each section is clearly commented for easy navigation and maintenance.
-*/
 
-/* ===================== Header Section Styling ===================== */
-.tab-box {
-  padding: 2px;
-  text-align: center;
-}
-.header-logo {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-}
-
-/* ===================== Official Profile Section ===================== */
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: scale(1.03); /* Slight zoom */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Elevation shadow */
-  z-index: 10;
-}
-
-/* ===================== Navbar Styles ===================== */
-.navbar-custom {
-  background: linear-gradient(90deg, #8b0000, #1a1a2e);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  padding: 10px 10px;
-  transition: all 0.3s ease-in-out;
-}
-.navbar-brand img {
-  height: 45px;
-  margin-right: 8px;
-  transition: transform 0.3s ease;
-}
-.navbar-brand:hover img {
-  transform: scale(1.1);
-}
-.nav-link {
-  color: #ffffff !important;
-  font-weight: 500;
-  position: relative;
-  padding: 0.5rem 1rem;
-  transition: all 0.3s ease;
-}
-.nav-link:hover {
-  color: #ffd700 !important;
-}
-.nav-link::after {
-  content: "";
-  width: 0;
-  height: 2px;
-  background: #9b9679;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  transition: width 0.4s ease;
-}
-.nav-link:hover::after {
-  width: 100%;
-  display: none !important;
-}
-.nav-item.dropdown {
-  position: relative; /* Anchor for absolute dropdown */
-}
-.dropdown-menu {
-  position: relative;
-  top: 100%; /* Places it just below the trigger */
-  left: 0;
-  z-index: 1050;
-  margin-top: 10px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  min-width: 180px;
-  background-color: #1a1a2e;
-  border: none;
-}
-.dropdown-item {
-  color: #fff;
-  transition: background 0.3s ease;
-}
-.dropdown-item:hover {
-  background-color: #800000;
-  color: #fff;
-}
-@media (max-width: 992px) {
-  .navbar-nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    max-width: 100%;
-  }
-}
-
-/* ===================== Section image slideshow ===================== */
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  text-align: justify;
-}
-.outer-wrapper {
-  width: 100%;
-  padding: 0 20px;
-}
+/* ===================== 7. Section Image Slideshow ===================== */
+/* Gallery section with responsive carousel images. */
 .gallery-section {
   background-color: #f8f9fa;
   padding: 20px 0;
@@ -361,7 +353,8 @@ html, body {
   }
 }
 
-/* ===================== Modern Card Design for Features & Objectives ===================== */
+/* ===================== 8. Modern Card Design for Features & Objectives ===================== */
+/* Stylish cards for features/objectives with hover and quote styling. */
 .features-objectives-card {
   background: linear-gradient(135deg, #f8fafc 60%, #e3e6ee 100%);
   border-radius: 16px;
@@ -427,7 +420,8 @@ html, body {
   margin-top: 2rem;
 }
 
-/* ===================== About Us CSS ===================== */
+/* ===================== 9. About Us Section ===================== */
+/* Responsive about section with text and image slider. */
 .about-wrapper {
   width: 95%;
   margin: 30px auto;

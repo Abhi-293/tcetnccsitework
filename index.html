@@ -23,49 +23,50 @@
 <body>
 
   <!-- Header Section -->
-  <div class="container mt-5">
+  <div class="headcontainer">
     <div class="tab-box">
       <img src="assets/img/Header.png" alt="NCC Header" class="header-logo">
     </div>
   </div>
 
-  <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-
-
-
 <!-- Navbar -->
-<nav class="navbar navbar-dark navbar-custom sticky-top">
+<nav class="navbar navbar-dark navbar-custom sticky-top navbar-expand-lg">
   <div class="container-fluid d-flex justify-content-between align-items-center">
-
-     <!-- Logo + Text aligned left -->
+    <!-- Logo + Text -->
     <a class="navbar-brand d-flex align-items-center me-4" href="index.html">
-      <img src="assets/img/logo/ncclogo.png" alt="NCC Logo" style="height: 60px; width: auto;" class="me-2">
+      <img src="assets/img/logo/ncclogo.png" alt="NCC Logo" style="height: 45px; width: auto;" class="me-2">
       <div class="d-flex flex-column lh-sm text-white">
         <span class="fw-bold" style="font-size: 2.0rem;">TCET</span>
         <span style="font-size: 1.2rem;">NCC UNIT</span>
       </div>
     </a>
-    <!-- Navigation Items Right-Aligned -->
-    <ul class="navbar-nav d-flex flex-row align-items-center ms-auto gap-2">
-      <li class="nav-item"><a class="nav-link" href="https://www.tcetmumbai.in">TCET Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="index.html">NCC Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="tcet_nccdomains.html">Our Teams</a></li>
-      <li class="nav-item"><a class="nav-link" href="camp.html">Training & Camps</a></li>
-      <li class="nav-item"><a class="nav-link" href="achievers.html">Achievers</a></li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown " href="#" role="button" data-bs-toggle="dropdown">Activities</a>
-        <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href="#">Puneet Sagar</a></li>
-          <li><a class="dropdown-item" href="#">Tree Plantation</a></li>
-          <li><a class="dropdown-item" href="#">Blood Donation</a></li>
-        </ul>
-      </li>
-      <li class="nav-item"><a class="nav-link" href="activities.html">Calendar</a></li>
-      <li class="nav-item"><a class="nav-link" href="index1.html">Gallery</a></li>
-      <li class="nav-item"><a class="nav-link" href="magazine.html">Magazine</a></li>
-      <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
-    </ul>
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>  
+    </button>
+    <!-- Collapsible nav links -->
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-2">
+        <li class="nav-item"><a class="nav-link" href="index.html">NCC Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="tcet_nccdomains.html">Our Teams</a></li>
+        <li class="nav-item"><a class="nav-link" href="camp.html">Training & Camps</a></li>
+        <li class="nav-item"><a class="nav-link" href="achievers.html">Achievers</a></li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Activities
+          </a>
+          <ul class="dropdown-menu" aria-labelledby = "navbarDropdown">
+            <li><a class="dropdown-item" href="#">Puneet Sagar</a></li>
+            <li><a class="dropdown-item" href="#">Tree Plantation</a></li>
+            <li><a class="dropdown-item" href="#">Blood Donation</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="activities.html">Calendar</a></li>
+        <li class="nav-item"><a class="nav-link" href="index1.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="magazine.html">Magazine</a></li>
+        <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -280,7 +281,7 @@
     </div>
     <div class="row g-4 justify-content-center">
       
-      <!-- Officer 1 -->
+      <!-- OIC -->
       <div class="col-md-4">
         <div class="card h-100 text-center shadow border-0">
           <img src="assets/img/cdr.png" class="card-img-top rounded-top" alt="Cdr. Vijay Pratap Singh">
@@ -292,7 +293,7 @@
         </div>
       </div>
 
-      <!-- Officer 2 -->
+      <!-- ANO -->
       <div class="col-md-4">
         <div class="card h-100 text-center shadow border-0">
           <img src="assets/img/ano.png" class="card-img-top rounded-top" alt="Lt. Dr. Nivant Kamabale">
@@ -304,7 +305,7 @@
         </div>
       </div>
 
-      <!-- Officer 3 -->
+      <!-- CTO -->
       <div class="col-md-4">
         <div class="card h-100 text-center shadow border-0">
           <img src="assets/img/cto.png" class="card-img-top rounded-top" alt="Mr. Sunil Khatri">
@@ -558,7 +559,7 @@
         <a href="index.html" class="footer-link"><i class="fas fa-home footer-icon"></i> Home</a>
         <a href="tcet_nccdomains.html" class="footer-link"><i class="fas fa-users footer-icon"></i> Our Teams</a>
         <a href="camp.html" class="footer-link"><i class="fas fa-campground footer-icon"></i> Training & Camps</a>
-        <a href="camp.html" class="footer-link"><i class="fas fa-trophy footer-icon"></i> NCC & Defence >
+        <a href="camp.html" class="footer-link"><i class="fas fa-trophy footer-icon"></i> NCC & Defence ></a>
         <a href="achievers.html" class="footer-link"><i class="fas fa-trophy footer-icon"></i> Achievers</a>
       </div>
       <div class="col-md-3">
