@@ -30,44 +30,28 @@
   </div>
 
 <!-- Navbar -->
-<nav class="navbar navbar-dark navbar-custom sticky-top navbar-expand-lg">
-  <div class="container-fluid d-flex justify-content-between align-items-center">
-    <!-- Logo + Text -->
-    <a class="navbar-brand d-flex align-items-center me-4" href="index.html">
-      <img src="assets/img/logo/ncclogo.png" alt="NCC Logo" style="height: 45px; width: auto;" class="me-2">
-      <div class="d-flex flex-column lh-sm text-white">
-        <span class="fw-bold" style="font-size: 2.0rem;">TCET</span>
-        <span style="font-size: 1.2rem;">NCC UNIT</span>
-      </div>
-    </a>
-    <!-- Toggler for mobile -->
-    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>  
-    </button>
-    <!-- Collapsible nav links -->
-    <div class="collapse navbar-collapse" id="mainNavbar">
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center gap-2">
-        <li class="nav-item"><a class="nav-link" href="index.html">NCC Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="tcet_nccdomains.html">Our Teams</a></li>
-        <li class="nav-item"><a class="nav-link" href="camp.html">Training & Camps</a></li>
-        <li class="nav-item"><a class="nav-link" href="achievers.html">Achievers</a></li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Activities
-          </a>
-          <ul class="dropdown-menu" aria-labelledby = "navbarDropdown">
-            <li><a class="dropdown-item" href="#">Puneet Sagar</a></li>
-            <li><a class="dropdown-item" href="#">Tree Plantation</a></li>
-            <li><a class="dropdown-item" href="#">Blood Donation</a></li>
-          </ul>
-        </li>
-        <li class="nav-item"><a class="nav-link" href="activities.html">Calendar</a></li>
-        <li class="nav-item"><a class="nav-link" href="index1.html">Gallery</a></li>
-        <li class="nav-item"><a class="nav-link" href="magazine.html">Magazine</a></li>
-        <li class="nav-item"><a class="nav-link" href="contactus.html">Contact Us</a></li>
-      </ul>
-    </div>
-  </div>
+<!-- Navbar -->
+<nav class="custom-navbar">
+  <!-- Logo + Text -->
+  <a class="brand" href="index.html">
+    <img src="assets/img/logo/ncclogo.png" alt="NCC Logo" style="height: 55px; width: auto;">
+    <span style="font-size: 2.0rem; font-weight: bold;">TCET</span>
+    <span style="font-size: 1.2rem;">NCC UNIT</span>
+  </a>
+  <!-- Hamburger for mobile -->
+  <button class="nav-toggle" aria-label="Open navigation">&#9776;</button>
+  <!-- Nav links -->
+  <ul class="nav-links">
+    <li><a class="nav-link" href="index.html">NCC Home</a></li>
+    <li><a class="nav-link" href="tcet_nccdomains.html">Our Teams</a></li>
+    <li><a class="nav-link" href="camp.html">Training & Camps</a></li>
+    <li><a class="nav-link" href="achievers.html">Achievers</a></li>
+    <li><a class="nav-link" href="activities.html">Activities</a></li>
+    <li><a class="nav-link" href="calendar.html">Calendar</a></li>
+    <li><a class="nav-link" href="index1.html">Gallery</a></li>
+    <li><a class="nav-link" href="magazine.html">Magazine</a></li>
+    <li><a class="nav-link" href="contactus.html">Contact Us</a></li>
+  </ul>
 </nav>
 
 <!-- TCET NCC Hero Section -->
@@ -592,6 +576,14 @@
 
 <!-- Bootstrap JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+<script>
+  // Hamburger menu toggle
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  navToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    document.body.classList.toggle('nav-open');
+  });
+</script>
 </body>
 </html>
