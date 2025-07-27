@@ -1,4 +1,3 @@
-
 /* =====================================================
    tcet_nccdomains.css - Custom styles for TCET NCC Domains page
    ===================================================== */
@@ -40,6 +39,28 @@
 .cadet-role {
   font-size: 1.0rem;
   color: #555;
+}
+.flex-column {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+/* Development Section */
+.rounded {
+    border-radius: var(--bs-border-radius) !important;
+    height: auto;
+    width: 100vw;
+    padding: 2px;
+}
+
+/* For the profile card in DD section */
+.g-4, .gy-4 {
+    --bs-gutter-y: 4.5rem;
+}
+
+.g-4, .gx-4 {
+    --bs-gutter-x: 1.5rem;
 }
 
 /* ========== Wing Section Flex Layout ========== */
@@ -98,3 +119,59 @@
   border-radius: 4px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05);
 }
+@media (min-width: 768px) {
+    .container, .container-md, .container-sm {
+        max-width: 80vw;
+        /* border: 5px solid black; */
+    }
+}
+
+/* Responsive grid for cards: 4 per row desktop, 2 per row mobile
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+@media (max-width: 900px) {
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* 4-image grid above cards in Design & Development */
+/* .image-grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+.image-grid-4 img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(44,62,80,0.10);
+  background: #fff;
+}
+@media (max-width: 900px) {
+  .image-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .image-grid-4 img {
+    height: 120px;
+  }
+}
+@media (max-width: 600px) {
+  .image-grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .image-grid-4 img {
+    height: 100px;
+  }
+}  */

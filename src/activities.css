@@ -1,11 +1,9 @@
-/* achievers.css - Custom styles for Achievers page
-   -----------------------------------------------
-   This file contains styles specific to the Achievers page sidebar, header, cards, and layout.
-   Author: TCET NCC Web Team
-   Last updated: July 2025
-*/
+/* ===========================================================
+   activities.css - Custom styles for Achievers/Activities Page
+   TCET NCC Web Team | Last updated July 2025
+=========================================================== */
 
-/* General page styles */
+/* ===================== Base / Global Styles ===================== */
 html {
   scroll-behavior: smooth;
   margin: 0px;
@@ -16,18 +14,18 @@ body {
   color: #333;
 }
 
-/* Header styles */
+/* ===================== Header ===================== */
 .page-header {
   background: linear-gradient(to right, #781c1c, #000000);
-    color: #fff;
-    border-radius: 0.5rem;
-    padding: 1.2rem 1.5rem 1.2rem 1.5rem;
-    margin-top: 10px;
-    margin-left: 390px;
-    margin-right: 10px;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(22, 59, 91, 0.07);     
-    z-index: 10;
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+  margin-top: 10px;
+  margin-left: 390px;
+  margin-right: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(22, 59, 91, 0.07);     
+  z-index: 10;
 }
 .page-header h1 {
   font-size: 2.0rem;
@@ -35,7 +33,7 @@ body {
   margin: 0;
 }
 
-/* Intro and section title */
+/* ===================== Titles & Section Titles ===================== */
 .intro-text {
   max-width: 1600px;
   margin: 30px auto;
@@ -65,7 +63,7 @@ body {
   text-align: center;
 }
 
-/* Cadet achievement card styles */
+/* ===================== Cadet Cards ===================== */
 .cadet-card {
   background-color: #ffffff;
   border-radius: 12px;
@@ -104,12 +102,12 @@ body {
   line-height: 1.6;
 }
 
-/* Sidebar styles */
+/* ===================== Sidebar styles / custom nav ===================== */
 .sidebar-custom {
   width: 450px;
-  height: calc(100vh - 0px); /* Adjust height based on header height */
+  height: calc(100vh - 0px);
   position: fixed;
-  top: 0px; /* exactly below the header */
+  top: 0px;
   left: 0;
   bottom: 0;
   background: #012a4a;
@@ -171,14 +169,7 @@ body {
   color: #90e0ef;
 }
 
-/* Main content area */
-.main-content {
-  margin-left: 300px; /* matches sidebar width + gap */
-  padding: 20px;
-}
-
-/* ================= Sidebar Styles ================= */
-/* Styles for the fixed sidebar navigation */
+/* ===================== Sidebar (main/left) ===================== */
 .camp-sidebar {
   width: 380px;
   background: #163b5b;
@@ -252,7 +243,7 @@ body {
   color: #fff;
 }
 
-/* ================= Main Content Styles ================= */
+/* ===================== Main Content Layout ===================== */
 .main-content {
   margin-left: 380px;
   padding: 2rem 2.5vw 2rem 2.5vw;
@@ -264,9 +255,7 @@ div.main-content {
   padding: 10px;
 }
 
-/* ================= Header and Navbar ================= */
-/* ===================== 3. Header Section ===================== */
-/* Styles for the logo and tab box in the header. */
+/* ===================== Header/Tabbox/Logo ===================== */
 .headcontainer {
   width: 100%;
   padding: 20px;
@@ -276,13 +265,13 @@ div.main-content {
   margin-left: 380px;
 }
 .header-logo {
-    width: 99%;
-    height: auto;
-    display: block;
-    margin: 10px;
+  width: 99%;
+  height: auto;
+  display: block;
+  margin: 10px;
 }
 
-/* ================= Hero Banner ================= */
+/* ===================== Hero Banner ===================== */
 .hero-banner {
   background: linear-gradient(90deg, #236090 60%, #163b5b 100%);
   color: #fff;
@@ -307,12 +296,12 @@ div.main-content {
   text-align: center;
 }
 
-/* ================= Activities Slider Styles ================= */
+/* ===================== Activities Slider ===================== */
 .activities-slider-section {
   margin: 2rem 0 2.5rem 0;
   position: relative;
   background: linear-gradient(135deg, #3b4c3f, #6a7c59, #8b9274);
-  color: #f4f4f4; /* Optional: light text for contrast */
+  color: #f4f4f4;
   border-radius: 12px;
   padding: 1.5rem 0.5rem 2.5rem 0.5rem;
   box-shadow: 0 2px 16px rgba(22,59,91,0.07);
@@ -340,19 +329,18 @@ div.main-content {
 .activities-slider-card {
   min-width: 32%;
   max-width: 33%;
-  margin-right: 1.5%; /* Add margin between cards */
+  margin-right: 1.5%;
 }
 .activities-slider-card:nth-child(3n) {
-  margin-right: 0; /* Remove margin on every 3rd card for perfect alignment */
+  margin-right: 0;
 }
 .activities-slider-card:hover {
   box-shadow: 0 4px 18px rgba(214,57,17,0.13);
   /* border: 1.5px solid #d63911; */
-  
 }
 .activities-card-img {
   width: 100%;
-  height: 210px; /* Previously 170px, now +40px */
+  height: 210px;
   background-size: cover;
   background-position: center;
   border-radius: 12px 12px 0 0;
@@ -409,17 +397,145 @@ div.main-content {
 .activities-arrow.right { right: 10px; }
 .activities-arrow:hover { background: #d63911; }
 
-/* ================= Footer Note ================= */
+/* ===================== Footer Note ===================== */
 .activities-footer-note {
   padding: 1.5rem;
   text-align: center;
 }
 
-/* ================= Responsive Styles ================= */
+/* ===================== Navbar (pure CSS) ===================== */
+.custom-navbar {
+  margin-left: 380px;
+  padding: 5px;
+  background: linear-gradient(90deg, #8b0000, #1a1a2e);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-right: 10px; */
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.custom-navbar .brand { 
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-right: 100px;
+  text-decoration: none;
+  color: #fff;
+}
+.me-4 {
+  margin-right: 2rem ;
+}
+.custom-navbar .brand img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+.custom-navbar .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: right 0.3s;
+}
+.custom-navbar .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    display: block;
+}
+.custom-navbar .nav-link:hover,
+.custom-navbar .nav-link:focus {
+  background: #d63911;
+  color: #fff;
+}
+.custom-navbar .nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-left: 1rem;
+}
+
+/* Sidebar toggle button styles */
+.sidebar-toggle {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 2001;
+  background: #163b5b;
+  color: #fff;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 8px rgba(22,59,91,0.12);
+  display: none;
+}
+
+/* ===========================================
+   MEDIA QUERIES FOR RESPONSIVENESS
+   =========================================== */
+  /* Extra small devices (phones) */
+@media (max-width: 600px) { 
+  /* -------------------------------------------
+   3. 600px and below: Phones and Small Devices
+   - Cards: full width (1 per row)
+   - Smaller title/font sizes
+   - Sidebar and main content with less margin/padding
+-------------------------------------------- */
+  .activities-slider-card {
+    min-width: 95vw;
+    max-width: 98vw;
+    margin-right: 0;
+  }
+  .activities-slider-container { gap: 0.7rem; }
+  .activities-slider-title { font-size: 1.1rem; }
+  .main-content,
+  .camp-sidebar {
+    margin-top: 0;
+  }
+  .header-logo {
+    height: auto;
+    /* border: 5px solid black; */
+    margin: 10px;
+  }
+}
+
+@media (min-width: 992px) { ... }
+/* Extra large devices (large desktops) */
+/* -------------------------------------------
+   1. 1200px and below: Card Min/Max Width Fix
+-------------------------------------------- */
 @media (max-width: 1200px) {
+  /* -- Adjust activities slider cards for desktop/L large -- */
   .activities-slider-card { min-width: 32%; max-width: 33%; }
 }
+
+
+/* -------------------------------------------
+   2. 900px and below: Tablet Portrait & Small Desktop
+   - Sidebar becomes static and full width
+   - Main content uses full width with less left margin
+   - Slider shows 2 cards per row
+   - Navbar shrinks, nav links collapse to hamburger
+-------------------------------------------- */
 @media (max-width: 900px) {
+  /* ----- Sidebar as Top/Static Panel ----- */
   .camp-sidebar {
     position: static;
     width: 100%;
@@ -427,9 +543,10 @@ div.main-content {
     border-right: none;
     border-bottom: 3px solid #d63911;
     padding-top: 0.5rem;
-    background: #163b5b;
+    background: #adbbc7;
     max-height: none;
   }
+  /* ----- Main content fills full width ----- */
   .main-content {
     margin-left: 0 !important;
     margin-top: 0;
@@ -446,105 +563,20 @@ div.main-content {
   .activities-slider-container { padding: 0 0.5rem; }
   .activities-slider-title { padding-left: 0; }
   .sidebar-menu {
-    max-height: 220px;
+    max-height: 100vh;
   }
-}
-@media (max-width: 600px) {
-  .activities-slider-card {
-    min-width: 95vw;
-    max-width: 98vw;
-    margin-right: 0;
-  }
-  .activities-slider-container { gap: 0.7rem; }
-  .activities-slider-title { font-size: 1.1rem; }
-  .main-content,
-  .camp-sidebar {
-    margin-top: 0;
-  }
-  .header-logo { height: 28px; }
-}
-
-
-/* ===================== 2. Navbar Styles ===================== */
-/* Custom gradient navbar with hover effects and dropdown styling. */
-/* --- NAVIGATION BAR: PURE CSS, NO BOOTSTRAP --- */
-.custom-navbar {
- margin-left: 390px;
-    padding: 20px;
-    background: linear-gradient(90deg, #8b0000, #1a1a2e);
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 1001;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-}
-
-.custom-navbar .brand { 
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    font-size: 1.3rem;
-    font-weight: bold;
-    margin-right: 120px;
-    text-decoration: none;
-    color: #fff;
-}
-.me-4 {
-    margin-right: 4.5rem !important;
-}
-
-.custom-navbar .brand img {
-  height: 40px;
-  width: auto;
-  display: block;
-}
-
-.custom-navbar .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 1.2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  transition: right 0.3s;
-}
-
-.custom-navbar .nav-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.08rem;
-  font-weight: 600;
-  padding: 0.4rem 0.9rem;
-  border-radius: 4px;
-  transition: background 0.2s, color 0.2s;
-  display: block;
-}
-
-.custom-navbar .nav-link:hover,
-.custom-navbar .nav-link:focus {
-  background: #d63911;
-  color: #fff;
-}
-
-/* Hamburger menu for mobile */
-.custom-navbar .nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  margin-left: 1rem;
-}
-
-/* Responsive: collapse nav links into hamburger */
-@media (max-width: 900px) {
+  /* -- Navbar Responsive Collapse -- */
   .custom-navbar {
     padding: 0.6rem 0.7rem;
+    margin: 10px;
+    justify-content:space-between;
+  }
+  .page-header{
+    margin:10px;
+  }
+  .tab-box {
+    text-align: center;
+    margin: 0px 10px 0px 67px;
   }
   .custom-navbar .nav-links {
     position: fixed;
@@ -568,32 +600,54 @@ div.main-content {
   }
 }
 
-/* Hide scroll on body when nav is open (optional, JS needed) */
-body.nav-open {
-  overflow: hidden;
-}
-
-/* Sidebar toggle button styles */
-.sidebar-toggle {
-  position: fixed;
-  top: 18px;
-  left: 18px;
-  z-index: 2001;
-  background: #163b5b;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 1.5rem;
-  box-shadow: 0 2px 8px rgba(22,59,91,0.12);
-  display: none;
-}
-
-/* Show toggle button on screens < 992px */
-@media (max-width: 991.98px) {
-  .sidebar-toggle {
-    display: block;
+/* -------------------------------------------
+   3. 600px and below: Phones and Small Devices
+   - Cards: full width (1 per row)
+   - Smaller title/font sizes
+   - Sidebar and main content with less margin/padding
+-------------------------------------------- */
+@media (max-width: 600px) {
+  .activities-slider-card {
+    min-width: 95vw;
+    max-width: 98vw;
+    margin-right: 0;
   }
+  .activities-slider-container { gap: 0.7rem; }
+  .activities-slider-title { font-size: 1.1rem; }
+  .main-content,
+  .camp-sidebar {
+    margin-top: 0;
+  }
+  .header-logo { height: auto; }
+}
+
+/* -------------------------------------------
+   4. 991.98px and below: Sidebar and Sidebar Toggle
+   - Show sidebar toggle button
+   - Sidebar slides in from left
+-------------------------------------------- */
+@media (max-width: 991.98px) {
+  .tab-box {
+    text-align: center;
+    margin-left: 10px;
+}
+
+  .custom-navbar {
+  margin-left: 380px;
+  padding: 5px;
+  background: linear-gradient(90deg, #8b0000, #1a1a2e);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-right: 10px; */
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+  .sidebar-toggle { display: block; }
   .camp-sidebar {
     position: fixed;
     left: -100vw;
@@ -608,9 +662,7 @@ body.nav-open {
     background: #163b5b;
     padding-bottom: 2rem;
   }
-  .camp-sidebar.open {
-    left: 0 !important;
-  }
+  .camp-sidebar.open { left: 0 !important; }
   .sidebar-overlay {
     display: block;
     position: fixed;
@@ -620,37 +672,36 @@ body.nav-open {
     opacity: 1;
     transition: opacity 0.3s;
   }
-  .sidebar-overlay.hide {
-    display: none;
-    opacity: 0;
-  }
-  .main-content {
-    margin-left: 0 !important;
-    padding: 1rem 1vw 1rem 1vw;
-  }
+  .sidebar-overlay.hide { display: none; opacity: 0; }
+  .main-content { margin-left: 0 !important; padding: 1rem 1vw 1rem 1vw; }
 }
-
-/* Sidebar menu uses full height */
-.camp-sidebar {
+.page-header{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.custom-navbar {
+  margin-left:10px;
+  padding: 5px;
+  background: linear-gradient(90deg, #8b0000, #1a1a2e);
+  color: #fff;
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-.sidebar-header {
-  flex-shrink: 0;
-}
-.sidebar-menu {
-  flex: 1 1 auto;
-  overflow-y: auto;
-  margin-bottom: 0;
-  padding-bottom: 2rem;
+  align-items: center;
+  justify-content: center;
+  /* margin-right: 10px; */
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Desktop: sidebar fixed left, content right */
+
+/* -------------------------------------------
+   5. Desktop (992px and up): Sidebar fixed left
+   - Sidebar and content as columns
+   - Hide toggle/overlay
+-------------------------------------------- */
 @media (min-width: 992px) {
-  .sidebar-toggle, .sidebar-overlay {
-    display: none !important;
-  }
+  .sidebar-toggle, .sidebar-overlay { display: none !important; }
   .camp-sidebar {
     left: 0 !important;
     position: fixed;
@@ -663,106 +714,28 @@ body.nav-open {
     margin-left: 380px;
     padding: 2rem 2.5vw 2rem 2.5vw;
   }
-}
 
-/* --- Adjust grid: Show 3 cards per row on desktop, 2 on tablet, 1 on mobile, with margin on 3rd card --- */
-.activities-slider-card {
-  min-width: 32%;
-  max-width: 33%;
-  margin-right: 1.5%; /* Add margin between cards */
-}
-.activities-slider-card:nth-child(3n) {
-  margin-right: 0; /* Remove margin on every 3rd card for perfect alignment */
-}
-
-/* Increase image height by 40px */
-.activities-card-img {
-  width: 100%;
-  height: 480px; 
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px 12px 0 0;
-}
-
-/* Tablet and mobile adjustments remain the same */
-@media (max-width: 900px) {
-  .camp-sidebar {
-    position: static;
-    width: 100%;
-    min-height: unset;
-    border-right: none;
-    border-bottom: 3px solid #d63911;
-    padding-top: 0.5rem;
-    background: #163b5b;
-    max-height: none;
+  .custom-navbar {
+    margin-left: 390px;
+    margin-right: 10px;
+    padding: 5px;
+    background: linear-gradient(90deg, #8b0000, #1a1a2e);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1001;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
-  .main-content {
-    margin-left: 0 !important;
-    margin-top: 0;
-    padding: 1rem 1vw 1rem 1vw;
-  }
-  .activities-slider-card {
-    min-width: 48%;
-    max-width: 49%;
-    margin-right: 2%;
-  }
-  .activities-slider-card:nth-child(2n) {
-    margin-right: 0;
-  }
-  .activities-slider-container { padding: 0 0.5rem; }
-  .activities-slider-title { padding-left: 0; }
-  .sidebar-menu {
-    max-height: 220px;
-  }
-}
-@media (max-width: 600px) {
-  .activities-slider-card {
-    min-width: 95vw;
-    max-width: 98vw;
-    margin-right: 0;
-  }
-  .activities-slider-container { gap: 0.7rem; }
-  .activities-slider-title { font-size: 1.1rem; }
-  .main-content,
-  .camp-sidebar {
-    margin-top: 0;
-  }
-  .header-logo { height: 28px; }
-}
 
-/* Add this at the end of your activities.css */
-
-/* Ensure logo stays left and nav links are in a single row after it */
-.navbar-custom .container-fluid {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.navbar-brand {
-  margin-right: 2rem;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-}
-
-.navbar-nav {
-  flex-direction: row !important;
-  flex-wrap: nowrap !important;
-  align-items: center;
-  gap: 0.7rem;
-  width: 100%;
-  margin-left: 0;
-  margin-bottom: 0;
-  padding-left: 0;
-  overflow-x: auto;
-  scrollbar-width: thin;
-  justify-content: flex-start;
-}
-
-.navbar-nav .nav-item {
-  white-space: nowrap;
+  .page-header {
+    margin-left: 390px;
+    margin-right: 10px;
+    padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(22,59,91,0.07);
+  }
 }
 

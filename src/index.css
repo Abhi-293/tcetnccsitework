@@ -10,12 +10,13 @@ html, body {
   padding: 0px;
   width: 100%;
   font-family: 'Poppins', sans-serif;
-  font-size: 15px;
+  font-size: 18px;
   text-align: justify;
 }
 .outer-wrapper {
-  width: 100%;
+  width: 90%;
   padding: 0 20px;
+  margin: auto;
 }
 
 /* ===================== 2. Navbar Styles Updated ===================== */
@@ -38,12 +39,18 @@ html, body {
     display: flex;
     align-items: center;
     gap: 0.7rem;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-right: 0px;
+    margin-right: 80px;
     text-decoration: none;
     color: #fff;
 }
+
+.navbrand{
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+}
+
 .me-4 {
     margin-right: 4.5rem !important;
 }
@@ -119,7 +126,7 @@ html, body {
     gap: 0.5rem;
   }
   .custom-navbar .brand {
-    font-size: 1.1rem;
+    font-size: 1.5rem;
   }
   .custom-navbar .nav-link {
     font-size: 1rem;
@@ -360,7 +367,7 @@ Specificity: (0,1,0){
 /* ===================== 7. Section Image Slideshow ===================== */
 /* Gallery section with responsive carousel images. */
 .gallery-section {
-  background-color: #f8f9fa;
+  background-color: #ffffff;
   padding: 20px 0;
 }
 .gallery-section h2 {
@@ -384,6 +391,11 @@ Specificity: (0,1,0){
   height: 600px;
   object-fit: cover;
   border-radius: 10px;
+}
+/* Image resizing */
+.w-100 {
+    width: 90% !important;
+    margin: auto;
 }
 .carousel-column {
   margin-bottom: 20px;
