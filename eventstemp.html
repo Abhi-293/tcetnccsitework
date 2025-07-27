@@ -2,34 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>eventemp</title>
+  <title>TCET NCC Domains</title>
+  <!-- Google Fonts & Bootstrap -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Black+Ops+One&display=swap">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+ <link rel="stylesheet" href="src/index.css">
+ <link rel="stylesheet" href="src/tcet_nccdomains.css">
+ <link rel="stylesheet" href="src/footer.css">
+ <link rel="stylesheet" href="src/magazine.css">
 </head>
+
 <body>
-     <!-- ===================== Custom Styles ===================== -->
-    <link rel="stylesheet" href="src/index.css" />
-    <link rel="stylesheet" href="src/footer.css" />
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Black+Ops+One&display=swap"
-      rel="stylesheet"
-    />
-  </head>
 
-  <body>
-    <!-- Header Section -->
-    <div class="headcontainer">
-      <div class="tab-box">
-        <img src="assets/img/Header.png" alt="NCC Header" class="header-logo" />
-      </div>
+  <!-- Header Section (full-width, matches index.html) -->
+  <div class="container-fluid p-0">
+    <div class="tab-box">
+      <img src="assets/img/Header.png" alt="NCC Header" class="header-logo">
     </div>
+  </div>
 
     <!-- Navbar -->
     <!-- Navbar -->
@@ -45,9 +38,9 @@
           alt="NCC Logo"
           style="height: 55px; width: auto"
         />
-        <div class = "navbrand" style="display: flex; flex-direction: column; line-height: 1.2; >
+        <div class = "navbrand" style="display: flex; flex-direction: column; line-height: 1.2;">
           <span style="font-size: 2rem; font-weight: 400">TCET</span>
-          <span style="font-size: 1.2rem; white-space: nowrap">NCC UNIT</span>
+          <span style="font-size: 1.2rem; white-space: nowrap  ">NCC UNIT</span>
         </div>
       </a>
       <!-- Hamburger for mobile -->
@@ -66,53 +59,95 @@
       </ul>
     </nav>
 
+</head>
+<body>
 
+  <!-- ======== Navbar ======== -->
+  <nav class="navbar-custom navbar sticky-top">
+    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between py-2">
+      <img src="header-logo.png" alt="TCET NCC Logo" class="header-logo mb-2 mb-md-0" />
+      <ul class="navbar-nav d-flex flex-row flex-wrap justify-content-center gap-2 mb-0">
+        <li class="nav-item"><a href="#" class="nav-link">TCET Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">NCC Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Our Teams</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Training & Camps</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Achievers</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Activities</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Puneet Sagar</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Tree Plantation</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Blood Donation</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Calendar</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
+        <li class="nav-item"><a href="#" class="nav-link active">Magazine</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <!-- ======= Main Container ======= -->
+  <main class="container my-5">
 
+    <!-- Edition Picker -->
+    <section class="edition-wrapper mb-4" aria-label="Magazine editions navigation">
+      <h4 class="edition-header">Our Edition Out</h4>
+      <div class="edition-links nav nav-tabs flex-wrap justify-content-center" id="magazineTabs" role="tablist">
+        <!-- Each button corresponds to a tab and is accessible -->
+        <button class="edition-btn nav-link active" id="link1-tab" data-bs-toggle="tab" data-bs-target="#link1" type="button" role="tab" aria-controls="link1" aria-selected="true">
+          Warrior – April 2025
+        </button>
+        <button class="edition-btn nav-link" id="link2-tab" data-bs-toggle="tab" data-bs-target="#link2" type="button" role="tab" aria-controls="link2" aria-selected="false">
+          Warrior – Oct 2024
+        </button>
+        <button class="edition-btn nav-link" id="link3-tab" data-bs-toggle="tab" data-bs-target="#link3" type="button" role="tab" aria-controls="link3" aria-selected="false">
+          Warrior – April 2023
+        </button>
+        <button class="edition-btn nav-link" id="link4-tab" data-bs-toggle="tab" data-bs-target="#link4" type="button" role="tab" aria-controls="link4" aria-selected="false">
+          Warrior – Oct 2023
+        </button>
+        <button class="edition-btn nav-link" id="link5-tab" data-bs-toggle="tab" data-bs-target="#link5" type="button" role="tab" aria-controls="link5" aria-selected="false">
+          Warrior – April 2022
+        </button>
+        <button class="edition-btn nav-link" id="link6-tab" data-bs-toggle="tab" data-bs-target="#link6" type="button" role="tab" aria-controls="link6" aria-selected="false">
+          Coffee Table Book
+        </button>
+      </div>
+    </section>
 
-  <!-- Footer Section -->
-  <footer class="footer-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="footer-title">TCET NCC UNIT</div>
-          <a href="index.html" class="footer-link"><i class="fas fa-home footer-icon"></i> Home</a>
-          <a href="tcet_nccdomains.html" class="footer-link"><i class="fas fa-users footer-icon"></i> Our Teams</a>
-          <a href="camp.html" class="footer-link"><i class="fas fa-campground footer-icon"></i> Training & Camps</a>
-          <a href="camp.html" class="footer-link"><i class="fas fa-trophy footer-icon"></i> NCC & Defence ></a>
-          <a href="achievers.html" class="footer-link"><i class="fas fa-trophy footer-icon"></i> Achievers</a>
+    <!-- Magazine Content Tabs -->
+    <section class="magazine-content">
+      <h2 class="magazine-title text-center mb-4">Warrior – TCET NCC Magazine</h2>
+      <div class="tab-content" id="magazineTabsContent">
+        <div class="tab-pane fade" id="link1" role="tabpanel" aria-labelledby="link1-tab" tabindex="0">
+          <p class="magazine-desc">Coming soon: April 2025 edition will be available here.</p>
+          <iframe src="" title="Warrior – April 2025 Coming Soon" loading="lazy"></iframe>
         </div>
-        <div class="col-md-3">
-          <div class="footer-title">ACTIVITIES</div>
-          <a href="calendar.html" class="footer-link"><i class="fas fa-calendar-alt footer-icon"></i> Events &
-            Calendar</a>
-          <a href="magazine.html" class="footer-link"><i class="fas fa-book footer-icon"></i> Magazine</a>
-          <a href="test2.html" class="footer-link"><i class="fas fa-images footer-icon"></i> Repuclic Day
-            Celebration</a>
-          <a href="test2.html" class="footer-link"><i class="fas fa-images footer-icon"></i> Collaba Visit</a>
-          <!-- <a href="test2.html" class="footer-link"><i class="fas fa-images footer-icon"></i> </a> -->
+        <div class="tab-pane fade" id="link2" role="tabpanel" aria-labelledby="link2-tab" tabindex="0">
+          <p class="magazine-desc">Coming soon: October 2024 edition will be available here.</p>
+          <iframe src="" title="Warrior – Oct 2024 Coming Soon" loading="lazy"></iframe>
         </div>
-        <div class="col-md-3">
-          <div class="footer-title">OFFICERS</div>
-          <a href="ncc_ano.html" class="footer-link"><i class="fas fa-user-tie footer-icon"></i> ANO</a>
-          <a href="ncc_cdr.html" class="footer-link"><i class="fas fa-user-shield footer-icon"></i> OIC</a>
-          <a href="ncc_cto.html" class="footer-link"><i class="fas fa-user-graduate footer-icon"></i> CTO</a>
+        <div class="tab-pane fade show active" id="link3" role="tabpanel" aria-labelledby="link3-tab" tabindex="0">
+          <p class="magazine-desc">Warrior – April 2023: Flip through the magazine below.</p>
+          <iframe src="https://online.fliphtml5.com/dvkne/dhaj/#p=1" allowfullscreen loading="lazy" title="Warrior – April 2023 Magazine"></iframe>
         </div>
-        <div class="col-md-3">
-          <div class="footer-title">CONTACT</div>
-          <a href="contactus.html" class="footer-link"><i class="fas fa-envelope footer-icon"></i> Contact Us</a>
-          <a href="https://www.instagram.com/ncc_tcet/" target="_blank" class="footer-link"><i
-              class="fab fa-instagram footer-icon"></i> Instagram</a>
-          <a href="https://twitter.com/" target="_blank" class="footer-link"><i class="fab fa-twitter footer-icon"></i>
-            Twitter</a>
-          <a href="https://github.com/Abhi-293" target="_blank" class="footer-link"><i
-              class="fab fa-github footer-icon"></i> GitHub</a>
-          <a href="https://www.linkedin.com/in/atabhishekx" target="_blank" class="footer-link"><i
-              class="fab fa-linkedin footer-icon"></i> LinkedIn</a>
+        <div class="tab-pane fade" id="link4" role="tabpanel" aria-labelledby="link4-tab" tabindex="0">
+          <p class="magazine-desc">Warrior – Oct 2023: Flip through the magazine below.</p>
+          <iframe src="https://online.fliphtml5.com/dvkne/juri/" allowfullscreen loading="lazy" title="Warrior – Oct 2023 Magazine"></iframe>
+        </div>
+        <div class="tab-pane fade" id="link5" role="tabpanel" aria-labelledby="link5-tab" tabindex="0">
+          <p class="magazine-desc">Warrior – April 2022: Flip through the magazine below.</p>
+          <iframe src="https://heyzine.com/flip-book/1e2383f07b.html" allowfullscreen loading="lazy" title="Warrior – April 2022 Magazine"></iframe>
+        </div>
+        <div class="tab-pane fade" id="link6" role="tabpanel" aria-labelledby="link6-tab" tabindex="0">
+          <p class="magazine-desc">Coffee Table Book: Coming soon.</p>
+          <iframe src="" title="Coffee Table Book Coming Soon" loading="lazy"></iframe>
         </div>
       </div>
-      <div class="footer-bottom">TCET-NCC. All rights reserved</div>
-    </div>
-  </footer>
+    </section>
+
+  </main>
+
+  <!-- Bootstrap 5 JS Bundle (required for tabs) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>

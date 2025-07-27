@@ -1,0 +1,119 @@
+/* ========== CALENDAR MAIN PAGE STYLE FOR NCC ========== */
+
+/* === Calendar Main Section === */
+.calendar-main {
+  max-width: 1800px;
+  margin: 2.5rem auto 2.5rem auto;
+  padding: 0 24px;
+  background: #fff;
+}
+
+.calendar-title {
+  font-family: 'Montserrat', 'Poppins', sans-serif;
+  color: #8b0000;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1.2px;
+  font-size: 2.11rem;
+  margin: 0 0 2.2rem 0;
+}
+
+/* === Card Row: two columns, wide cards === */
+.calendar-row {
+  display: flex;
+  gap: 38px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+/* === Event Card Columns === */
+.calendar-col {
+  flex: 1 1 600px;
+  max-width: 700px;
+  min-width: 300px;
+  display: flex;
+}
+
+/* === Event Card === */
+.calendar-card {
+  background: linear-gradient(130deg, #fff 70%, #f5f7fa 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.14);
+  padding: 26px 18px 20px 18px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 470px;
+  max-height: 570px;
+  min-width: 0;
+}
+
+.calendar-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ba1b1b;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+/* === Scrollable Table === */
+.calendar-table-scroll {
+  overflow-y: auto;
+  flex: 1 1 auto;
+  max-height: 50vh;
+}
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  background: #fff;
+  min-width: 400px;
+}
+.calendar-table th, .calendar-table td {
+  padding: 0.65rem 0.7rem;
+  text-align: left;
+  border: 1.2px solid #eee;
+  font-size: 0.98rem;
+}
+.calendar-table th {
+  background: #f8dad5;
+  color: #8b0000;
+  font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.calendar-table tbody tr:nth-child(even) { background: #faf7f4; }
+.calendar-table tbody tr:hover {background: #fff8ec;}
+
+/* === Responsive: Stack cards and shrink table on narrow screens === */
+@media (max-width: 2500px) {
+  .calendar-row { flex-direction: column; gap: 22px;}
+  .calendar-col, .calendar-card { max-width: 100vw; min-width: 0; }
+  .calendar-card { min-height: 0; max-height: none;}
+  .calendar-table-scroll { max-height: 100%;}
+}
+
+@media (max-width: 600px) {
+  .calendar-main { padding: 0 2vw; }
+  .calendar-title { font-size: 1.02rem;}
+  .calendar-card-title { font-size: 0.993rem;}
+  .calendar-card { padding: 13px 4vw; }
+  .calendar-table th, .calendar-table td { font-size: 0.93rem; padding: 0.48rem 0.3rem; }
+  .calendar-table-scroll { max-height: 210px;}
+}
+
+/* === Optional: Modern scrollbar for table scroll === */
+.calendar-table-scroll::-webkit-scrollbar { width: 8px; }
+.calendar-table-scroll::-webkit-scrollbar-thumb { background: #bbd1df; border-radius: 13px; }
+.calendar-table-scroll { scrollbar-width: thin; scrollbar-color: #bbd1df #eee; }
+
+/* === Sticky Footer Logic Only (NO color change) === */
+html, body { height: 100%; min-height: 100vh; margin: 0; padding: 0; }
+body { display: flex; flex-direction: column; min-height: 100vh;width: auto }
+.calendar-main { flex: 1 0 auto; }
+.ncc-footer { flex-shrink: 0; }

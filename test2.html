@@ -1,597 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>TCET NCC Activities</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Bootstrap CSS (if used) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-  <!-- FontAwesome (if used) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Your custom CSS -->
-  <link rel="stylesheet" href="src/activities.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Warrior Magazine | TCET NCC</title>
+    <!-- Link the magazine stylesheet -->
+    <link rel="stylesheet" href="magazine.css">
+    <!-- Optional: Add favicon -->
+    <!-- <link rel="icon" href="favicon.ico"> -->
 </head>
-
 <body>
-
-  <!-- Header Section -->
-  <div class="container-fluid p-0">
-    <div class="tab-box">
-      <img src="assets/img/Header.png" alt="NCC Header" class="header-logo">
-    </div>
-  </div>
-<nav class="custom-navbar">
-    <a class="navbar-brand d-flex align-items-center me-4" href="index.html">
-      <img src="assets/img/logo/ncclogo.png" alt="NCC Logo" style="height: 55px; width: auto;" class="me-2">
-      <div class="d-flex flex-column lh-sm text-white">
-        <span class="fw-bold" style="font-size: 2.0rem;">TCET</span>
-        <span style="font-size: 1.2rem;">NCC UNIT</span>
-      </div>
-    </a>
-  <button class="nav-toggle" aria-label="Open navigation">&#9776;</button>
-  <ul class="nav-links">
-    <li><a class="nav-link" href="index.html">NCC Home</a></li>
-    <li><a class="nav-link" href="tcet_nccdomains.html">Our Teams</a></li>
-    <li><a class="nav-link" href="camp.html">Training & Camps</a></li>
-    <li><a class="nav-link" href="achievers.html">Achievers</a></li>
-    <li><a class="nav-link" href="activities.html">Activities</a></li>
-    <li><a class="nav-link" href="calendar.html">Calendar</a></li>
-    <li><a class="nav-link" href="test2.html">Gallery</a></li>
-    <li><a class="nav-link" href="magazine.html">Magazine</a></li>
-    <li><a class="nav-link" href="contactus.html">Contact Us</a></li>
-  </ul>
-</nav>
-  <!-- Sidebar Toggle Button (visible on mobile/tablet) -->
-  <button class="sidebar-toggle d-lg-none" aria-label="Open sidebar" aria-controls="sidebarNav" aria-expanded="false">
-    <i class="fas fa-bars"></i>
-  </button>
-
-  <!-- Sidebar -->
-  <aside class="camp-sidebar" id="sidebarNav">
-    <div class="sidebar-header">
-      <span class="sidebar-title"><b>Activities</b></span>
-    </div>
-    <ul class="sidebar-menu">
-      <!-- Sidebar navigation grouped by category -->
-      <li>
-        <span>Defence & Armed Forces</span>
-        <ul class="submenu">
-          <li>
-            <a href="#defence"><i class="fas fa-shield-alt"></i> Defence Exposure</a>
-          </li>
-          <li>
-            <a href="#armyday"><i class="fas fa-flag"></i> Army Day</a>
-          </li>
-          <li>
-            <a href="#navyday"><i class="fas fa-anchor"></i> Navy Day Celebration</a>
-          </li>
-          <li>
-            <a href="#shastrapooja"><i class="fas fa-gavel"></i> Shastra Pooja</a>
-          </li>
-          <li>
-            <a href="#catc"><i class="fas fa-campground"></i> CATC 512 & 405</a>
-          </li>
+    <!-- ========== Header / Navigation Bar ========== -->
+    <nav class="navbar-custom">
+        <div class="tab-box">
+            <!-- Insert header logo here (replace src as needed) -->
+            <img src="header-logo.png" alt="TCET NCC Logo" class="header-logo">
+        </div>
+        <ul class="navbar-nav">
+            <li><a class="nav-link" href="#">TCET Home</a></li>
+            <li><a class="nav-link" href="#">NCC Home</a></li>
+            <li><a class="nav-link" href="#">Our Teams</a></li>
+            <li><a class="nav-link" href="#">Training & Camps</a></li>
+            <li><a class="nav-link" href="#">Achievers</a></li>
+            <li><a class="nav-link" href="#">Activities</a></li>
+            <li><a class="nav-link" href="#">Puneet Sagar</a></li>
+            <li><a class="nav-link" href="#">Tree Plantation</a></li>
+            <li><a class="nav-link" href="#">Blood Donation</a></li>
+            <li><a class="nav-link" href="#">Calendar</a></li>
+            <li><a class="nav-link" href="#">Gallery</a></li>
+            <li><a class="nav-link active" href="#">Magazine</a></li>
+            <li><a class="nav-link" href="#">Contact Us</a></li>
         </ul>
-      </li>
-      <li>
-        <span>Training & Sports</span>
-        <ul class="submenu">
-          <li>
-            <a href="#training"><i class="fas fa-running"></i> Physical Training</a>
-          </li>
-          <li>
-            <a href="#patrioticrun"><i class="fas fa-shoe-prints"></i> Patriotic Run</a>
-          </li>
-          <li>
-            <a href="#sojourn"><i class="fas fa-music"></i> Sojourn 2025</a>
-          </li>
-          <li>
-            <a href="#ecocyclothon"><i class="fas fa-bicycle"></i> Eco Cylothon</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <span>Lectures & Career</span>
-        <ul class="submenu">
-          <li>
-            <a href="#lectures"><i class="fas fa-chalkboard-teacher"></i> Defence Training &
-              Lectures</a>
-          </li>
-          <li>
-            <a href="#ncctraining"><i class="fas fa-book"></i> NCC Training & Lectures</a>
-          </li>
-          <li>
-            <a href="#selection"><i class="fas fa-user-check"></i> Selection & Eligibility</a>
-          </li>
-          <li>
-            <a href="#motivation"><i class="fas fa-bullhorn"></i> Motivational Lectures</a>
-          </li>
-          <li>
-            <a href="#farewell"><i class="fas fa-award"></i> Felicitation & Farewell</a>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <span>Social Initiatives</span>
-        <ul class="submenu">
-          <li>
-            <a href="#treeplantation"><i class="fas fa-tree"></i> Tree Plantation Drive</a>
-          </li>
-          <li>
-            <a href="#swachhbharat"><i class="fas fa-recycle"></i> Swachh Bharat Abhiyan</a>
-          </li>
-          <li>
-            <a href="#achievers"><i class="fas fa-trophy"></i> Achievers 2024–2025</a>
-          </li>
-          <li>
-            <a href="#republicday"><i class="fas fa-flag-usa"></i> 76th Republic Day</a>
-          </li>
-          <li>
-            <a href="#independenceday"><i class="fas fa-flag"></i> 78th Independence Day</a>
-          </li>
-          <li>
-            <a href="#heritage"><i class="fas fa-landmark"></i> Heritage Awareness Program</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </aside>
+    </nav>
 
-  <header class="page-header">
-    <h1>Our Achievers</h1>
-  </header>
+    <!-- ========== Main Magazine Section ========== -->
+    <section class="magazine-section">
+        <!-- ===== Sidebar: Editions Navigation ===== -->
+        <aside class="sidebar">
+            <h4>Our Edition Out</h4>
+            <nav class="magazine-links">
+                <a class="nav-link-sidebar" href="#">Warrior – April 2025</a>
+                <a class="nav-link-sidebar" href="#">Warrior – Oct 2024</a>
+                <a class="nav-link-sidebar" href="#">Warrior – April 2023</a>
+                <a class="nav-link-sidebar" href="#">Warrior – Oct 2023</a>
+                <a class="nav-link-sidebar" href="#">Warrior – April 2022</a>
+                <a class="nav-link-sidebar" href="#">Coffee Table Book</a>
+            </nav>
+        </aside>
 
-  <!-- ================= Main Content Section ================= -->
-  <div class="main-content">
-    <!-- Hero Banner -->
-    <div class="hero-banner">
-      <h2>Shaping Cadets Through Service &amp; Discipline</h2>
-      <p>Explore our journey through impactful events and dedicated service.</p>
-    </div>
-    
-    <!-- Grid Starting  -->
-    <div class="activities-slider-section">
-  <h2 class="activities-slider-title">Major Events & Activities</h2>
-  <div class="activities-slider-viewport">
-    <div class="activities-slider-container" id="activitiesCarousel">
-        <!-- First Row Card Starts Here -->
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://picsum.photos/600/400?random=4');;"></div>
-        <div class="activities-card-content">
-          <h4>Republic Day Parade</h4>
-          <p>Cadets showcased discipline and unity with a vibrant parade and performances.Cadets showcased discipline and unity with a vibrant parade and performances.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Youth+Exchange+Program');"></div>
-        <div class="activities-card-content">
-          <h4>Youth Exchange Program</h4>
-          <p>Selected cadets interacted with peers nationwide in leadership workshops.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Tree+Plantation');"></div>
-        <div class="activities-card-content">
-          <h4>Tree Plantation Drive</h4>
-          <p>Campus-wide plantation promoting environmental awareness and responsibility.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Patriotic+Run');"></div>
-        <div class="activities-card-content">
-          <h4>Patriotic Run</h4>
-          <p>Cadets and staff celebrated fitness and national pride with a 5km run.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Army+Day');"></div>
-        <div class="activities-card-content">
-          <h4>Army Day</h4>
-          <p>Activities included parades and motivational talks by defence officers.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Navy+Day');"></div>
-        <div class="activities-card-content">
-          <h4>Navy Day Celebration</h4>
-          <p>Visit to INS Shikra inspired cadets about real-world naval operations.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Republic+Day+Parade');"></div>
-        <div class="activities-card-content">
-          <h4>Republic Day Parade</h4>
-          <p>Cadets showcased discipline and unity with a vibrant parade and performances.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Youth+Exchange+Program');"></div>
-        <div class="activities-card-content">
-          <h4>Youth Exchange Program</h4>
-          <p>Selected cadets interacted with peers nationwide in leadership workshops.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Tree+Plantation');"></div>
-        <div class="activities-card-content">
-          <h4>Tree Plantation Drive</h4>
-          <p>Campus-wide plantation promoting environmental awareness and responsibility.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Patriotic+Run');"></div>
-        <div class="activities-card-content">
-          <h4>Patriotic Run</h4>
-          <p>Cadets and staff celebrated fitness and national pride with a 5km run.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Army+Day');"></div>
-        <div class="activities-card-content">
-          <h4>Army Day</h4>
-          <p>Activities included parades and motivational talks by defence officers.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Navy+Day');"></div>
-        <div class="activities-card-content">
-          <h4>Navy Day Celebration</h4>
-          <p>Visit to INS Shikra inspired cadets about real-world naval operations.</p>
-        </div>
-      </div>
-      <!-- Add more cards as needed -->
-    </div>
-  </div>
-</div>
-<!-- Frist Row Card Ends Here -->
+        <!-- ===== Main Content: Selected Magazine ===== -->
+        <div class="magazine-content">
+            <!-- Magazine Title -->
+            <div class="magazine-title">Warrior – TCET NCC Magazine</div>
 
-<!-- Second Carousel Row -->
-<div class="activities-slider-section">
-  <h2 class="activities-slider-title">Training & Sports Activities</h2>
-  <div class="activities-slider-viewport">
-    <div class="activities-slider-container" id="activitiesCarousel2">
-      <!-- 4 Sample Event Cards (originals) -->
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Physical+Training');"></div>
-        <div class="activities-card-content">
-          <h4>Physical Training</h4>
-          <p>Rigorous physical training enhances fitness, discipline, and teamwork.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Patriotic+Run+2025');"></div>
-        <div class="activities-card-content">
-          <h4>Patriotic Run 2025</h4>
-          <p>Unites cadets and staff for a 5km run celebrating fitness and national pride.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Eco-Cyclothon');"></div>
-        <div class="activities-card-content">
-          <h4>Eco-Cyclothon 2025</h4>
-          <p>Cadets and volunteers cycle to promote environment and healthy living.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Sojourn+2025');"></div>
-        <div class="activities-card-content">
-          <h4>Sojourn 2025</h4>
-          <p>Cadets perform a group dance at the college festival blending pride and unity.</p>
-        </div>
-      </div>
+            <!-- Magazine Embeds -->
+            <div class="magazine-embed">
+                <!-- Future Editions -->
+                <div class="magazine-desc">Coming soon: April 2025 edition will be available here.</div>
+                <div class="magazine-desc">Coming soon: October 2024 edition will be available here.</div>
 
-      <!-- 4 Duplicate Cards for Infinite Looping -->
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Physical+Training');"></div>
-        <div class="activities-card-content">
-          <h4>Physical Training</h4>
-          <p>Rigorous physical training enhances fitness, discipline, and teamwork.</p>
+                <!-- Embedded Editions -->
+                <div class="magazine-desc">Warrior – April 2023: Flip through the magazine below.</div>
+                <!-- Example Embed (add real URLs as needed) -->
+                <iframe src="https://example.com/warrior-apr-2023"
+                        title="Warrior April 2023 Magazine" loading="lazy"></iframe>
+
+                <div class="magazine-desc">Warrior – Oct 2023: Flip through the magazine below.</div>
+                <iframe src="https://example.com/warrior-oct-2023"
+                        title="Warrior October 2023 Magazine" loading="lazy"></iframe>
+
+                <div class="magazine-desc">Warrior – April 2022: Flip through the magazine below.</div>
+                <iframe src="https://example.com/warrior-apr-2022"
+                        title="Warrior April 2022 Magazine" loading="lazy"></iframe>
+
+                <div class="magazine-desc">Coffee Table Book: Coming soon.</div>
+            </div>
         </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Patriotic+Run+2025');"></div>
-        <div class="activities-card-content">
-          <h4>Patriotic Run 2025</h4>
-          <p>Unites cadets and staff for a 5km run celebrating fitness and national pride.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Eco-Cyclothon');"></div>
-        <div class="activities-card-content">
-          <h4>Eco-Cyclothon 2025</h4>
-          <p>Cadets and volunteers cycle to promote environment and healthy living.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Sojourn+2025');"></div>
-        <div class="activities-card-content">
-          <h4>Sojourn 2025</h4>
-          <p>Cadets perform a group dance at the college festival blending pride and unity.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Second Carousel Row Ends Here -->
-<!-- Third Carousel Row -->
-<div class="activities-slider-section">
-  <h2 class="activities-slider-title">Training & Sports Activities</h2>
-  <div class="activities-slider-viewport">
-    <div class="activities-slider-container" id="activitiesCarousel3">
-      <!-- 4 Sample Event Cards (originals) -->
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Physical+Training');"></div>
-        <div class="activities-card-content">
-          <h4>Physical Training</h4>
-          <p>Rigorous physical training enhances fitness, discipline, and teamwork.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Patriotic+Run+2025');"></div>
-        <div class="activities-card-content">
-          <h4>Patriotic Run 2025</h4>
-          <p>Unites cadets and staff for a 5km run celebrating fitness and national pride.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Eco-Cyclothon');"></div>
-        <div class="activities-card-content">
-          <h4>Eco-Cyclothon 2025</h4>
-          <p>Cadets and volunteers cycle to promote environment and healthy living.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Sojourn+2025');"></div>
-        <div class="activities-card-content">
-          <h4>Sojourn 2025</h4>
-          <p>Cadets perform a group dance at the college festival blending pride and unity.</p>
-        </div>
-      </div>
-
-      <!-- 4 Duplicate Cards for Infinite Looping -->
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Physical+Training');"></div>
-        <div class="activities-card-content">
-          <h4>Physical Training</h4>
-          <p>Rigorous physical training enhances fitness, discipline, and teamwork.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Patriotic+Run+2025');"></div>
-        <div class="activities-card-content">
-          <h4>Patriotic Run 2025</h4>
-          <p>Unites cadets and staff for a 5km run celebrating fitness and national pride.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Eco-Cyclothon');"></div>
-        <div class="activities-card-content">
-          <h4>Eco-Cyclothon 2025</h4>
-          <p>Cadets and volunteers cycle to promote environment and healthy living.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Sojourn+2025');"></div>
-        <div class="activities-card-content">
-          <h4>Sojourn 2025</h4>
-          <p>Cadets perform a group dance at the college festival blending pride and unity.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Third Carousel Row Ends Here -->
-<!-- Fourth Carousel Row -->
-<div class="activities-slider-section">
-  <h2 class="activities-slider-title">Training & Sports Activities</h2>
-  <div class="activities-slider-viewport">
-    <div class="activities-slider-container" id="activitiesCarousel4">
-      <!-- 4 Sample Event Cards (originals) -->
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Physical+Training');"></div>
-        <div class="activities-card-content">
-          <h4>Physical Training</h4>
-          <p>Rigorous physical training enhances fitness, discipline, and teamwork.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Patriotic+Run+2025');"></div>
-        <div class="activities-card-content">
-          <h4>Patriotic Run 2025</h4>
-          <p>Unites cadets and staff for a 5km run celebrating fitness and national pride.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Eco-Cyclothon');"></div>
-        <div class="activities-card-content">
-          <h4>Eco-Cyclothon 2025</h4>
-          <p>Cadets and volunteers cycle to promote environment and healthy living.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Sojourn+2025');"></div>
-        <div class="activities-card-content">
-          <h4>Sojourn 2025</h4>
-          <p>Cadets perform a group dance at the college festival blending pride and unity.</p>
-        </div>
-      </div>
-
-      <!-- 4 Duplicate Cards for Infinite Looping -->
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Physical+Training');"></div>
-        <div class="activities-card-content">
-          <h4>Physical Training</h4>
-          <p>Rigorous physical training enhances fitness, discipline, and teamwork.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Patriotic+Run+2025');"></div>
-        <div class="activities-card-content">
-          <h4>Patriotic Run 2025</h4>
-          <p>Unites cadets and staff for a 5km run celebrating fitness and national pride.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Eco-Cyclothon');"></div>
-        <div class="activities-card-content">
-          <h4>Eco-Cyclothon 2025</h4>
-          <p>Cadets and volunteers cycle to promote environment and healthy living.</p>
-        </div>
-      </div>
-      <div class="activities-slider-card">
-        <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Sojourn+2025');"></div>
-        <div class="activities-card-content">
-          <h4>Sojourn 2025</h4>
-          <p>Cadets perform a group dance at the college festival blending pride and unity.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Fourth Carousel Row Ends Here -->
-
-
-
-  <!-- Page Footer/Note -->
-  <div class="activities-footer-note">
-    <p><strong>TCET NCC – Fostering Patriotism, Awareness, and Leadership</strong></p>
-    <p>From defence inspiration to social impact, each event reinforces discipline, unity, and national pride among cadets.</p>
-  </div>
-  </div>
-
-  <!-- ================= Slider Script ================= -->
-  <!-- Bootstrap JS for navbar toggler -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-
-    // Responsive auto-sliding carousel logic
-const slider = document.getElementById('activitiesCarousel');
-let cardCount = slider.children.length / 2; // real number of cards
-let cardsPerFrame = 3;
-
-function updateCardsPerFrame() {
-  if (window.innerWidth <= 600) {
-    cardsPerFrame = 2;
-  } else if (window.innerWidth <= 900) {
-    cardsPerFrame = 2;
-  } else {
-    cardsPerFrame = 3;
-  }
-}
-updateCardsPerFrame();
-window.addEventListener('resize', updateCardsPerFrame);
-
-let cardWidth = slider.children[0].offsetWidth;
-let position = 0;
-let animationId = null;
-let isPaused = false;
-
-function updateCardWidth() {
-  cardWidth = slider.children[0].offsetWidth;
-}
-window.addEventListener('resize', updateCardWidth);
-
-function animate() {
-  if (isPaused) return;
-  position += 0.7; // adjust for speed
-  const maxScroll = cardWidth * cardCount;
-  if (position >= maxScroll) {
-    position = 0;
-    // Instantly reset position, without visible jump
-    slider.style.transition = 'none';
-    slider.style.transform = `translateX(${-position}px)`;
-    // Trigger reflow for smooth animation restoration
-    void slider.offsetWidth;
-    slider.style.transition = 'transform 0.2s linear';
-  } else {
-    slider.style.transform = `translateX(${-position}px)`;
-  }
-  animationId = requestAnimationFrame(animate);
-}
-
-// Pause on hover
-slider.parentElement.addEventListener('mouseenter', () => {
-  isPaused = true;
-});
-slider.parentElement.addEventListener('mouseleave', () => {
-  isPaused = false;
-  animate();
-});
-
-// Responsive reset
-window.addEventListener('resize', () => {
-  updateCardsPerFrame();
-  updateCardWidth();
-  position = 0;
-  slider.style.transform = 'translateX(0)';
-});
-
-// Start animation
-requestAnimationFrame(animate);
-
-function startInfiniteCarousel(carouselId) {
-  const slider = document.getElementById(carouselId);
-  if (!slider) return;
-  let cardCount = slider.children.length / 2;
-  let cardsPerFrame = 3;
-
-  function updateCardsPerFrame() {
-    if (window.innerWidth <= 600) {
-      cardsPerFrame = 2;
-    } else if (window.innerWidth <= 900) {
-      cardsPerFrame = 2;
-    } else {
-      cardsPerFrame = 3;
-    }
-  }
-  updateCardsPerFrame();
-  window.addEventListener('resize', updateCardsPerFrame);
-
-  let cardWidth = slider.children[0].offsetWidth;
-  let position = 0;
-  let isPaused = false;
-
-  function updateCardWidth() {
-    cardWidth = slider.children[0].offsetWidth;
-  }
-  window.addEventListener('resize', updateCardWidth);
-
-  function animate() {
-    if (isPaused) return;
-    position += 0.8; // Adjust speed as desired
-    const maxScroll = cardWidth * cardCount;
-    if (position >= maxScroll) {
-      position = 0;
-      slider.style.transition = 'none';
-      slider.style.transform = `translateX(${-position}px)`;
-      void slider.offsetWidth;
-      slider.style.transition = 'transform 0.2s linear';
-    } else {
-      slider.style.transform = `translateX(${-position}px)`;
-    }
-    requestAnimationFrame(animate);
-  }
-
-  slider.parentElement.addEventListener('mouseenter', () => { isPaused = true; });
-  slider.parentElement.addEventListener('mouseleave', () => { isPaused = false; animate(); });
-  window.addEventListener('resize', () => {
-    updateCardsPerFrame();
-    updateCardWidth();
-    position = 0;
-    slider.style.transform = 'translateX(0)';
-  });
-
-  requestAnimationFrame(animate);
-}
-
-// Start/attach carousel on each row you add
-startInfiniteCarousel('activitiesCarousel');
-startInfiniteCarousel('activitiesCarousel2');
-startInfiniteCarousel('activitiesCarousel3');
-startInfiniteCarousel('activitiesCarousel4');
-
-  </script>
+    </section>
 </body>
-
 </html>
