@@ -1,153 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>TCET NCC Domains</title>
-  <!-- Google Fonts & Bootstrap -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet">
-     <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Black+Ops+One&display=swap">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
- <link rel="stylesheet" href="src/index.css">
- <link rel="stylesheet" href="src/tcet_nccdomains.css">
- <link rel="stylesheet" href="src/footer.css">
- <link rel="stylesheet" href="src/magazine.css">
+  <title>TCET NCC Activities</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS (if used) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <!-- FontAwesome (if used) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="src/activities.css">
+  <link rel="stylesheet" href="eventstemp.css">
 </head>
 
 <body>
 
-
-  <!-- Header Section (full-width, matches index.html) -->
+  <!-- Header Section -->
   <div class="container-fluid p-0">
     <div class="tab-box">
       <img src="assets/img/Header.png" alt="NCC Header" class="header-logo">
     </div>
   </div>
+<nav class="custom-navbar">
+    <a class="navbar-brand d-flex align-items-center me-4" href="index.html">
+      <img src="assets/img/logo/ncclogo.png" alt="NCC Logo" style="height: 55px; width: auto;" class="me-2">
+      <div class="d-flex flex-column lh-sm text-white">
+        <span class="fw-bold" style="font-size: 2.0rem;">TCET</span>
+        <span style="font-size: 1.2rem;">NCC UNIT</span>
+      </div>
+    </a>
+   <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  <ul class="nav-links">
+    <li><a class="nav-link" href="index.html">NCC Home</a></li>
+    <li><a class="nav-link" href="tcet_nccdomains.html">Our Teams</a></li>
+    <li><a class="nav-link" href="camp.html">Training & Camps</a></li>
+    <li><a class="nav-link" href="achievers.html">Achievers</a></li>
+    <li><a class="nav-link" href="activities.html">Activities</a></li>
+    <li><a class="nav-link" href="calendar.html">Calendar</a></li>
+    <li><a class="nav-link" href="test2.html">Gallery</a></li>
+    <li><a class="nav-link" href="magazine.html">Magazine</a></li>
+    <li><a class="nav-link" href="contactus.html">Contact Us</a></li>
+  </ul>
+</nav>
+  <!-- Sidebar Toggle Button (visible on mobile/tablet) -->
+  <button class="sidebar-toggle d-lg-none" aria-label="Open sidebar" aria-controls="sidebarNav" aria-expanded="false">
+    <i class="fas fa-bars"></i>
+  </button>
 
-    <!-- Navbar -->
-    <!-- Navbar -->
-    <nav class="custom-navbar">
-      <!-- Logo + Text -->
-      <a
-        class="brand"
-        href="index.html"
-        style="display: flex; align-items: center; gap: 10px"
-      >
-        <img
-          src="assets/img/logo/ncclogo.png"
-          alt="NCC Logo"
-          style="height: 55px; width: auto"
-        />
-        <div class = "navbrand" style="display: flex; flex-direction: column; line-height: 1.2;">
-          <span style="font-size: 2rem; font-weight: 400">TCET</span>
-          <span style="font-size: 1.2rem; white-space: nowrap  ">NCC UNIT</span>
-        </div>
-      </a>
-      <!-- Hamburger for mobile -->
-      <button class="nav-toggle" aria-label="Open navigation">&#9776;</button>
-      <!-- Nav links -->
-      <ul class="nav-links">
-        <li><a class="nav-link" href="index.html">NCC Home</a></li>
-        <li><a class="nav-link" href="tcet_nccdomains.html">Our Teams</a></li>
-        <li><a class="nav-link" href="camp.html">Training & Camps</a></li>
-        <li><a class="nav-link" href="achievers.html">Achievers</a></li>
-        <li><a class="nav-link" href="activities.html">Activities</a></li>
-        <li><a class="nav-link" href="calendar.html">Calendar</a></li>
-        <li><a class="nav-link" href="index1.html">Gallery</a></li>
-        <li><a class="nav-link" href="magazine.html">Magazine</a></li>
-        <li><a class="nav-link" href="contactus.html">Contact Us</a></li>
-      </ul>
-    </nav>
-
-</head>
-<body>
-
-  <!-- ======== Navbar ======== -->
-  <nav class="navbar-custom navbar sticky-top">
-    <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between py-2">
-      <img src="header-logo.png" alt="TCET NCC Logo" class="header-logo mb-2 mb-md-0" />
-      <ul class="navbar-nav d-flex flex-row flex-wrap justify-content-center gap-2 mb-0">
-        <li class="nav-item"><a href="#" class="nav-link">TCET Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">NCC Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Our Teams</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Training & Camps</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Achievers</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Activities</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Puneet Sagar</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Tree Plantation</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Blood Donation</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Calendar</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>
-        <li class="nav-item"><a href="#" class="nav-link active">Magazine</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>
-      </ul>
+  <!-- Sidebar -->
+  <aside class="camp-sidebar" id="sidebarNav">
+    <div class="sidebar-header">
+      <span class="sidebar-title"><b>Activities</b></span>
     </div>
-  </nav>
+    <ul class="sidebar-menu">
+      <!-- Sidebar navigation grouped by category -->
+      <li>
+        <span>Defence & Armed Forces</span>
+        <ul class="submenu">
+          <li>
+            <a href="#defence"><i class="fas fa-shield-alt"></i> Defence Exposure</a>
+          </li>
+          <li>
+            <a href="#armyday"><i class="fas fa-flag"></i> Army Day</a>
+          </li>
+          <li>
+            <a href="#navyday"><i class="fas fa-anchor"></i> Navy Day Celebration</a>
+          </li>
+          <li>
+            <a href="#shastrapooja"><i class="fas fa-gavel"></i> Shastra Pooja</a>
+          </li>
+          <li>
+            <a href="#catc"><i class="fas fa-campground"></i> CATC 512 & 405</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>Training & Sports</span>
+        <ul class="submenu">
+          <li>
+            <a href="#training"><i class="fas fa-running"></i> Physical Training</a>
+          </li>
+          <li>
+            <a href="#patrioticrun"><i class="fas fa-shoe-prints"></i> Patriotic Run</a>
+          </li>
+          <li>
+            <a href="#sojourn"><i class="fas fa-music"></i> Sojourn 2025</a>
+          </li>
+          <li>
+            <a href="#ecocyclothon"><i class="fas fa-bicycle"></i> Eco Cylothon</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>Lectures & Career</span>
+        <ul class="submenu">
+          <li>
+            <a href="#lectures"><i class="fas fa-chalkboard-teacher"></i> Defence Training &
+              Lectures</a>
+          </li>
+          <li>
+            <a href="#ncctraining"><i class="fas fa-book"></i> NCC Training & Lectures</a>
+          </li>
+          <li>
+            <a href="#selection"><i class="fas fa-user-check"></i> Selection & Eligibility</a>
+          </li>
+          <li>
+            <a href="#motivation"><i class="fas fa-bullhorn"></i> Motivational Lectures</a>
+          </li>
+          <li>
+            <a href="#farewell"><i class="fas fa-award"></i> Felicitation & Farewell</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span>Social Initiatives</span>
+        <ul class="submenu">
+          <li>
+            <a href="#treeplantation"><i class="fas fa-tree"></i> Tree Plantation Drive</a>
+          </li>
+          <li>
+            <a href="#swachhbharat"><i class="fas fa-recycle"></i> Swachh Bharat Abhiyan</a>
+          </li>
+          <li>
+            <a href="#achievers"><i class="fas fa-trophy"></i> Achievers 2024–2025</a>
+          </li>
+          <li>
+            <a href="#republicday"><i class="fas fa-flag-usa"></i> 76th Republic Day</a>
+          </li>
+          <li>
+            <a href="#independenceday"><i class="fas fa-flag"></i> 78th Independence Day</a>
+          </li>
+          <li>
+            <a href="#heritage"><i class="fas fa-landmark"></i> Heritage Awareness Program</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </aside>
 
-  <!-- ======= Main Container ======= -->
-  <main class="container my-5">
+  <header class="page-header">
+    <h1> Event Name </h1>
+  </header>
 
-    <!-- Edition Picker -->
-    <section class="edition-wrapper mb-4" aria-label="Magazine editions navigation">
-      <h4 class="edition-header">Our Edition Out</h4>
-      <div class="edition-links nav nav-tabs flex-wrap justify-content-center" id="magazineTabs" role="tablist">
-        <!-- Each button corresponds to a tab and is accessible -->
-        <button class="edition-btn nav-link active" id="link1-tab" data-bs-toggle="tab" data-bs-target="#link1" type="button" role="tab" aria-controls="link1" aria-selected="true">
-          Warrior – April 2025
-        </button>
-        <button class="edition-btn nav-link" id="link2-tab" data-bs-toggle="tab" data-bs-target="#link2" type="button" role="tab" aria-controls="link2" aria-selected="false">
-          Warrior – Oct 2024
-        </button>
-        <button class="edition-btn nav-link" id="link3-tab" data-bs-toggle="tab" data-bs-target="#link3" type="button" role="tab" aria-controls="link3" aria-selected="false">
-          Warrior – April 2023
-        </button>
-        <button class="edition-btn nav-link" id="link4-tab" data-bs-toggle="tab" data-bs-target="#link4" type="button" role="tab" aria-controls="link4" aria-selected="false">
-          Warrior – Oct 2023
-        </button>
-        <button class="edition-btn nav-link" id="link5-tab" data-bs-toggle="tab" data-bs-target="#link5" type="button" role="tab" aria-controls="link5" aria-selected="false">
-          Warrior – April 2022
-        </button>
-        <button class="edition-btn nav-link" id="link6-tab" data-bs-toggle="tab" data-bs-target="#link6" type="button" role="tab" aria-controls="link6" aria-selected="false">
-          Coffee Table Book
-        </button>
+  <!-- ================= Main Content Section ================= -->
+
+<main class="main-event-content">
+  <section class="event-section">
+    <header class="event-header">
+      <h1>Farewell & Felicitation of Cadets</h1>
+      <p class="event-subtitle">
+        A Tribute to Years of Service, Leadership, and Camaraderie
+      </p>
+    </header>
+    <div class="event-desc-block">
+      <h2 class="event-title">Glorious Sendoff to Our Outgoing 3rd Year NCC Cadets</h2>
+      <p class="event-desc">
+        The TCET NCC Unit hosted a dignified and memorable <b>Felicitation and Farewell Ceremony</b> for its outgoing 3rd-year cadets, celebrating their unwavering dedication and service over three impactful years. The event was marked by emotional moments, including a display of Polaroid snapshots capturing their NCC journey. Senior dignitaries including the Principal, Vice Principal, ANO, and CTO graced the occasion, sharing words of appreciation and encouragement. The 3rd-year cadets were felicitated with mementos and ‘C’ Certificates, honouring their achievements in national camps like RDC, Nausainik Camp, YEP, and more. Juniors paid tribute by presenting heartfelt tokens of remembrance, symbolizing gratitude and deep camaraderie. The event concluded with a group photograph, followed by dinner and shared memories among cadets and staff. The ceremony was not just a farewell, but a celebration of legacy, leadership, and inspiration for the juniors to carry forward.
+      </p>
+      <div class="event-details">
+        <span><i class="fa fa-calendar"></i> 2024 - 2025</span>
+        <span><i class="fa fa-map-marker"></i> TCET Campus, Mumbai</span>
       </div>
-    </section>
+    </div>
+    <div class="event-slideshow-container" id="eventSlideshowContainer" tabindex="0">
+      <div class="event-slideshow-grid" id="eventSlideshowGrid"></div>
+      <div class="slideshow-pagination" id="eventSlideshowDots"></div>
+      <button class="slideshow-ctrl prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+      <button class="slideshow-ctrl next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <div class="slide-caption-main" id="eventMainCaption"></div>
+  </section>
+</main>
+<footer class="event-footer">
+  <div>© 2025 TCET NCC Unit &middot; Farewell & Felicitation Ceremony</div>
+</footer>
+<!-- Font Awesome icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+<script>
+const imgBase = 'assets/img/rdc2024/';
+const captions = [
+  "Farewell setup & heart-warming decor",
+  "Cadets gather for their final ceremony",
+  "Honour Guard: Ready for recognition",
+  "Receiving C-Certificate of pride",
+  "Leadership saluted by juniors",
+  "Emotional addresses from dignitaries",
+  "Principal and CTO addressing all cadets",
+  "Juniors present heartfelt tokens",
+  "Mentorship & pride: A bonding moment",
+  "Group photo: The outgoing batch’s legacy",
+  "Cadets share memories, laughs, unity",
+  "Moments of reflection and gratitude",
+  "Camaraderie: farewell dinner and joy",
+  "Unseen bonds across the year batches",
+  "Final salute – started as cadets, leaving as leaders",
+  "The legacy continues for new batches"
+];
+// Compose slides from 16 images, using 3 per slide (looping if needed)
+let slides = [];
+const total = 16;
+for(let i=0; i<total; i+=3) {
+  slides.push({
+    topLeft:  imgBase + `rdc2024 (${(i%total)+1}).jpg`,
+    topRight: imgBase + `rdc2024 (${((i+1)%total)+1}).jpg`,
+    bottom:   imgBase + `rdc2024 (${((i+2)%total)+1}).jpg`,
+    captions: [
+      captions[i % captions.length] || '',
+      captions[(i+1)%captions.length] || '',
+      captions[(i+2)%captions.length] || ''
+    ]
+  });
+}
+// Slideshow logic
+let slideIdx = 0, running = true, timer, dots;
+function renderSlide(idx, isInit=false) {
+  const grid = document.getElementById('eventSlideshowGrid');
+  const slide = slides[idx];
+  grid.classList.remove('fadein');
+  setTimeout(() => {
+    grid.innerHTML = `
+      <div class="grid-item gtop gtop-left">
+        <img src="${slide.topLeft}" alt="">
+        <div class="small-caption">${slide.captions[0]}</div>
+      </div>
+      <div class="grid-item gtop gtop-right">
+        <img src="${slide.topRight}" alt="">
+        <div class="small-caption">${slide.captions[1]}</div>
+      </div>
+      <div class="grid-item gbottom">
+        <img src="${slide.bottom}" alt="">
+        <div class="main-caption">${slide.captions[2]}</div>
+      </div>
+    `;
+    setTimeout(()=>grid.classList.add('fadein'), 50);
+    document.getElementById('eventMainCaption').textContent = slide.captions[2];
+    if(isInit) {
+      dots = document.getElementById('eventSlideshowDots');
+      dots.innerHTML = '';
+      for(let i=0; i<slides.length; i++) {
+        let dot = document.createElement('button');
+        dot.className = (i === idx) ? 'dot active-dot' : 'dot';
+        dot.setAttribute('type','button');
+        dot.setAttribute('tabindex',0);
+        dot.onclick = ()=>goTo(i);
+        dots.appendChild(dot);
+      }
+    } else {
+      Array.from(dots.children).forEach((d,k)=>d.className = (k === idx) ? 'dot active-dot' : 'dot');
+    }
+  }, 160);
+}
+function next() { slideIdx = (slideIdx+1)%slides.length; renderSlide(slideIdx);}
+function prev() { slideIdx = (slideIdx-1+slides.length)%slides.length; renderSlide(slideIdx);}
+function goTo(i) { slideIdx=i; renderSlide(slideIdx);}
+function startAuto() { timer = setInterval(()=>{ if(running) next(); }, 4600);}
+function stopAuto() { if(timer) clearInterval(timer); }
+window.addEventListener('DOMContentLoaded', function() {
+  renderSlide(0,true); startAuto();
+  const cont = document.getElementById('eventSlideshowContainer');
+  [cont].forEach(el=>{
+    el.addEventListener('mouseenter', _=>{ running=false; });
+    el.addEventListener('mouseleave', _=>{ running=true; });
+    el.addEventListener('focusin',  _=>{ running=false; });
+    el.addEventListener('focusout', _=>{ running=true; });
+    el.addEventListener('click',    _=>{ running = !running; }); // click toggles play/pause
+  });
+  document.querySelector('.slideshow-ctrl.next').onclick=()=>{next();};
+  document.querySelector('.slideshow-ctrl.prev').onclick=()=>{prev();};
+});
+</script>
 
-    <!-- Magazine Content Tabs -->
-    <section class="magazine-content">
-      <h2 class="magazine-title text-center mb-4">Warrior – TCET NCC Magazine</h2>
-      <div class="tab-content" id="magazineTabsContent">
-        <div class="tab-pane fade" id="link1" role="tabpanel" aria-labelledby="link1-tab" tabindex="0">
-          <p class="magazine-desc">Coming soon: April 2025 edition will be available here.</p>
-          <iframe src="" title="Warrior – April 2025 Coming Soon" loading="lazy"></iframe>
+
+
+        <!-- Footer Section -->
+  <footer class="footer-section  ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="footer-title">TCET NCC UNIT</div>
+          <a href="index.html" class="footer-link"><i class="fas fa-home footer-icon"></i> Home</a>
+          <a href="tcet_nccdomains.html" class="footer-link"><i class="fas fa-users footer-icon"></i> Our Teams</a>
+          <a href="camp.html" class="footer-link"><i class="fas fa-campground footer-icon"></i> Training & Camps</a>
+          <a href="camp.html" class="footer-link"><i class="fas fa-trophy footer-icon"></i> NCC & Defence ></a>
+          <a href="achievers.html" class="footer-link"><i class="fas fa-trophy footer-icon"></i> Achievers</a>
         </div>
-        <div class="tab-pane fade" id="link2" role="tabpanel" aria-labelledby="link2-tab" tabindex="0">
-          <p class="magazine-desc">Coming soon: October 2024 edition will be available here.</p>
-          <iframe src="" title="Warrior – Oct 2024 Coming Soon" loading="lazy"></iframe>
+        <div class="col-md-3">
+          <div class="footer-title">ACTIVITIES</div>
+          <a href="calendar.html" class="footer-link"><i class="fas fa-calendar-alt footer-icon"></i> Events &
+            Calendar</a>
+          <a href="magazine.html" class="footer-link"><i class="fas fa-book footer-icon"></i> Magazine</a>
+          <a href="test2.html" class="footer-link"><i class="fas fa-images footer-icon"></i> Repuclic Day
+            Celebration</a>
+          <a href="test2.html" class="footer-link"><i class="fas fa-images footer-icon"></i> Collaba Visit</a>
+          <!-- <a href="test2.html" class="footer-link"><i class="fas fa-images footer-icon"></i> </a> -->
         </div>
-        <div class="tab-pane fade show active" id="link3" role="tabpanel" aria-labelledby="link3-tab" tabindex="0">
-          <p class="magazine-desc">Warrior – April 2023: Flip through the magazine below.</p>
-          <iframe src="https://online.fliphtml5.com/dvkne/dhaj/#p=1" allowfullscreen loading="lazy" title="Warrior – April 2023 Magazine"></iframe>
+        <div class="col-md-3">
+          <div class="footer-title">OFFICERS</div>
+          <a href="ncc_ano.html" class="footer-link"><i class="fas fa-user-tie footer-icon"></i> ANO</a>
+          <a href="ncc_cdr.html" class="footer-link"><i class="fas fa-user-shield footer-icon"></i> OIC</a>
+          <a href="ncc_cto.html" class="footer-link"><i class="fas fa-user-graduate footer-icon"></i> CTO</a>
         </div>
-        <div class="tab-pane fade" id="link4" role="tabpanel" aria-labelledby="link4-tab" tabindex="0">
-          <p class="magazine-desc">Warrior – Oct 2023: Flip through the magazine below.</p>
-          <iframe src="https://online.fliphtml5.com/dvkne/juri/" allowfullscreen loading="lazy" title="Warrior – Oct 2023 Magazine"></iframe>
-        </div>
-        <div class="tab-pane fade" id="link5" role="tabpanel" aria-labelledby="link5-tab" tabindex="0">
-          <p class="magazine-desc">Warrior – April 2022: Flip through the magazine below.</p>
-          <iframe src="https://heyzine.com/flip-book/1e2383f07b.html" allowfullscreen loading="lazy" title="Warrior – April 2022 Magazine"></iframe>
-        </div>
-        <div class="tab-pane fade" id="link6" role="tabpanel" aria-labelledby="link6-tab" tabindex="0">
-          <p class="magazine-desc">Coffee Table Book: Coming soon.</p>
-          <iframe src="" title="Coffee Table Book Coming Soon" loading="lazy"></iframe>
+        <div class="col-md-3">
+          <div class="footer-title">CONTACT</div>
+          <a href="contactus.html" class="footer-link"><i class="fas fa-envelope footer-icon"></i> Contact Us</a>
+          <a href="https://www.instagram.com/ncc_tcet/" target="_blank" class="footer-link"><i
+              class="fab fa-instagram footer-icon"></i> Instagram</a>
+          <a href="https://twitter.com/" target="_blank" class="footer-link"><i class="fab fa-twitter footer-icon"></i>
+            Twitter</a>
+          <a href="https://github.com/Abhi-293" target="_blank" class="footer-link"><i
+              class="fab fa-github footer-icon"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/atabhishekx" target="_blank" class="footer-link"><i
+              class="fab fa-linkedin footer-icon"></i> LinkedIn</a>
         </div>
       </div>
-    </section>
+      <div class="footer-bottom">TCET-NCC. All rights reserved</div>
+    </div>
+  </footer>
 
-  </main>
+  <!-- ================= Slider Script ================= -->
+  <!-- <script>
+    // ... (your slider JS remains unchanged) ...
+    function getVisibleCards() {
+      if (window.innerWidth <= 600) return 1;
+      if (window.innerWidth <= 900) return 2;
+      if (window.innerWidth <= 1200) return 3;
+      return 4;
+    }
+    function setupSlider(sliderId, intervalMs = 5000) {
+      const slider = document.getElementById(sliderId);
+      if (!slider) return;
+      const cards = slider.children;
+      let current = 0;
+      let visible = getVisibleCards();
+      function update() {
+        visible = getVisibleCards();
+        const cardWidth =
+          cards[0].offsetWidth +
+          parseFloat(getComputedStyle(slider).gap || 24);
+        slider.style.transform = `translateX(-${current * cardWidth}px)`;
+      }
+      function next() {
+        visible = getVisibleCards();
+        if (current + visible >= cards.length) {
+          current = 0;
+        } else {
+          current++;
+        }
+        update();
+      }
+      function prev() {
+        visible = getVisibleCards();
+        if (current === 0) {
+          current = Math.max(0, cards.length - visible);
+        } else {
+          current--;
+        }
+        update();
+      }
+      let auto = setInterval(next, intervalMs);
+      slider.parentElement.addEventListener("mouseenter", () =>
+        clearInterval(auto)
+      );
+      slider.parentElement.addEventListener(
+        "mouseleave",
+        () => (auto = setInterval(next, intervalMs))
+      );
+      window.addEventListener("resize", update);
+      slider.dataset.current = current;
+      slider.dataset.visible = visible;
+      slider.next = next;
+      slider.prev = prev;
+      slider.update = update;
+      update();
+    }
+    function manualSlide(sliderId, dir) {
+      const slider = document.getElementById(sliderId);
+      if (!slider) return;
+      if (dir > 0) slider.next();
+      else slider.prev();
+    }
+    document.addEventListener("DOMContentLoaded", function () {
+      setupSlider("activitiesSlider", 5000);
+      setupSlider("defenceSlider", 5000);
+      setupSlider("trainingSlider", 5000);
+      setupSlider("lecturesSlider", 5000);
+      setupSlider("socialSlider", 5000);
+    });
+  </script> -->
 
-  <!-- Bootstrap 5 JS Bundle (required for tabs) -->
+  <!-- Toggle Navigation -->
+   <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  toggle.addEventListener('click', function () {
+    links.classList.toggle('open');
+    document.body.classList.toggle('nav-open', links.classList.contains('open'));
+  });
+  // Close menu on nav link click (optional for better UX)
+  links.querySelectorAll('.nav-link').forEach(item => {
+    item.addEventListener('click', () => {
+      links.classList.remove('open');
+      document.body.classList.remove('nav-open');
+    });
+  });
+});
+</script>
+
+  <!-- Corousel Slider Script -->
+   <script>
+       // Responsive auto-sliding carousel logic
+const slider = document.getElementById('activitiesCarousel');
+let cardCount = slider.children.length / 2; // real number of cards
+let cardsPerFrame = 3;
+
+function updateCardsPerFrame() {
+  if (window.innerWidth <= 600) {
+    cardsPerFrame = 2;
+  } else if (window.innerWidth <= 900) {
+    cardsPerFrame = 2;
+  } else {
+    cardsPerFrame = 3;
+  }
+}
+updateCardsPerFrame();
+window.addEventListener('resize', updateCardsPerFrame);
+
+let cardWidth = slider.children[0].offsetWidth;
+let position = 0;
+let animationId = null;
+let isPaused = false;
+
+function updateCardWidth() {
+  cardWidth = slider.children[0].offsetWidth;
+}
+window.addEventListener('resize', updateCardWidth);
+
+function animate() {
+  if (isPaused) return;
+  position += 0.7; // adjust for speed
+  const maxScroll = cardWidth * cardCount;
+  if (position >= maxScroll) {
+    position = 0;
+    // Instantly reset position, without visible jump
+    slider.style.transition = 'none';
+    slider.style.transform = `translateX(${-position}px)`;
+    // Trigger reflow for smooth animation restoration
+    void slider.offsetWidth;
+    slider.style.transition = 'transform 0.2s linear';
+  } else {
+    slider.style.transform = `translateX(${-position}px)`;
+  }
+  animationId = requestAnimationFrame(animate);
+}
+
+// Pause on hover
+slider.parentElement.addEventListener('mouseenter', () => {
+  isPaused = true;
+});
+slider.parentElement.addEventListener('mouseleave', () => {
+  isPaused = false;
+  animate();
+});
+
+// Responsive reset
+window.addEventListener('resize', () => {
+  updateCardsPerFrame();
+  updateCardWidth();
+  position = 0;
+  slider.style.transform = 'translateX(0)';
+});
+
+// Start animation
+requestAnimationFrame(animate);
+
+function startInfiniteCarousel(carouselId) {
+  const slider = document.getElementById(carouselId);
+  if (!slider) return;
+  let cardCount = slider.children.length / 2;
+  let cardsPerFrame = 3;
+
+  function updateCardsPerFrame() {
+    if (window.innerWidth <= 600) {
+      cardsPerFrame = 2;
+    } else if (window.innerWidth <= 900) {
+      cardsPerFrame = 2;
+    } else {
+      cardsPerFrame = 3;
+    }
+  }
+  updateCardsPerFrame();
+  window.addEventListener('resize', updateCardsPerFrame);
+
+  let cardWidth = slider.children[0].offsetWidth;
+  let position = 0;
+  let isPaused = false;
+
+  function updateCardWidth() {
+    cardWidth = slider.children[0].offsetWidth;
+  }
+  window.addEventListener('resize', updateCardWidth);
+
+  function animate() {
+    if (isPaused) return;
+    position += 0.8; // Adjust speed as desired
+    const maxScroll = cardWidth * cardCount;
+    if (position >= maxScroll) {
+      position = 0;
+      slider.style.transition = 'none';
+      slider.style.transform = `translateX(${-position}px)`;
+      void slider.offsetWidth;
+      slider.style.transition = 'transform 0.2s linear';
+    } else {
+      slider.style.transform = `translateX(${-position}px)`;
+    }
+    requestAnimationFrame(animate);
+  }
+
+  slider.parentElement.addEventListener('mouseenter', () => { isPaused = true; });
+  slider.parentElement.addEventListener('mouseleave', () => { isPaused = false; animate(); });
+  window.addEventListener('resize', () => {
+    updateCardsPerFrame();
+    updateCardWidth();
+    position = 0;
+    slider.style.transform = 'translateX(0)';
+  });
+
+  requestAnimationFrame(animate);
+}
+
+// Start/attach carousel on each row you add
+startInfiniteCarousel('activitiesCarousel');
+startInfiniteCarousel('activitiesCarousel2');
+startInfiniteCarousel('activitiesCarousel3');
+startInfiniteCarousel('activitiesCarousel4');
+   </script>
+   <!-- Script Ends heere -->
+  <!-- Bootstrap JS for navbar toggler -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const sidebar = document.getElementById('sidebarNav');
+      const toggleBtn = document.querySelector('.sidebar-toggle');
+      let overlay = null;
+
+      function openSidebar() {
+        sidebar.classList.add('open');
+        toggleBtn.setAttribute('aria-expanded', 'true');
+        overlay = document.createElement('div');
+        overlay.className = 'sidebar-overlay';
+        overlay.onclick = closeSidebar;
+        document.body.appendChild(overlay);
+        // Trap focus inside sidebar for accessibility
+        sidebar.setAttribute('tabindex', '-1');
+        sidebar.focus();
+      }
+      function closeSidebar() {
+        sidebar.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        if (overlay) {
+          overlay.classList.add('hide');
+          setTimeout(() => overlay && overlay.remove(), 300);
+        }
+        sidebar.removeAttribute('tabindex');
+      }
+      // Toggle sidebar on hamburger click
+      toggleBtn && toggleBtn.addEventListener('click', function () {
+        if (sidebar.classList.contains('open')) {
+          closeSidebar();
+        } else {
+          openSidebar();
+        }
+      });
+      // Close sidebar on resize to desktop
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 992) closeSidebar();
+      });
+      // Close sidebar on ESC key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === "Escape" && sidebar.classList.contains('open')) {
+          closeSidebar();
+          toggleBtn.focus();
+        }
+      });
+    });
+
+    
+  </script>
 
 </body>
+
 </html>

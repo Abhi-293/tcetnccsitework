@@ -1,19 +1,22 @@
-  .footer-section {
+.footer-section {
+  margin-top:20px;
     background: linear-gradient(90deg, #800000 0%, #1a1a2e 100%);
     color: #fff;
     font-family: 'Poppins', Arial, sans-serif;
     padding: 2.5rem 0 1.2rem 0;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
-    box-shadow: 0 -2px 16px rgba(128,0,0,0.08);
-  }
-  .footer-title {
+    box-shadow: 0 -2px 16px rgba(128, 0, 0, 0.08);
+}
+
+.footer-title {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 1.1rem;
     letter-spacing: 0.04em;
-  }
-  .footer-link {
+}
+
+.footer-link {
     display: flex;
     align-items: center;
     gap: 0.5em;
@@ -25,42 +28,50 @@
     transition: color 0.2s, background 0.2s;
     border-radius: 6px;
     padding: 0.1em 0.2em;
-  }
-  .footer-link:hover {
+}
+
+.footer-link:hover {
     color: #fff;
-    background: rgba(128,0,0,0.12);
+    background: rgba(128, 0, 0, 0.12);
     text-decoration: underline;
-  }
-  .footer-icon {
+}
+
+.footer-icon {
     font-size: 1.15em;
     color: #ffd700;
     transition: color 0.2s, transform 0.2s;
-  }
-  .footer-link:hover .footer-icon {
+}
+
+.footer-link:hover .footer-icon {
     color: #fff;
     transform: scale(1.15) rotate(-5deg);
-  }
-  .footer-bottom {
+}
+
+.footer-bottom {
     text-align: center;
     color: #eee;
     font-size: 0.98rem;
     margin-top: 2rem;
     letter-spacing: 0.03em;
-  }
-  @media (max-width: 768px) {
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
     .footer-title {
-      font-size: 1.05rem;
+        font-size: 1.05rem;
     }
     .footer-link {
-      font-size: 0.95rem;
-      margin-bottom: 0.4rem;
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
     }
     .footer-section {
-      padding: 1.5rem 0 0.8rem 0;
+        padding: 1.5rem 0 0.8rem 0;
     }
-  }
-  @media (min-width: 768px) {
-    .container, .container-md, .container-sm {
-        max-width: 880px;
+}
+
+/* Only apply on medium+ screens */
+@media (min-width: 768px) {
+    .container, .container-md {
+        max-width: 1200px;
     }
 }
