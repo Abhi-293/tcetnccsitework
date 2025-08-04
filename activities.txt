@@ -1,0 +1,255 @@
+<!-- Row 1: Defence & Armed Forces -->
+<div class="activities-slider-section">
+  <h2 class="activities-slider-title">Defence & Armed Forces</h2>
+  <div class="activities-slider-viewport">
+    <div class="activities-slider-container" id="defenceCarousel">
+
+      <!-- Defence Exposure -->
+      <div class="activities-slider-card">
+        <a href="activities.html#defence">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Defence+Exposure');"></div>
+          <div class="activities-card-content">
+            <h4>Defence Exposure</h4>
+            <p>Details to be added.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Army Day -->
+      <div class="activities-slider-card">
+        <a href="activities.html#armyday">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Army+Day');"></div>
+          <div class="activities-card-content">
+            <h4>Army Day</h4>
+            <p>Cadets participated in parades and motivational talks by defence officers, celebrating discipline and leadership.[1]</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Navy Day Celebration -->
+      <div class="activities-slider-card">
+        <a href="activities.html#navyday">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Navy+Day');"></div>
+          <div class="activities-card-content">
+            <h4>Navy Day Celebration</h4>
+            <p>NCC cadets visited INS Shikra, viewed helicopters up close, and attended sessions on naval operations.[1]</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Shastra Pooja -->
+      <div class="activities-slider-card">
+        <a href="activities.html#shastrapooja">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Shastra+Pooja');"></div>
+          <div class="activities-card-content">
+            <h4>Shastra Pooja</h4>
+            <p>On Dussehra, cadets honored weapons, reflecting on tradition, discipline, and national pride through ritual and ceremony.[1]</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- CATC 512 & 405 -->
+      <div class="activities-slider-card">
+        <a href="activities.html#catc">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=CATC+Camp');"></div>
+          <div class="activities-card-content">
+            <h4>CATC 512 & 405</h4>
+            <p>Combined Annual Training Camps fostered teamwork, leadership, cultural exchange, and all-round growth among NCC cadets.[1]</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Row 2: Training & Sports -->
+<div class="activities-slider-section">
+  <h2 class="activities-slider-title">Training & Sports</h2>
+  <div class="activities-slider-viewport">
+    <div class="activities-slider-container" id="trainingCarousel">
+
+      <!-- Physical Training -->
+      <div class="activities-slider-card">
+        <a href="activities.html#training">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Physical+Training');"></div>
+          <div class="activities-card-content">
+            <h4>Physical Training</h4>
+            <p>Intensive physical exercises build cadet fitness, discipline, and effective teamwork.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Patriotic Run -->
+      <div class="activities-slider-card">
+        <a href="activities.html#patrioticrun">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Patriotic+Run');"></div>
+          <div class="activities-card-content">
+            <h4>Patriotic Run</h4>
+            <p>The 5 km Patriotic Run at TCET fostered unity, fitness, and national pride among cadets and staff.[1]</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Sojourn 2025 -->
+      <div class="activities-slider-card">
+        <a href="activities.html#sojourn">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Sojourn+2025');"></div>
+          <div class="activities-card-content">
+            <h4>Sojourn 2025</h4>
+            <p>Cadets performed a spirited group dance, blending discipline and cultural pride at the campus festival.[1]</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Eco Cyclothon -->
+      <div class="activities-slider-card">
+        <a href="activities.html#ecocyclothon">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Eco-Cyclothon');"></div>
+          <div class="activities-card-content">
+            <h4>Eco Cylothon</h4>
+            <p>Cycling event uniting cadets and community for fitness, environment, and to honor national heroes.[1]</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Row 3: Lectures & Career -->
+<div class="activities-slider-section">
+  <h2 class="activities-slider-title">Lectures & Career</h2>
+  <div class="activities-slider-viewport">
+    <div class="activities-slider-container" id="lecturesCarousel">
+
+      <!-- Defence Training & Lectures -->
+      <div class="activities-slider-card">
+        <a href="activities.html#lectures">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Defence+Lectures');"></div>
+          <div class="activities-card-content">
+            <h4>Defence Training & Lectures</h4>
+            <p>Details to be added.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- NCC Training & Lectures -->
+      <div class="activities-slider-card">
+        <a href="activities.html#ncctraining">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=NCC+Lectures');"></div>
+          <div class="activities-card-content">
+            <h4>NCC Training & Lectures</h4>
+            <p>Details to be added.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Selection & Eligibility -->
+      <div class="activities-slider-card">
+        <a href="activities.html#selection">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Selection+Eligibility');"></div>
+          <div class="activities-card-content">
+            <h4>Selection & Eligibility</h4>
+            <p>Joining NCC includes fitness tests and registration; full selection details are announced during enrolment. Details to be added.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Motivational Lectures -->
+      <div class="activities-slider-card">
+        <a href="activities.html#motivation">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Motivational+Lectures');"></div>
+          <div class="activities-card-content">
+            <h4>Motivational Lectures</h4>
+            <p>Details to be added.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Felicitation & Farewell -->
+      <div class="activities-slider-card">
+        <a href="activities.html#farewell">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Farewell');"></div>
+          <div class="activities-card-content">
+            <h4>Felicitation & Farewell</h4>
+            <p>Ceremony honored outgoing cadets, strengthening camaraderie, with heartfelt tributes and inspiration for juniors.[1]</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Row 4: Social Initiatives -->
+<div class="activities-slider-section">
+  <h2 class="activities-slider-title">Social Initiatives</h2>
+  <div class="activities-slider-viewport">
+    <div class="activities-slider-container" id="socialCarousel">
+
+      <!-- Tree Plantation Drive -->
+      <div class="activities-slider-card">
+        <a href="activities.html#treeplantation">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Tree+Plantation');"></div>
+          <div class="activities-card-content">
+            <h4>Tree Plantation Drive</h4>
+            <p>NCC and Rotary Club planted saplings, delivered climate awareness speeches, and pledged future environmental responsibility.[1]</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Swachh Bharat Abhiyan -->
+      <div class="activities-slider-card">
+        <a href="activities.html#swachhbharat">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Swachh+Bharat');"></div>
+          <div class="activities-card-content">
+            <h4>Swachh Bharat Abhiyan</h4>
+            <p>Cadets cleaned parks and coasts, ran street plays, and inspired community action for a cleaner India.[1]</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Achievers 2024–2025 -->
+      <div class="activities-slider-card">
+        <a href="activities.html#achievers">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Achievers+2024-2025');"></div>
+          <div class="activities-card-content">
+            <h4>Achievers 2024–2025</h4>
+            <p>Details to be added.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- 76th Republic Day -->
+      <div class="activities-slider-card">
+        <a href="activities.html#republicday">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=76th+Republic+Day');"></div>
+          <div class="activities-card-content">
+            <h4>76th Republic Day</h4>
+            <p>Flag hoisting, parades, and patriotic acts celebrated unity and discipline at TCET’s Republic Day.[1]</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- 78th Independence Day -->
+      <div class="activities-slider-card">
+        <a href="activities.html#independenceday">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=78th+Independence+Day');"></div>
+          <div class="activities-card-content">
+            <h4>78th Independence Day</h4>
+            <p>NCC cadets performed parade and cultural acts, inspiring pride under the “Viksit Bharat” vision.[1]</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Heritage Awareness Program -->
+      <div class="activities-slider-card">
+        <a href="activities.html#heritage">
+          <div class="activities-card-img" style="background-image:url('https://via.placeholder.com/400x220?text=Heritage+Awareness');"></div>
+          <div class="activities-card-content">
+            <h4>Heritage Awareness Program</h4>
+            <p>Heritage Walk and Nukkad Natak inspired preservation, reinforcing students’ commitment to India’s culture.[1]</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

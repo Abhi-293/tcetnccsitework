@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>76th Republic Day | TCET NCC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href = "src/eventstemp.css">
+</head>
+<body>
+  <main class="main-event-content">
+    <section class="event-section">
+      <header class="event-header">
+        <h1>76th Republic Day</h1>
+        <p class="event-subtitle">A Grand Celebration of National Pride</p>
+      </header>
+      <div class="event-desc-block">
+        <h2 class="event-title">TCET NCC Marks the 76th Republic Day with a Grand Parade</h2>
+        <p class="event-desc">
+        The TCET NCC Unit celebrated the 76th Republic Day with a spectacular parade, showcasing the discipline and patriotism of the cadets. The event was graced by the presence of the Principal, Vice Principal, and other dignitaries. The celebration included a flag hoisting ceremony, the national anthem, and a march past by the NCC cadets.
+        </p>
+        <div class="event-details">
+          <span><i class="fa fa-calendar"></i> 26th January 2025</span>
+          <span><i class="fa fa-map-marker"></i> TCET Campus, Mumbai</span>
+        </div>
+      </div>
+      <!-- SLIDESHOW GRID -->
+      <div class="event-slideshow-container" id="eventSlideshowContainer" tabindex="0">
+        <div class="event-slideshow-grid" id="eventSlideshowGrid">
+          <!-- Slides injected by JS -->
+        </div>
+        <div class="slideshow-pagination" id="eventSlideshowDots"></div>
+        <button class="slideshow-ctrl prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="slideshow-ctrl next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+      </div>
+      <div class="slide-caption-main" id="eventMainCaption"></div>
+    </section>
+  </main>
+  <footer class="event-footer">
+    <div>© 2025 TCET NCC Unit &middot; 76th Republic Day</div>
+  </footer>
+  <!-- Font Awesome (for icons) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+  <script>
+  // Images and captions for slideshow
+  const imgBase = 'assets/img/tcetrdc25/';
+  const captions = [
+    "Cadets preparing for the parade",
+    "The flag hoisting ceremony",
+    "The proud cadets of TCET NCC",
+    "Marching with pride and honour",
+    "A display of unity and discipline",
+    "Dignitaries saluting the flag",
+    "A moment of national pride",
+    "The future of the nation",
+    "A perfect salute",
+    "The parade in full swing",
+    "A memorable celebration",
+    "Honouring the nation",
+    "A day of patriotism",
+    "The spirit of the Republic",
+    "A grand spectacle",
+    "A tribute to the nation"
+  ];
+  // Compose slides from 16 images, using 3 per slide (looping if needed)
+  let slides = [];
+  const total = 16;
+  for(let i=0; i<total; i+=3) {
+    slides.push({
+      topLeft:  imgBase + `IMG-20250729-WA00${42 + i}.jpg`,
+      topRight: imgBase + `IMG-20250729-WA00${42 + i + 1}.jpg`,
+      bottom:   imgBase + `IMG-20250729-WA00${42 + i + 2}.jpg`,
+      captions: [
+        captions[i % captions.length] || '',
+        captions[(i+1)%captions.length] || '',
+        captions[(i+2)%captions.length] || ''
+      ]
+    });
+  }
+  // Slideshow logic
+  let slideIdx = 0, running = true, timer, dots;
+  function renderSlide(idx, isInit=false) {
+    const grid = document.getElementById('eventSlideshowGrid');
+    const slide = slides[idx];
+    grid.classList.remove('fadein');
+    setTimeout(() => {
+      grid.innerHTML = `
+        <div class="grid-item gtop-left">
+          <img src="${slide.topLeft}" alt="">
+          <div class="small-caption">${slide.captions[0]}</div>
+        </div>
+        <div class="grid-item gtop-right">
+          <img src="${slide.topRight}" alt="">
+          <div class="small-caption">${slide.captions[1]}</div>
+        </div>
+        <div class="grid-item gbottom">
+          <img src="${slide.bottom}" alt="">
+          <div class="main-caption">${slide.captions[2]}</div>
+        </div>
+      `;
+      setTimeout(()=>grid.classList.add('fadein'), 50);
+      document.getElementById('eventMainCaption').textContent = slide.captions[2];
+      // Dots
+      if(isInit) {
+        dots = document.getElementById('eventSlideshowDots');
+        dots.innerHTML = '';
+        for(let i=0; i<slides.length; i++) {
+          let dot = document.createElement('button');
+          dot.className = (i === idx) ? 'dot active-dot' : 'dot';
+          dot.setAttribute('type','button');
+          dot.setAttribute('tabindex',0);
+          dot.onclick = ()=>goTo(i);
+          dots.appendChild(dot);
+        }
+      } else {
+        Array.from(dots.children).forEach((d,k)=>d.className = (k === idx) ? 'dot active-dot' : 'dot');
+      }
+    }, 160);
+  }
+  function next() { slideIdx = (slideIdx+1)%slides.length; renderSlide(slideIdx);}
+  function prev() { slideIdx = (slideIdx-1+slides.length)%slides.length; renderSlide(slideIdx);}
+  function goTo(i) { slideIdx=i; renderSlide(slideIdx);}
+  function startAuto() { timer = setInterval(()=>{ if(running) next(); }, 4600);}
+  function stopAuto() { if(timer) clearInterval(timer); }
+  // Auto/pause controls
+  window.addEventListener('DOMContentLoaded', function() {
+    renderSlide(0,true); startAuto();
+    const cont = document.getElementById('eventSlideshowContainer');
+    [cont].forEach(el=>{
+      el.addEventListener('mouseenter', _=>{ running=false; });
+      el.addEventListener('mouseleave', _=>{ running=true; });
+      el.addEventListener('focusin',  _=>{ running=false; });
+      el.addEventListener('focusout', _=>{ running=true; });
+      el.addEventListener('click',    _=>{ running = !running; }); // click toggles play/pause
+    });
+    document.querySelector('.slideshow-ctrl.next').onclick=()=>{next();};
+    document.querySelector('.slideshow-ctrl.prev').onclick=()=>{prev();};
+  });
+  </script>
+</body>
+</html>

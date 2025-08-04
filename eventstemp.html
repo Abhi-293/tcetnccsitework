@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <!-- Your custom CSS -->
   <link rel="stylesheet" href="src/activities.css">
-  <link rel="stylesheet" href="eventstemp.css">
 </head>
 
 <body>
@@ -140,138 +139,11 @@
   </aside>
 
   <header class="page-header">
-    <h1> Event Name </h1>
+    <h1>Our Achievers</h1>
   </header>
 
   <!-- ================= Main Content Section ================= -->
-
-<main class="main-event-content">
-  <section class="event-section">
-    <header class="event-header">
-      <h1>Farewell & Felicitation of Cadets</h1>
-      <p class="event-subtitle">
-        A Tribute to Years of Service, Leadership, and Camaraderie
-      </p>
-    </header>
-    <div class="event-desc-block">
-      <h2 class="event-title">Glorious Sendoff to Our Outgoing 3rd Year NCC Cadets</h2>
-      <p class="event-desc">
-        The TCET NCC Unit hosted a dignified and memorable <b>Felicitation and Farewell Ceremony</b> for its outgoing 3rd-year cadets, celebrating their unwavering dedication and service over three impactful years. The event was marked by emotional moments, including a display of Polaroid snapshots capturing their NCC journey. Senior dignitaries including the Principal, Vice Principal, ANO, and CTO graced the occasion, sharing words of appreciation and encouragement. The 3rd-year cadets were felicitated with mementos and ‘C’ Certificates, honouring their achievements in national camps like RDC, Nausainik Camp, YEP, and more. Juniors paid tribute by presenting heartfelt tokens of remembrance, symbolizing gratitude and deep camaraderie. The event concluded with a group photograph, followed by dinner and shared memories among cadets and staff. The ceremony was not just a farewell, but a celebration of legacy, leadership, and inspiration for the juniors to carry forward.
-      </p>
-      <div class="event-details">
-        <span><i class="fa fa-calendar"></i> 2024 - 2025</span>
-        <span><i class="fa fa-map-marker"></i> TCET Campus, Mumbai</span>
-      </div>
-    </div>
-    <div class="event-slideshow-container" id="eventSlideshowContainer" tabindex="0">
-      <div class="event-slideshow-grid" id="eventSlideshowGrid"></div>
-      <div class="slideshow-pagination" id="eventSlideshowDots"></div>
-      <button class="slideshow-ctrl prev" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
-      <button class="slideshow-ctrl next" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
-    </div>
-    <div class="slide-caption-main" id="eventMainCaption"></div>
-  </section>
-</main>
-<footer class="event-footer">
-  <div>© 2025 TCET NCC Unit &middot; Farewell & Felicitation Ceremony</div>
-</footer>
-<!-- Font Awesome icons -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-<script>
-const imgBase = 'assets/img/rdc2024/';
-const captions = [
-  "Farewell setup & heart-warming decor",
-  "Cadets gather for their final ceremony",
-  "Honour Guard: Ready for recognition",
-  "Receiving C-Certificate of pride",
-  "Leadership saluted by juniors",
-  "Emotional addresses from dignitaries",
-  "Principal and CTO addressing all cadets",
-  "Juniors present heartfelt tokens",
-  "Mentorship & pride: A bonding moment",
-  "Group photo: The outgoing batch’s legacy",
-  "Cadets share memories, laughs, unity",
-  "Moments of reflection and gratitude",
-  "Camaraderie: farewell dinner and joy",
-  "Unseen bonds across the year batches",
-  "Final salute – started as cadets, leaving as leaders",
-  "The legacy continues for new batches"
-];
-// Compose slides from 16 images, using 3 per slide (looping if needed)
-let slides = [];
-const total = 16;
-for(let i=0; i<total; i+=3) {
-  slides.push({
-    topLeft:  imgBase + `rdc2024 (${(i%total)+1}).jpg`,
-    topRight: imgBase + `rdc2024 (${((i+1)%total)+1}).jpg`,
-    bottom:   imgBase + `rdc2024 (${((i+2)%total)+1}).jpg`,
-    captions: [
-      captions[i % captions.length] || '',
-      captions[(i+1)%captions.length] || '',
-      captions[(i+2)%captions.length] || ''
-    ]
-  });
-}
-// Slideshow logic
-let slideIdx = 0, running = true, timer, dots;
-function renderSlide(idx, isInit=false) {
-  const grid = document.getElementById('eventSlideshowGrid');
-  const slide = slides[idx];
-  grid.classList.remove('fadein');
-  setTimeout(() => {
-    grid.innerHTML = `
-      <div class="grid-item gtop gtop-left">
-        <img src="${slide.topLeft}" alt="">
-        <div class="small-caption">${slide.captions[0]}</div>
-      </div>
-      <div class="grid-item gtop gtop-right">
-        <img src="${slide.topRight}" alt="">
-        <div class="small-caption">${slide.captions[1]}</div>
-      </div>
-      <div class="grid-item gbottom">
-        <img src="${slide.bottom}" alt="">
-        <div class="main-caption">${slide.captions[2]}</div>
-      </div>
-    `;
-    setTimeout(()=>grid.classList.add('fadein'), 50);
-    document.getElementById('eventMainCaption').textContent = slide.captions[2];
-    if(isInit) {
-      dots = document.getElementById('eventSlideshowDots');
-      dots.innerHTML = '';
-      for(let i=0; i<slides.length; i++) {
-        let dot = document.createElement('button');
-        dot.className = (i === idx) ? 'dot active-dot' : 'dot';
-        dot.setAttribute('type','button');
-        dot.setAttribute('tabindex',0);
-        dot.onclick = ()=>goTo(i);
-        dots.appendChild(dot);
-      }
-    } else {
-      Array.from(dots.children).forEach((d,k)=>d.className = (k === idx) ? 'dot active-dot' : 'dot');
-    }
-  }, 160);
-}
-function next() { slideIdx = (slideIdx+1)%slides.length; renderSlide(slideIdx);}
-function prev() { slideIdx = (slideIdx-1+slides.length)%slides.length; renderSlide(slideIdx);}
-function goTo(i) { slideIdx=i; renderSlide(slideIdx);}
-function startAuto() { timer = setInterval(()=>{ if(running) next(); }, 4600);}
-function stopAuto() { if(timer) clearInterval(timer); }
-window.addEventListener('DOMContentLoaded', function() {
-  renderSlide(0,true); startAuto();
-  const cont = document.getElementById('eventSlideshowContainer');
-  [cont].forEach(el=>{
-    el.addEventListener('mouseenter', _=>{ running=false; });
-    el.addEventListener('mouseleave', _=>{ running=true; });
-    el.addEventListener('focusin',  _=>{ running=false; });
-    el.addEventListener('focusout', _=>{ running=true; });
-    el.addEventListener('click',    _=>{ running = !running; }); // click toggles play/pause
-  });
-  document.querySelector('.slideshow-ctrl.next').onclick=()=>{next();};
-  document.querySelector('.slideshow-ctrl.prev').onclick=()=>{prev();};
-});
-</script>
-
-
+   
 
         <!-- Footer Section -->
   <footer class="footer-section  ">
@@ -318,76 +190,6 @@ window.addEventListener('DOMContentLoaded', function() {
     </div>
   </footer>
 
-  <!-- ================= Slider Script ================= -->
-  <!-- <script>
-    // ... (your slider JS remains unchanged) ...
-    function getVisibleCards() {
-      if (window.innerWidth <= 600) return 1;
-      if (window.innerWidth <= 900) return 2;
-      if (window.innerWidth <= 1200) return 3;
-      return 4;
-    }
-    function setupSlider(sliderId, intervalMs = 5000) {
-      const slider = document.getElementById(sliderId);
-      if (!slider) return;
-      const cards = slider.children;
-      let current = 0;
-      let visible = getVisibleCards();
-      function update() {
-        visible = getVisibleCards();
-        const cardWidth =
-          cards[0].offsetWidth +
-          parseFloat(getComputedStyle(slider).gap || 24);
-        slider.style.transform = `translateX(-${current * cardWidth}px)`;
-      }
-      function next() {
-        visible = getVisibleCards();
-        if (current + visible >= cards.length) {
-          current = 0;
-        } else {
-          current++;
-        }
-        update();
-      }
-      function prev() {
-        visible = getVisibleCards();
-        if (current === 0) {
-          current = Math.max(0, cards.length - visible);
-        } else {
-          current--;
-        }
-        update();
-      }
-      let auto = setInterval(next, intervalMs);
-      slider.parentElement.addEventListener("mouseenter", () =>
-        clearInterval(auto)
-      );
-      slider.parentElement.addEventListener(
-        "mouseleave",
-        () => (auto = setInterval(next, intervalMs))
-      );
-      window.addEventListener("resize", update);
-      slider.dataset.current = current;
-      slider.dataset.visible = visible;
-      slider.next = next;
-      slider.prev = prev;
-      slider.update = update;
-      update();
-    }
-    function manualSlide(sliderId, dir) {
-      const slider = document.getElementById(sliderId);
-      if (!slider) return;
-      if (dir > 0) slider.next();
-      else slider.prev();
-    }
-    document.addEventListener("DOMContentLoaded", function () {
-      setupSlider("activitiesSlider", 5000);
-      setupSlider("defenceSlider", 5000);
-      setupSlider("trainingSlider", 5000);
-      setupSlider("lecturesSlider", 5000);
-      setupSlider("socialSlider", 5000);
-    });
-  </script> -->
 
   <!-- Toggle Navigation -->
    <script>
@@ -411,77 +213,25 @@ document.addEventListener("DOMContentLoaded", function () {
   <!-- Corousel Slider Script -->
    <script>
        // Responsive auto-sliding carousel logic
-const slider = document.getElementById('activitiesCarousel');
-let cardCount = slider.children.length / 2; // real number of cards
-let cardsPerFrame = 3;
-
-function updateCardsPerFrame() {
-  if (window.innerWidth <= 600) {
-    cardsPerFrame = 2;
-  } else if (window.innerWidth <= 900) {
-    cardsPerFrame = 2;
-  } else {
-    cardsPerFrame = 3;
-  }
-}
-updateCardsPerFrame();
-window.addEventListener('resize', updateCardsPerFrame);
-
-let cardWidth = slider.children[0].offsetWidth;
-let position = 0;
-let animationId = null;
-let isPaused = false;
-
-function updateCardWidth() {
-  cardWidth = slider.children[0].offsetWidth;
-}
-window.addEventListener('resize', updateCardWidth);
-
-function animate() {
-  if (isPaused) return;
-  position += 0.7; // adjust for speed
-  const maxScroll = cardWidth * cardCount;
-  if (position >= maxScroll) {
-    position = 0;
-    // Instantly reset position, without visible jump
-    slider.style.transition = 'none';
-    slider.style.transform = `translateX(${-position}px)`;
-    // Trigger reflow for smooth animation restoration
-    void slider.offsetWidth;
-    slider.style.transition = 'transform 0.2s linear';
-  } else {
-    slider.style.transform = `translateX(${-position}px)`;
-  }
-  animationId = requestAnimationFrame(animate);
-}
-
-// Pause on hover
-slider.parentElement.addEventListener('mouseenter', () => {
-  isPaused = true;
-});
-slider.parentElement.addEventListener('mouseleave', () => {
-  isPaused = false;
-  animate();
-});
-
-// Responsive reset
-window.addEventListener('resize', () => {
-  updateCardsPerFrame();
-  updateCardWidth();
-  position = 0;
-  slider.style.transform = 'translateX(0)';
-});
-
-// Start animation
-requestAnimationFrame(animate);
-
 function startInfiniteCarousel(carouselId) {
   const slider = document.getElementById(carouselId);
   if (!slider) return;
-  let cardCount = slider.children.length / 2;
-  let cardsPerFrame = 3;
 
-  function updateCardsPerFrame() {
+  const computedStyle = getComputedStyle(slider);
+  const gap = parseFloat(computedStyle.gap) || 0;
+
+  let cardWidth;
+  let cardsPerFrame;
+  let position = 0;
+  let isPaused = false;
+
+  function updateCardWidthAndFrame() {
+    if (slider.children.length > 0) {
+      cardWidth = slider.children[0].offsetWidth + gap;
+    } else {
+      cardWidth = 0; // Handle case where there are no children
+    }
+
     if (window.innerWidth <= 600) {
       cardsPerFrame = 2;
     } else if (window.innerWidth <= 900) {
@@ -490,27 +240,27 @@ function startInfiniteCarousel(carouselId) {
       cardsPerFrame = 3;
     }
   }
-  updateCardsPerFrame();
-  window.addEventListener('resize', updateCardsPerFrame);
 
-  let cardWidth = slider.children[0].offsetWidth;
-  let position = 0;
-  let isPaused = false;
-
-  function updateCardWidth() {
-    cardWidth = slider.children[0].offsetWidth;
-  }
-  window.addEventListener('resize', updateCardWidth);
+  updateCardWidthAndFrame();
+  window.addEventListener('resize', updateCardWidthAndFrame);
 
   function animate() {
-    if (isPaused) return;
-    position += 0.8; // Adjust speed as desired
-    const maxScroll = cardWidth * cardCount;
-    if (position >= maxScroll) {
+    if (isPaused) {
+      requestAnimationFrame(animate);
+      return;
+    }
+
+    position += 0.8;
+    // Calculate maxScroll based on the actual number of unique cards, not total children
+    // Assuming the first half of children are the unique cards
+    const uniqueCardCount = slider.children.length / 2;
+    const maxScroll = cardWidth * uniqueCardCount;
+
+    if (position >= maxScroll && uniqueCardCount > 0) { // Added uniqueCardCount > 0 check
       position = 0;
       slider.style.transition = 'none';
       slider.style.transform = `translateX(${-position}px)`;
-      void slider.offsetWidth;
+      void slider.offsetWidth; // Force reflow
       slider.style.transition = 'transform 0.2s linear';
     } else {
       slider.style.transform = `translateX(${-position}px)`;
@@ -520,21 +270,17 @@ function startInfiniteCarousel(carouselId) {
 
   slider.parentElement.addEventListener('mouseenter', () => { isPaused = true; });
   slider.parentElement.addEventListener('mouseleave', () => { isPaused = false; animate(); });
-  window.addEventListener('resize', () => {
-    updateCardsPerFrame();
-    updateCardWidth();
-    position = 0;
-    slider.style.transform = 'translateX(0)';
-  });
 
   requestAnimationFrame(animate);
 }
 
 // Start/attach carousel on each row you add
-startInfiniteCarousel('activitiesCarousel');
-startInfiniteCarousel('activitiesCarousel2');
-startInfiniteCarousel('activitiesCarousel3');
-startInfiniteCarousel('activitiesCarousel4');
+document.addEventListener("DOMContentLoaded", function() {
+  startInfiniteCarousel('defenceCarousel');
+  startInfiniteCarousel('trainingCarousel');
+  startInfiniteCarousel('lecturesCarousel');
+  startInfiniteCarousel('socialCarousel');
+});
    </script>
    <!-- Script Ends heere -->
   <!-- Bootstrap JS for navbar toggler -->

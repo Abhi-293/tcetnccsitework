@@ -1,0 +1,434 @@
+body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #f7f9fc;
+      color: #1c1c1c;
+    }
+
+.camp-header {
+  background: linear-gradient(to right, #012a4a, #468faf);
+  padding: 10px 20px;
+  margin-left: 10px 0;
+  margin-right: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-left: 8px solid  #468faf;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.camp-title {
+  font-size: 2.5rem;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1px;
+}
+
+
+      /* Navbar/Header */
+    .topbar {
+      background: linear-gradient(to right, #781c1c, #000000);
+      color: white;
+      padding: 7.5px 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    }
+
+    .topbar h1 {
+      font-size: 24px;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* Hero Banner */
+    .hero-banner {
+      background-image: url('your-camp-image.jpg'); /* Replace with actual */
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 15px 15px;
+      position: relative;
+    
+    }
+
+    .hero-banner::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-banner h2 {
+      font-size: 48px;
+      font-weight: 700;
+      z-index: 2;
+      position: relative;
+    }
+
+    .hero-banner p {
+      font-size: 18px;
+      margin-top: 10px;
+      z-index: 2;
+      position: relative;
+    }
+
+    /* Section */
+
+    .catc-slider-section {
+  position: relative;
+  margin: 1px;
+  overflow: hidden;
+  background: #f9f9f9;
+}
+
+.catc-slider-container {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 50ppx;
+  scroll-snap-type: x mandatory;
+}
+
+.catc-slider-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar */
+}
+
+.catc-slider-card {
+  flex: 0 0 auto;
+  width: 650px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  scroll-snap-align: start;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.catc-slider-card:hover {
+  transform: scale(1.02);
+}
+
+.catc-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.2rem;
+  color: #012a4a;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  cursor: pointer;
+  z-index: 1;
+  user-select: none;
+}
+
+.catc-arrow.left {
+  left: 10px;
+}
+
+.catc-arrow.right {
+  right: 10px;
+}
+    .camp-section {
+      max-width: 100%;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+  .catc-army-header {
+  background-color: #012a4a; /* Dark Blue */
+  color: white;
+  text-align: center;
+  padding: 1px 2px;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.catc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+}
+
+.catc-card-img {
+  height: 230px;
+  background-color: #dfe7f2;
+  background-size: cover;
+  background-position: center;
+}
+
+.catc-card-content {
+  padding: 20px;
+}
+
+.catc-card h4 {
+  font-size: 1.3rem;
+  color: #002147;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.catc-card p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+    /* Footer */
+    .footer {
+      text-align: center;
+      background: #111;
+      color: #aaa;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    .camp-sidebar {
+  width: 260px;
+  position: fixed;
+  top: 0px; /* adjust to sit below the header */
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, #2a5688, #003566);
+  padding: 25px 20px;
+  color: #fff;
+  z-index: 100;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  border-right: 8px solid #8b0000;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu > li {
+  margin-bottom: 20px;
+}
+
+.sidebar-menu span {
+  font-weight: 600;
+  color: #f0f8ff;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 2.1rem;
+  border-left: 8px solid #ffb703;
+  padding-left: 10px;
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.submenu li {
+  margin-bottom: 10px;
+}
+
+.submenu a {
+  text-decoration: none;
+  color: #e0f7fa;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.submenu a i {
+  margin-right: 10px;
+  color: #00b4d8;
+}
+
+.training-camp-headings {
+  padding: 2px;
+  background: linear-gradient(to right, #f9fafb, #eef1f5);
+  margin-top: 0;
+}
+
+.headline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 15px 30px;
+  display: inline-block;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.training-title {
+  color: #ffffff;
+  background: linear-gradient(135deg, #0077b6, #00b4d8);
+}
+
+.camp-title {
+  color: #ffffff;
+  background: linear-gradient(135deg, #8b0000, #c0392b);
+}
+
+.headline:hover {
+  transform: scale(1.05);
+}
+
+    .main-content {
+  margin-left: 310px; /* to avoid overlap with sidebar */
+  padding: 10px;
+    }
+
+    .training-wrapper {
+  position: relative;
+  padding: 30px 10px;
+}
+  .training-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  max-width: 1600px;
+  max-height: 1000px;
+  margin: 0 auto;
+  position:relative;}
+
+.training-card {
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.training-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #012a4a;
+}
+
+.training-card p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* Slideshow styles */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.slideshow-container img.active {
+  display: block;
+}
+
+/* Cross lines */
+.vertical-line {
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 50%;
+  width: 2px;
+  background: #ccc;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.horizontal-line {
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 50%;
+  height: 2px;
+  background: #ccc;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.training-card,
+.catc-slider-card {
+  margin: 0.5rem 0.5rem;
+  padding: 0.7rem 0.7rem;
+}
+
+.slideshow-container img.slide,
+.catc-card-img {
+  height: 550px !important;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.catc-card-img {
+  min-height: 550px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+/* Optional: Reduce section paddings for a more compact look */
+.training-wrapper,
+.catc-slider-section {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.sidebar-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .camp-sidebar {
+    left: -100%;
+    transition: left 0.3s ease-in-out;
+  }
+
+  .camp-sidebar.open {
+    left: 0;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .sidebar-toggle {
+    display: block;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    z-index: 101;
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catc-slider-card {
+    width: 100%;
+  }
+}
